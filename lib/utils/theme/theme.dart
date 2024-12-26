@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:single_store_ecommerce/utils/theme/appbar_theme.dart';
 import 'package:single_store_ecommerce/utils/theme/elevated_button_theme.dart';
 import 'package:single_store_ecommerce/utils/theme/input_decoration.dart';
 import 'package:single_store_ecommerce/utils/theme/outline_button.dart';
@@ -14,6 +15,7 @@ class MyAppTheme {
     elevatedButtonTheme: MyElevatedButtonTheme.lightElevatedButton,
     inputDecorationTheme: MyInputDecorationTheme.light,
     outlinedButtonTheme: MyOutlineButtonTheme.light,
+    appBarTheme: MyAppbarTheme.lightAppbarTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -24,5 +26,6 @@ class MyAppTheme {
     elevatedButtonTheme: MyElevatedButtonTheme.darkElevatedButton,
     inputDecorationTheme: MyInputDecorationTheme.dark,
     outlinedButtonTheme: MyOutlineButtonTheme.dark,
+    appBarTheme: MyAppbarTheme.darkAppbarTheme,
   );
 }
