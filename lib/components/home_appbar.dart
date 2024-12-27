@@ -12,37 +12,31 @@ class HomeAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HeaderWrapper(
-      child: Column(
+    return MyAppBar(
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MyAppBar(
-            title: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  MyTexts.appbarLabel,
-                  style: Theme.of(context)
-                      .textTheme
-                      .labelMedium!
-                      .apply(color: MyColors.grey),
-                ),
-                Text(
-                  MyTexts.appbarTitle,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineSmall!
-                      .apply(color: MyColors.white),
-                ),
-              ],
-            ),
-            actions: [
-              CartCounterIcon(
-                onPressed: () {},
-              ),
-            ],
+          Text(
+            MyTexts.appbarLabel,
+            style: Theme.of(context)
+                .textTheme
+                .labelMedium!
+                .apply(color: MyColors.grey),
+          ),
+          Text(
+            MyTexts.appbarTitle,
+            style: Theme.of(context)
+                .textTheme
+                .headlineSmall!
+                .apply(color: MyColors.white),
           ),
         ],
       ),
+      actions: [
+        CartCounterIcon(
+          onPressed: () {},
+        ),
+      ],
     );
   }
 }
