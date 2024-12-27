@@ -9,7 +9,7 @@ class MyAppbarTheme {
     scrolledUnderElevation: 0,
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
-    iconTheme: IconThemeData(color: MyColors.black, size: MySizes.iconMd),
+    iconTheme: IconThemeData(color: MyColors.white, size: MySizes.iconMd),
     actionsIconTheme:
         IconThemeData(color: MyColors.black, size: MySizes.iconMd),
     titleTextStyle: TextStyle(
