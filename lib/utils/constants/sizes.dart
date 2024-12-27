@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class MySizes {
   // Padding and margin sizes
   static const double xs = 4.0;
@@ -27,4 +29,7 @@ class MySizes {
   static const double buttonRadius = 12.0;
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
+
+  // Appbar Sizes
+  static const appBarHeight = kToolbarHeight;
 }
