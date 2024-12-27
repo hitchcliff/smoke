@@ -56,4 +56,8 @@ class MyTexts {
       "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
   static const String forgotPasswordPlaceholder = "E-mail";
   static const String forgotPasswordBtn = "Submit";
+
+  // Appbar
+  static const appbarLabel = "Good day for shopping";
+  static const appbarTitle = "Tailmoor Skinder";
 }
