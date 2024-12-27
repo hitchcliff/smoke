@@ -4,6 +4,7 @@ import 'package:single_store_ecommerce/utils/theme/appbar_theme.dart';
 import 'package:single_store_ecommerce/utils/theme/elevated_button_theme.dart';
 import 'package:single_store_ecommerce/utils/theme/input_decoration.dart';
 import 'package:single_store_ecommerce/utils/theme/outline_button.dart';
+import 'package:single_store_ecommerce/utils/theme/search_bar.dart';
 import 'package:single_store_ecommerce/utils/theme/text_theme.dart';
 
 class MyAppTheme {
@@ -16,6 +17,7 @@ class MyAppTheme {
     inputDecorationTheme: MyInputDecorationTheme.light,
     outlinedButtonTheme: MyOutlineButtonTheme.light,
     appBarTheme: MyAppbarTheme.lightAppbarTheme,
+    searchBarTheme: MySearchBarTheme.light,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -27,5 +29,6 @@ class MyAppTheme {
     inputDecorationTheme: MyInputDecorationTheme.dark,
     outlinedButtonTheme: MyOutlineButtonTheme.dark,
     appBarTheme: MyAppbarTheme.darkAppbarTheme,
+    searchBarTheme: MySearchBarTheme.dark,
   );
 }
