@@ -63,4 +63,8 @@ class MyTexts {
 
   // Search bar
   static const searchBarPlaceholder = "Search in Store";
+
+  // Headings
+  static const headingProductCategories = "Product Categories";
+  static const headingActionBtnTxt = "View All";
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:single_store_ecommerce/components/header_wrapper.dart';
 import 'package:single_store_ecommerce/components/home_appbar.dart';
+import 'package:single_store_ecommerce/components/product_categories.dart';
 import 'package:single_store_ecommerce/components/search_form.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -26,6 +26,9 @@ class Home extends StatelessWidget {
                   onSubmitted: (value) {},
                   text: MyTexts.searchBarPlaceholder,
                 ),
+
+                // product categories
+                const ProductCategories(),
               ].gap(height: MySizes.spaceBtwSections),
             ),
           ),
