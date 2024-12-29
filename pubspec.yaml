@@ -17,6 +17,9 @@ dependencies:
   # Icons
   font_awesome_flutter: ^10.7.0
 
+  # Carousel
+  carousel_slider: ^5.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -28,3 +31,4 @@ flutter:
     - assets/images/on_boarding_images/
     - assets/logos/
     - assets/images/animations/
+    - assets/images/banners/
