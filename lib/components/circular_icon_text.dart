@@ -21,12 +21,12 @@ class CircularIconText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(right: MySizes.spaceBtwItems),
+        padding: const EdgeInsets.only(left: MySizes.defaultSpace),
         child: Column(
           children: [
             Container(
-              width: 55,
-              height: 55,
+              width: 60,
+              height: 60,
               decoration: BoxDecoration(
                 color: MyHelpers.isDarkMode(context)
                     ? MyColors.black
