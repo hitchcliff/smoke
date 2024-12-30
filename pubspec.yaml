@@ -19,6 +19,7 @@ dependencies:
 
   # Carousel
   carousel_slider: ^5.0.0
+  flutter_layout_grid: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +33,4 @@ flutter:
     - assets/logos/
     - assets/images/animations/
     - assets/images/banners/
+    - assets/images/products/

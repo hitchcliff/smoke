@@ -30,6 +30,16 @@ class MySizes {
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
 
+  // Card radius
+  static const double cardPadding = 5;
+  static const double cardRadius = 16;
+  static const double cardImgRadius = 16;
+  static const double cardSaleRadius = 4;
+  static const double cardSaleHPadding = 7;
+  static const double cardSaleVPadding = 2;
+  static const double cardPlusPadding = 5;
+  static const double cardPlusRadius = 10;
+
   // Appbar Sizes
   static const appBarHeight = kToolbarHeight;
 }

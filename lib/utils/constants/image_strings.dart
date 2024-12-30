@@ -33,4 +33,7 @@ class MyImages {
   static const promoBannerImg6 = "assets/images/banners/banner_6.jpg";
   static const promoBannerImg7 = "assets/images/banners/banner_7.jpg";
   static const promoBannerImg8 = "assets/images/banners/banner_8.jpg";
+
+  // products
+  static const productImg1 = "assets/images/products/product-1.png";
 }
