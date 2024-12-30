@@ -3,6 +3,7 @@ import 'package:single_store_ecommerce/components/products/product_vertical_deta
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductVerticalItem extends StatelessWidget {
   const ProductVerticalItem(
@@ -13,11 +14,14 @@ class ProductVerticalItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyHelpers.isDarkMode(context);
+
     return Container(
       padding: const EdgeInsets.all(MySizes.cardPadding),
       decoration: BoxDecoration(
-        color: MyColors.white,
+        color: isDarkMode ? MyColors.black : MyColors.white,
         borderRadius: BorderRadius.circular(MySizes.cardRadius),
+        border: Border.all(width: 1, color: MyColors.white),
       ),
       child: Column(
         children: [thumbnail, details],

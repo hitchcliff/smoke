@@ -45,7 +45,7 @@ class Home extends StatelessWidget {
                 ),
               ),
 
-              // carousel slider
+              // promo slider
               Container(
                 padding: const EdgeInsets.symmetric(
                     horizontal: MySizes.defaultSpace),

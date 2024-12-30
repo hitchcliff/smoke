@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductVerticalDetails extends StatelessWidget {
   const ProductVerticalDetails({
@@ -22,6 +23,8 @@ class ProductVerticalDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyHelpers.isDarkMode(context);
+
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: MySizes.spaceBtwItems,
@@ -60,9 +63,9 @@ class ProductVerticalDetails extends StatelessWidget {
                 onTap: onTap,
                 child: Container(
                   padding: const EdgeInsets.all(MySizes.cardPlusPadding),
-                  decoration: const BoxDecoration(
-                    color: MyColors.black,
-                    borderRadius: BorderRadius.only(
+                  decoration: BoxDecoration(
+                    color: isDarkMode ? MyColors.primary : MyColors.black,
+                    borderRadius: const BorderRadius.only(
                       topRight: Radius.circular(MySizes.cardPlusRadius),
                       bottomLeft: Radius.circular(MySizes.cardPlusRadius),
                     ),

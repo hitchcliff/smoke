@@ -1,40 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class SectionHeading extends StatelessWidget {
-  const SectionHeading(
-      {super.key,
-      required this.title,
-      this.showActionButton = false,
-      this.actionText = "view all"});
+  const SectionHeading({
+    super.key,
+    required this.title,
+    this.showActionButton = false,
+    this.actionText = "view all",
+    this.titleColor = MyColors.white,
+  });
 
   final String title;
   final bool showActionButton;
   final String actionText;
+  final Color titleColor;
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyHelpers.isDarkMode(context);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             overflow: TextOverflow.ellipsis,
-            color: MyColors.white,
+            color: titleColor,
           ),
         ),
         if (showActionButton)
           (TextButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: WidgetStateProperty.all(MyColors.light),
+                backgroundColor: WidgetStateProperty.all(
+                    isDarkMode ? MyColors.light : MyColors.dark),
                 elevation: const WidgetStatePropertyAll(1),
               ),
               child: Text(
                 actionText,
-                style: const TextStyle(
-                  color: MyColors.black,
+                style: TextStyle(
+                  color: isDarkMode ? MyColors.black : MyColors.white,
                 ),
               )))
       ],

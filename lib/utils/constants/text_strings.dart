@@ -66,5 +66,6 @@ class MyTexts {
 
   // Headings
   static const headingProductCategories = "Product Categories";
+  static const headingPopularProducts = "Popular Products";
   static const headingActionBtnTxt = "View All";
 }
