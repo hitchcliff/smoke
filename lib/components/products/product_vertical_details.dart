@@ -48,7 +48,7 @@ class ProductVerticalDetails extends StatelessWidget {
               if (verified)
                 const Icon(
                   FontAwesomeIcons.solidCircleCheck,
-                  color: MyColors.primary,
+                  color: MyColors.verified,
                   size: MySizes.iconSm,
                 )
             ].gap(width: MySizes.sm),
