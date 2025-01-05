@@ -1,7 +1,7 @@
 class MyTexts {
   static const appName = "E-commerce Store";
 
-  // OnBoarding Texts
+  // ---# OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
   static const String onBoardingTitle2 = "Select Payment Method";
   static const String onBoardingTitle3 = "Deliver at your door step";
@@ -13,7 +13,7 @@ class MyTexts {
   static const String onBoardingSubTitle3 =
       "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
-  // Login Texts
+  // ---# Login Texts
   static const String loginTitle = "Welcome back,";
   static const String loginSubTitle =
       "Discover Limitless Choices and  Unmatched Convenience.";
@@ -25,7 +25,7 @@ class MyTexts {
   static const String loginSignUp = "Create Account";
   static const String loginDivider = "Or Sign in With";
 
-  // Signup Texts
+  // ---# Signup Texts
   static const String registerTitle = "Let's create your account";
   static const String registerFirstName = "First Name";
   static const String registerLastName = "Last Name";
@@ -35,7 +35,7 @@ class MyTexts {
   static const String registerPassword = "Password";
   static const String registerCreateAccount = "Create Account";
 
-  // Verify account
+  // ---# Verify account
   static const String verifyTitle = "Verify your email address!";
   static const String verifyEmail = "support@email.com";
   static const String verifyDescription =
@@ -43,29 +43,34 @@ class MyTexts {
   static const String verifyContinueBtn = "Continue";
   static const String verifyResendBtn = "Re-send";
 
-  // Account created
+  // ---# Account created
   static const String accountCreatedTitle =
       "Your account successfully created!";
   static const String accountCreatedDescription =
       "Welcome to your ultimate shopping destination. Your account is created, unleash the job of seamless online shoppings.";
   static const String accountCreatedBtn = "Continue";
 
-  // Forgot password
+  // ---# Forgot password
   static const String forgotPasswordTitle = "Forgot password";
   static const String forgotPasswordDescription =
       "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
   static const String forgotPasswordPlaceholder = "E-mail";
   static const String forgotPasswordBtn = "Submit";
 
-  // Appbar
+  // ---# Appbar
   static const appbarLabel = "Good day for shopping";
   static const appbarTitle = "Tailmoor Skinder";
+  static const appbarShopTitle = "Shop";
 
-  // Search bar
+  // ---# Search bar
   static const searchBarPlaceholder = "Search in Store";
 
-  // Headings
+  // ---# Headings
   static const headingProductCategories = "Product Categories";
   static const headingPopularProducts = "Popular Products";
   static const headingActionBtnTxt = "View All";
+  static const headingFeatureBrands = "Feature Brands";
+
+  // ---# ---# Brands
+  static const brandNike = "Nike";
 }

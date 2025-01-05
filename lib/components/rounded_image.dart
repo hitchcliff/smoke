@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class RoundedImage extends StatelessWidget {
   const RoundedImage({
     super.key,
     required this.onTap,
-    this.borderRadius = 10,
+    this.borderRadius = MySizes.defaultRadius,
     required this.imgUrl,
     this.isNetworkImage = false,
     this.fit = BoxFit.contain,

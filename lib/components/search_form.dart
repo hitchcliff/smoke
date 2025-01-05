@@ -5,21 +5,23 @@ import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class SearchForm extends StatelessWidget {
-  const SearchForm({
-    super.key,
-    required this.text,
-    this.icon = FontAwesomeIcons.magnifyingGlass,
-    required this.onSubmitted,
-  });
+  const SearchForm(
+      {super.key,
+      required this.text,
+      this.icon = FontAwesomeIcons.magnifyingGlass,
+      required this.onSubmitted,
+      this.padding =
+          const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace)});
 
   final String text;
   final IconData? icon;
   final ValueChanged<String> onSubmitted;
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
+      padding: padding,
       child: SearchBar(
         onSubmitted: onSubmitted,
         leading: Icon(
@@ -27,6 +29,7 @@ class SearchForm extends StatelessWidget {
           color: MyHelpers.isDarkMode(context) ? MyColors.white : MyColors.grey,
         ),
         hintText: text,
+        side: const WidgetStatePropertyAll(BorderSide(color: MyColors.grey)),
       ),
     );
   }

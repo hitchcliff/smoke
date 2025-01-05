@@ -42,4 +42,7 @@ class MySizes {
 
   // Appbar Sizes
   static const appBarHeight = kToolbarHeight;
+
+  // ---# Radius
+  static const double defaultRadius = 10;
 }
