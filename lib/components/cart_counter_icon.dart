@@ -24,7 +24,8 @@ class CartCounterIcon extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: 0,
+          right: -2,
+          top: -2,
           child: Container(
             width: 18,
             height: 18,

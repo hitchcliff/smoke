@@ -9,12 +9,14 @@ class SectionHeading extends StatelessWidget {
     this.showActionButton = false,
     this.actionText = "view all",
     this.titleColor = MyColors.white,
+    this.onPressed,
   });
 
   final String title;
   final bool showActionButton;
   final String actionText;
   final Color titleColor;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +27,14 @@ class SectionHeading extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
-            overflow: TextOverflow.ellipsis,
-            color: titleColor,
-          ),
+          style: Theme.of(context).textTheme.headlineSmall?.apply(
+                overflow: TextOverflow.ellipsis,
+                color: titleColor,
+              ),
         ),
         if (showActionButton)
           (TextButton(
-              onPressed: () {},
+              onPressed: onPressed,
               style: ButtonStyle(
                 backgroundColor: WidgetStateProperty.all(
                     isDarkMode ? MyColors.light : MyColors.dark),

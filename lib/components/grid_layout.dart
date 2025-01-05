@@ -16,7 +16,7 @@ class GridLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     List<TrackSize> trackSize = [];
 
-    var totalSize = (children.length / 2).ceil();
+    var totalSize = (children.length / crossAxisCount).ceil();
 
     for (int i = 0; i < totalSize; i++) {
       trackSize.add(auto);
