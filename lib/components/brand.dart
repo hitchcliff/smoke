@@ -29,32 +29,33 @@ class Brand extends StatelessWidget {
           borderRadius: BorderRadius.circular(MySizes.defaultRadius),
           border: Border.all(color: MyColors.grey)),
       child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // ---# Brand Image
-          Expanded(
-            child: Image(
-              fit: BoxFit.contain,
-              image: image,
-            ),
+          Image(
+            width: 40,
+            height: 40,
+            fit: BoxFit.contain,
+            image: image,
           ),
 
           // ---# Brand Name
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              BrandTitleWithIcon(
-                name: brandName,
-                verified: verified,
-              ),
-              Text(
-                "$totalProducts Products",
-                style: Theme.of(context).textTheme.labelMedium?.apply(
-                      overflow: TextOverflow.ellipsis,
-                    ),
-              ),
-            ],
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                BrandTitleWithIcon(
+                  name: brandName,
+                  verified: verified,
+                ),
+                Text(
+                  "$totalProducts Products",
+                  style: Theme.of(context).textTheme.labelMedium?.apply(
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                ),
+              ],
+            ),
           )
         ].gap(width: MySizes.sm),
       ),

@@ -79,6 +79,7 @@ class Store extends StatelessWidget {
                                     ),
                                     brandName: MyTexts.brandNike,
                                     totalProducts: "256",
+                                    verified: true,
                                   ),
                                   Brand(
                                     image: AssetImage(
@@ -86,6 +87,7 @@ class Store extends StatelessWidget {
                                     ),
                                     brandName: MyTexts.brandNike,
                                     totalProducts: "256",
+                                    verified: true,
                                   ),
                                   Brand(
                                     image: AssetImage(
@@ -93,6 +95,7 @@ class Store extends StatelessWidget {
                                     ),
                                     brandName: MyTexts.brandNike,
                                     totalProducts: "256",
+                                    verified: true,
                                   ),
                                   Brand(
                                     image: AssetImage(
@@ -100,6 +103,7 @@ class Store extends StatelessWidget {
                                     ),
                                     brandName: MyTexts.brandNike,
                                     totalProducts: "256",
+                                    verified: true,
                                   ),
                                 ],
                               ),
