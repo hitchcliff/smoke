@@ -18,10 +18,14 @@ class BrandTitleWithIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-          name,
-          style:
-              Theme.of(context).textTheme.bodyMedium?.apply(fontWeightDelta: 4),
+        Flexible(
+          child: Text(
+            name,
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium
+                ?.apply(fontWeightDelta: 4, overflow: TextOverflow.ellipsis),
+          ),
         ),
         if (verified)
           const Icon(
