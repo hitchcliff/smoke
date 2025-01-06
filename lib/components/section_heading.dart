@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
-class SectionHeading extends StatelessWidget {
-  const SectionHeading({
-    super.key,
+class SectionHeadingProps {
+  const SectionHeadingProps({
     required this.title,
     this.showActionButton = false,
     this.actionText = "view all",
@@ -17,6 +16,15 @@ class SectionHeading extends StatelessWidget {
   final String actionText;
   final Color titleColor;
   final VoidCallback? onPressed;
+}
+
+class SectionHeading extends StatelessWidget {
+  const SectionHeading(
+    this.props, {
+    super.key,
+  });
+
+  final SectionHeadingProps props;
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +34,27 @@ class SectionHeading extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          title,
+          props.title,
           style: Theme.of(context).textTheme.headlineSmall?.apply(
                 overflow: TextOverflow.ellipsis,
-                color: titleColor,
+                color: props.titleColor,
               ),
         ),
-        if (showActionButton)
+        if (props.showActionButton)
           (TextButton(
-              onPressed: onPressed,
-              style: ButtonStyle(
-                backgroundColor: WidgetStateProperty.all(
-                    isDarkMode ? MyColors.light : MyColors.dark),
-                elevation: const WidgetStatePropertyAll(1),
+            onPressed: props.onPressed,
+            style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.all(
+                  isDarkMode ? MyColors.light : MyColors.dark),
+              elevation: const WidgetStatePropertyAll(1),
+            ),
+            child: Text(
+              props.actionText,
+              style: TextStyle(
+                color: isDarkMode ? MyColors.black : MyColors.white,
               ),
-              child: Text(
-                actionText,
-                style: TextStyle(
-                  color: isDarkMode ? MyColors.black : MyColors.white,
-                ),
-              )))
+            ),
+          ))
       ],
     );
   }

@@ -7,7 +7,10 @@ import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductVerticalItem extends StatelessWidget {
   const ProductVerticalItem(
-      {super.key, required this.details, required this.thumbnail});
+    this.thumbnail,
+    this.details, {
+    super.key,
+  });
 
   final ProductVerticalDetails details;
   final ProductThumbnail thumbnail;

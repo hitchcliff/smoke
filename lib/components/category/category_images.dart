@@ -15,7 +15,10 @@ class CategoryImageProp {
 
 // ignore: non_constant_identifier_names
 class CategoryImages extends StatelessWidget {
-  const CategoryImages({super.key, required this.props});
+  const CategoryImages(
+    this.props, {
+    super.key,
+  });
 
   final List<CategoryImageProp> props;
 

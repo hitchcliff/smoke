@@ -7,8 +7,12 @@ import 'package:single_store_ecommerce/components/category/category_images.dart'
 import 'package:single_store_ecommerce/components/grid_layout.dart';
 import 'package:single_store_ecommerce/components/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/my_tab_bar.dart';
+import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
+import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
+import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
 import 'package:single_store_ecommerce/components/search_form.dart';
 import 'package:single_store_ecommerce/components/section_heading.dart';
+import 'package:single_store_ecommerce/components/store/store_tab.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
@@ -67,13 +71,13 @@ class Store extends StatelessWidget {
                           Column(
                             children: [
                               // ---# Heading
-                              SectionHeading(
+                              SectionHeading(SectionHeadingProps(
                                 titleColor: MyColors.black,
                                 title: MyTexts.headingFeatureBrands,
                                 showActionButton: true,
                                 actionText: MyTexts.headingActionBtnTxt,
                                 onPressed: () {},
-                              ),
+                              )),
 
                               // ---# Brands
                               const GridLayout(
@@ -140,41 +144,9 @@ class Store extends StatelessWidget {
                   ),
                 ];
               },
-              body: TabBarView(
+              body: const TabBarView(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: MySizes.defaultSpace,
-                    ),
-                    child: Column(
-                      children: [
-                        // ---# Showcase brand
-                        ShowcaseBrandCard(
-                          const BrandItem(BrandItemProp(
-                              image: AssetImage(MyImages.brandNike),
-                              brandName: MyTexts.brandNike,
-                              verified: true,
-                              totalProducts: "256")),
-                          CategoryImages(props: [
-                            CategoryImageProp(
-                              imgUrl: MyImages.productImg1,
-                              onTap: () {},
-                            ),
-                            CategoryImageProp(
-                              imgUrl: MyImages.productImg2,
-                              onTap: () {},
-                            ),
-                            CategoryImageProp(
-                              imgUrl: MyImages.productImg3,
-                              onTap: () {},
-                            ),
-                          ]),
-                        ),
-
-                        Text("hello")
-                      ],
-                    ),
-                  ),
+                  StoreTab(),
                 ],
               )),
         ),

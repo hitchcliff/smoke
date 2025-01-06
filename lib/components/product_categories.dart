@@ -20,7 +20,9 @@ class ProductCategories extends StatelessWidget {
             horizontal: MySizes.defaultSpace,
           ),
           child: SectionHeading(
-            title: MyTexts.headingProductCategories,
+            SectionHeadingProps(
+              title: MyTexts.headingProductCategories,
+            ),
           ),
         ),
         SizedBox(

@@ -4,9 +4,8 @@ import 'package:single_store_ecommerce/components/rounded_image.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
-class ProductThumbnail extends StatelessWidget {
-  const ProductThumbnail({
-    super.key,
+class ProductThumbnailProps {
+  const ProductThumbnailProps({
     required this.imgUrl,
     this.isNetworkImg = false,
     this.saleTxt = "25%",
@@ -23,6 +22,12 @@ class ProductThumbnail extends StatelessWidget {
   final String saleTxt;
   final bool isWishlist;
   final bool onSale;
+}
+
+class ProductThumbnail extends StatelessWidget {
+  const ProductThumbnail(this.props, {super.key});
+
+  final ProductThumbnailProps props;
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +42,14 @@ class ProductThumbnail extends StatelessWidget {
             ),
           ),
           child: RoundedImage(
-            onTap: onTapImg,
-            imgUrl: imgUrl,
-            isNetworkImage: isNetworkImg,
+            onTap: props.onTapImg,
+            imgUrl: props.imgUrl,
+            isNetworkImage: props.isNetworkImg,
           ),
         ),
 
         // Sale
-        if (onSale)
+        if (props.onSale)
           Positioned(
             top: 20,
             left: 5,
@@ -59,18 +64,18 @@ class ProductThumbnail extends StatelessWidget {
                   MySizes.cardSaleRadius,
                 ),
               ),
-              child:
-                  Text(saleTxt, style: Theme.of(context).textTheme.labelSmall),
+              child: Text(props.saleTxt,
+                  style: Theme.of(context).textTheme.labelSmall),
             ),
           ),
 
         // Heart
-        if (isWishlist)
+        if (props.isWishlist)
           Positioned(
             top: 20,
             right: 5,
             child: GestureDetector(
-              onTap: onTapHeart,
+              onTap: props.onTapHeart,
               child: const Icon(
                 FontAwesomeIcons.solidHeart,
                 color: MyColors.primary,

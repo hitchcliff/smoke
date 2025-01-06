@@ -70,6 +70,7 @@ class MyTexts {
   static const headingPopularProducts = "Popular Products";
   static const headingActionBtnTxt = "View All";
   static const headingFeatureBrands = "Feature Brands";
+  static const headingYouMightLike = "You Might Like";
 
   // ---# ---# Brands
   static const brandNike = "Nike";

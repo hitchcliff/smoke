@@ -18,7 +18,7 @@ class ShowcaseBrandCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CardContainer(
-      margin: const EdgeInsets.symmetric(vertical: MySizes.spaceBtwItems),
+      margin: const EdgeInsets.only(top: MySizes.spaceBtwItems),
       child: Column(
         children: [
           brandItem,

@@ -5,9 +5,8 @@ import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
-class ProductVerticalDetails extends StatelessWidget {
-  const ProductVerticalDetails({
-    super.key,
+class ProductVerticalDetailsProp {
+  const ProductVerticalDetailsProp({
     required this.name,
     required this.brand,
     this.price = "0",
@@ -20,6 +19,15 @@ class ProductVerticalDetails extends StatelessWidget {
   final String price;
   final bool verified;
   final VoidCallback onTap;
+}
+
+class ProductVerticalDetails extends StatelessWidget {
+  const ProductVerticalDetails(
+    this.prop, {
+    super.key,
+  });
+
+  final ProductVerticalDetailsProp prop;
 
   @override
   Widget build(BuildContext context) {
@@ -35,17 +43,17 @@ class ProductVerticalDetails extends StatelessWidget {
         children: [
           // product name
           Text(
-            name,
+            prop.name,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           // brand
           Row(
             children: [
               Text(
-                brand,
+                prop.brand,
                 style: Theme.of(context).textTheme.bodySmall,
               ),
-              if (verified)
+              if (prop.verified)
                 const Icon(
                   FontAwesomeIcons.solidCircleCheck,
                   color: MyColors.verified,
@@ -57,10 +65,10 @@ class ProductVerticalDetails extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('\$$price',
+              Text('\$${prop.price}',
                   style: Theme.of(context).textTheme.headlineMedium),
               GestureDetector(
-                onTap: onTap,
+                onTap: prop.onTap,
                 child: Container(
                   padding: const EdgeInsets.all(MySizes.cardPlusPadding),
                   decoration: BoxDecoration(
