@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class RoundedImage extends StatelessWidget {
@@ -9,6 +10,7 @@ class RoundedImage extends StatelessWidget {
     required this.imgUrl,
     this.isNetworkImage = false,
     this.fit = BoxFit.contain,
+    this.color = MyColors.white,
   });
 
   final VoidCallback onTap;
@@ -16,6 +18,7 @@ class RoundedImage extends StatelessWidget {
   final String imgUrl;
   final bool isNetworkImage;
   final BoxFit? fit;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +26,12 @@ class RoundedImage extends StatelessWidget {
       onTap: onTap,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
-        child: Image(
-          image: isNetworkImage ? NetworkImage(imgUrl) : AssetImage(imgUrl),
-          fit: fit,
+        child: Container(
+          color: color,
+          child: Image(
+            image: isNetworkImage ? NetworkImage(imgUrl) : AssetImage(imgUrl),
+            fit: fit,
+          ),
         ),
       ),
     );

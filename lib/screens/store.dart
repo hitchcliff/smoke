@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/components/brand.dart';
+import 'package:single_store_ecommerce/components/brand/brand.dart';
+import 'package:single_store_ecommerce/components/brand/brand_item.dart';
+import 'package:single_store_ecommerce/components/card/showcase_brand_card.dart';
 import 'package:single_store_ecommerce/components/cart_counter_icon.dart';
-import 'package:single_store_ecommerce/components/circular_container.dart';
+import 'package:single_store_ecommerce/components/category/category_images.dart';
 import 'package:single_store_ecommerce/components/grid_layout.dart';
 import 'package:single_store_ecommerce/components/my_app_bar.dart';
+import 'package:single_store_ecommerce/components/my_tab_bar.dart';
 import 'package:single_store_ecommerce/components/search_form.dart';
 import 'package:single_store_ecommerce/components/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
@@ -21,20 +23,22 @@ class Store extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
 
-    return Scaffold(
-      appBar: MyAppBar(
-        showBackArrow: false,
-        title: Text(
-          MyTexts.appbarShopTitle,
-          style: Theme.of(context).textTheme.headlineMedium,
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        appBar: MyAppBar(
+          showBackArrow: false,
+          title: Text(
+            MyTexts.appbarShopTitle,
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          actions: [
+            CartCounterIcon(
+                color: isDarkMode ? MyColors.white : MyColors.black,
+                onPressed: () {}),
+          ],
         ),
-        actions: [
-          CartCounterIcon(
-              color: isDarkMode ? MyColors.white : MyColors.black,
-              onPressed: () {}),
-        ],
-      ),
-      body: SafeArea(
+        body: SafeArea(
           child: NestedScrollView(
               headerSliverBuilder: (_, innerBoxIsScrolled) {
                 return [
@@ -45,6 +49,8 @@ class Store extends StatelessWidget {
                     backgroundColor:
                         isDarkMode ? MyColors.black : MyColors.white,
                     expandedHeight: 440,
+
+                    // ---# Header
                     flexibleSpace: Padding(
                       padding: const EdgeInsets.all(MySizes.defaultSpace),
                       child: ListView(
@@ -74,36 +80,44 @@ class Store extends StatelessWidget {
                                 crossAxisCount: 2,
                                 children: [
                                   Brand(
-                                    image: AssetImage(
-                                      MyImages.brandNike,
+                                    BrandItemProp(
+                                      image: AssetImage(
+                                        MyImages.brandNike,
+                                      ),
+                                      brandName: MyTexts.brandNike,
+                                      totalProducts: "256",
+                                      verified: true,
                                     ),
-                                    brandName: MyTexts.brandNike,
-                                    totalProducts: "256",
-                                    verified: true,
                                   ),
                                   Brand(
-                                    image: AssetImage(
-                                      MyImages.brandNike,
+                                    BrandItemProp(
+                                      image: AssetImage(
+                                        MyImages.brandNike,
+                                      ),
+                                      brandName: MyTexts.brandNike,
+                                      totalProducts: "256",
+                                      verified: true,
                                     ),
-                                    brandName: MyTexts.brandNike,
-                                    totalProducts: "256",
-                                    verified: true,
                                   ),
                                   Brand(
-                                    image: AssetImage(
-                                      MyImages.brandNike,
+                                    BrandItemProp(
+                                      image: AssetImage(
+                                        MyImages.brandNike,
+                                      ),
+                                      brandName: MyTexts.brandNike,
+                                      totalProducts: "256",
+                                      verified: true,
                                     ),
-                                    brandName: MyTexts.brandNike,
-                                    totalProducts: "256",
-                                    verified: true,
                                   ),
                                   Brand(
-                                    image: AssetImage(
-                                      MyImages.brandNike,
+                                    BrandItemProp(
+                                      image: AssetImage(
+                                        MyImages.brandNike,
+                                      ),
+                                      brandName: MyTexts.brandNike,
+                                      totalProducts: "256",
+                                      verified: true,
                                     ),
-                                    brandName: MyTexts.brandNike,
-                                    totalProducts: "256",
-                                    verified: true,
                                   ),
                                 ],
                               ),
@@ -112,10 +126,59 @@ class Store extends StatelessWidget {
                         ].gap(height: MySizes.spaceBtwSections),
                       ),
                     ),
+
+                    // ---# Tabs
+                    bottom: const MyTabBar(
+                      tabs: [
+                        Tab(text: "Electronics"),
+                        Tab(text: "Sports"),
+                        Tab(text: "Furniture"),
+                        Tab(text: "Clothes"),
+                        Tab(text: "Store"),
+                      ],
+                    ),
                   ),
                 ];
               },
-              body: const SizedBox())),
+              body: TabBarView(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: MySizes.defaultSpace,
+                    ),
+                    child: Column(
+                      children: [
+                        // ---# Showcase brand
+                        ShowcaseBrandCard(
+                          const BrandItem(BrandItemProp(
+                              image: AssetImage(MyImages.brandNike),
+                              brandName: MyTexts.brandNike,
+                              verified: true,
+                              totalProducts: "256")),
+                          CategoryImages(props: [
+                            CategoryImageProp(
+                              imgUrl: MyImages.productImg1,
+                              onTap: () {},
+                            ),
+                            CategoryImageProp(
+                              imgUrl: MyImages.productImg2,
+                              onTap: () {},
+                            ),
+                            CategoryImageProp(
+                              imgUrl: MyImages.productImg3,
+                              onTap: () {},
+                            ),
+                          ]),
+                        ),
+
+                        Text("hello")
+                      ],
+                    ),
+                  ),
+                ],
+              )),
+        ),
+      ),
     );
   }
 }

@@ -36,6 +36,8 @@ class MyImages {
 
   // ---# products
   static const productImg1 = "assets/images/products/product-1.png";
+  static const productImg2 = "assets/images/products/NikeAirJOrdonBlackRed.png";
+  static const productImg3 = "assets/images/products/NikeAirJOrdonOrange.png";
 
   // ---# brands
   static const brandNike = "assets/icons/brands/nike.png";
