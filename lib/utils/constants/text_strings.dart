@@ -61,6 +61,7 @@ class MyTexts {
   static const appbarLabel = "Good day for shopping";
   static const appbarTitle = "Tailmoor Skinder";
   static const appbarShopTitle = "Shop";
+  static const appbarWishlistTitle = "Wishlist";
 
   // ---# Search bar
   static const searchBarPlaceholder = "Search in Store";

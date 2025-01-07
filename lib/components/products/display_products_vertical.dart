@@ -13,43 +13,45 @@ class DisplayProductsVerticalDetailsProp {
       {required this.thumbnail, required this.details});
 
   final ProductThumbnailProps thumbnail;
-  final ProductVerticalDetailsProp details;
+  final ProductVerticalDetailsProps details;
 }
 
 class DisplayProductsVerticalProps {
   const DisplayProductsVerticalProps(this.heading, this.products);
 
-  final SectionHeadingProps heading;
+  final SectionHeadingProps? heading;
   final List<DisplayProductsVerticalDetailsProp> products;
 }
 
 class DisplayProductsVertical extends StatelessWidget {
-  const DisplayProductsVertical(
-    this.props, {
-    super.key,
-  });
+  const DisplayProductsVertical(this.props,
+      {super.key,
+      this.margin = const EdgeInsets.only(top: MySizes.spaceBtwSections)});
 
   final DisplayProductsVerticalProps props;
+  final EdgeInsetsGeometry margin;
 
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
 
     return Container(
-      margin: const EdgeInsets.only(top: MySizes.spaceBtwSections),
+      margin: margin,
       color: isDarkMode ? MyColors.darkerGrey : MyColors.lightGrey,
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: MySizes.spaceBtwItems),
-            child: SectionHeading(SectionHeadingProps(
-              titleColor: props.heading.titleColor,
-              title: props.heading.title,
-              actionText: props.heading.actionText,
-              showActionButton: props.heading.showActionButton,
-            )),
-          ),
+          // ---# if heading is passed
+          if (props.heading != null)
+            Padding(
+              padding: const EdgeInsets.only(top: MySizes.spaceBtwItems),
+              child: SectionHeading(SectionHeadingProps(
+                titleColor: props.heading!.titleColor,
+                title: props.heading!.title,
+                actionText: props.heading!.actionText,
+                showActionButton: props.heading!.showActionButton,
+              )),
+            ),
           Padding(
             padding: const EdgeInsets.only(
               bottom: MySizes.defaultSpace,
@@ -71,7 +73,7 @@ class DisplayProductsVertical extends StatelessWidget {
                         ),
                       ),
                       ProductVerticalDetails(
-                        ProductVerticalDetailsProp(
+                        ProductVerticalDetailsProps(
                           name: info.details.name,
                           price: info.details.price,
                           brand: info.details.brand,

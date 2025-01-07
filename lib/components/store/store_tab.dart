@@ -23,7 +23,7 @@ class StoreTab extends StatelessWidget {
 
     return ListView(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       children: [
         Column(
           children: [
@@ -81,7 +81,7 @@ class StoreTab extends StatelessWidget {
                       onTapHeart: () {},
                       onTapImg: () {},
                     ),
-                    details: ProductVerticalDetailsProp(
+                    details: ProductVerticalDetailsProps(
                       name: "Green Nike Air Shoes",
                       price: "35.5",
                       brand: MyTexts.brandNike,
@@ -95,7 +95,7 @@ class StoreTab extends StatelessWidget {
                       onTapHeart: () {},
                       onTapImg: () {},
                     ),
-                    details: ProductVerticalDetailsProp(
+                    details: ProductVerticalDetailsProps(
                       name: "Green Nike Air Shoes",
                       price: "55.5",
                       brand: MyTexts.brandNike,
@@ -112,7 +112,7 @@ class StoreTab extends StatelessWidget {
                       onTapHeart: () {},
                       onTapImg: () {},
                     ),
-                    details: ProductVerticalDetailsProp(
+                    details: ProductVerticalDetailsProps(
                       name: "Green Nike Air Shoes",
                       price: "35.5",
                       brand: MyTexts.brandNike,
@@ -126,7 +126,7 @@ class StoreTab extends StatelessWidget {
                       onTapHeart: () {},
                       onTapImg: () {},
                     ),
-                    details: ProductVerticalDetailsProp(
+                    details: ProductVerticalDetailsProps(
                       name: "Green Nike Air Shoes",
                       price: "55.5",
                       brand: MyTexts.brandNike,
@@ -143,7 +143,7 @@ class StoreTab extends StatelessWidget {
                       onTapHeart: () {},
                       onTapImg: () {},
                     ),
-                    details: ProductVerticalDetailsProp(
+                    details: ProductVerticalDetailsProps(
                       name: "Green Nike Air Shoes",
                       price: "35.5",
                       brand: MyTexts.brandNike,
@@ -157,7 +157,7 @@ class StoreTab extends StatelessWidget {
                       onTapHeart: () {},
                       onTapImg: () {},
                     ),
-                    details: ProductVerticalDetailsProp(
+                    details: ProductVerticalDetailsProps(
                       name: "Green Nike Air Shoes",
                       price: "55.5",
                       brand: MyTexts.brandNike,

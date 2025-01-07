@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/brand/brand.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/components/card/showcase_brand_card.dart';
 import 'package:single_store_ecommerce/components/cart_counter_icon.dart';
-import 'package:single_store_ecommerce/components/category/category_images.dart';
 import 'package:single_store_ecommerce/components/grid_layout.dart';
 import 'package:single_store_ecommerce/components/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/my_tab_bar.dart';
-import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
-import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
 import 'package:single_store_ecommerce/components/search_form.dart';
 import 'package:single_store_ecommerce/components/section_heading.dart';
 import 'package:single_store_ecommerce/components/store/store_tab.dart';
@@ -71,13 +66,17 @@ class Store extends StatelessWidget {
                           Column(
                             children: [
                               // ---# Heading
-                              SectionHeading(SectionHeadingProps(
-                                titleColor: MyColors.black,
-                                title: MyTexts.headingFeatureBrands,
-                                showActionButton: true,
-                                actionText: MyTexts.headingActionBtnTxt,
-                                onPressed: () {},
-                              )),
+                              SectionHeading(
+                                SectionHeadingProps(
+                                  titleColor: isDarkMode
+                                      ? MyColors.light
+                                      : MyColors.black,
+                                  title: MyTexts.headingFeatureBrands,
+                                  showActionButton: true,
+                                  actionText: MyTexts.headingActionBtnTxt,
+                                  onPressed: () {},
+                                ),
+                              ),
 
                               // ---# Brands
                               const GridLayout(

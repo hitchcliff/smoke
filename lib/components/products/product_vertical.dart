@@ -12,19 +12,23 @@ class ProductVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ProductVerticalItem(
-      thumbnail: ProductThumbnail(
-        imgUrl: MyImages.productImg1,
-        onTapHeart: () {},
-        onTapImg: () {},
-        saleTxt: "25%",
-        onSale: true,
-        isWishlist: true,
+      ProductThumbnail(
+        ProductThumbnailProps(
+          imgUrl: MyImages.productImg1,
+          onTapHeart: () {},
+          onTapImg: () {},
+          saleTxt: "25%",
+          onSale: true,
+          isWishlist: true,
+        ),
       ),
-      details: ProductVerticalDetails(
-        name: "Green Nike Air Shoes",
-        price: "35.5",
-        brand: "Nike",
-        onTap: () {},
+      ProductVerticalDetails(
+        ProductVerticalDetailsProps(
+          name: "Green Nike Air Shoes",
+          price: "35.5",
+          brand: "Nike",
+          onTap: () {},
+        ),
       ),
     );
   }

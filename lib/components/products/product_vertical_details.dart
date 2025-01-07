@@ -5,8 +5,8 @@ import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
-class ProductVerticalDetailsProp {
-  const ProductVerticalDetailsProp({
+class ProductVerticalDetailsProps {
+  const ProductVerticalDetailsProps({
     required this.name,
     required this.brand,
     this.price = "0",
@@ -27,7 +27,7 @@ class ProductVerticalDetails extends StatelessWidget {
     super.key,
   });
 
-  final ProductVerticalDetailsProp prop;
+  final ProductVerticalDetailsProps prop;
 
   @override
   Widget build(BuildContext context) {

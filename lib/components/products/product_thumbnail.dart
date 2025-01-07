@@ -78,7 +78,7 @@ class ProductThumbnail extends StatelessWidget {
               onTap: props.onTapHeart,
               child: const Icon(
                 FontAwesomeIcons.solidHeart,
-                color: MyColors.primary,
+                color: MyColors.heart,
               ),
             ),
           )

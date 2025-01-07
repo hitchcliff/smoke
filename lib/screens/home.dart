@@ -82,7 +82,7 @@ class Home extends StatelessWidget {
                         onTapHeart: () {},
                         onTapImg: () {},
                       ),
-                      details: ProductVerticalDetailsProp(
+                      details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
                         price: "35.5",
                         brand: MyTexts.brandNike,
@@ -96,7 +96,7 @@ class Home extends StatelessWidget {
                         onTapHeart: () {},
                         onTapImg: () {},
                       ),
-                      details: ProductVerticalDetailsProp(
+                      details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
                         price: "55.5",
                         brand: MyTexts.brandNike,
@@ -113,7 +113,7 @@ class Home extends StatelessWidget {
                         onTapHeart: () {},
                         onTapImg: () {},
                       ),
-                      details: ProductVerticalDetailsProp(
+                      details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
                         price: "35.5",
                         brand: MyTexts.brandNike,
@@ -127,7 +127,7 @@ class Home extends StatelessWidget {
                         onTapHeart: () {},
                         onTapImg: () {},
                       ),
-                      details: ProductVerticalDetailsProp(
+                      details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
                         price: "55.5",
                         brand: MyTexts.brandNike,
@@ -144,7 +144,7 @@ class Home extends StatelessWidget {
                         onTapHeart: () {},
                         onTapImg: () {},
                       ),
-                      details: ProductVerticalDetailsProp(
+                      details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
                         price: "35.5",
                         brand: MyTexts.brandNike,
@@ -158,7 +158,7 @@ class Home extends StatelessWidget {
                         onTapHeart: () {},
                         onTapImg: () {},
                       ),
-                      details: ProductVerticalDetailsProp(
+                      details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
                         price: "55.5",
                         brand: MyTexts.brandNike,
