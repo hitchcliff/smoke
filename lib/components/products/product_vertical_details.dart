@@ -44,14 +44,14 @@ class ProductVerticalDetails extends StatelessWidget {
           // product name
           Text(
             prop.name,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           // brand
           Row(
             children: [
               Text(
                 prop.brand,
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               if (prop.verified)
                 const Icon(
