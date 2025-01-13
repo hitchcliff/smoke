@@ -11,7 +11,10 @@ class MyOutlineButtonTheme {
         fontSize: MySizes.fontSizeMd,
         fontWeight: FontWeight.w600,
       ),
-      padding: const EdgeInsets.symmetric(vertical: MySizes.buttonHeight),
+      padding: const EdgeInsets.symmetric(
+        vertical: MySizes.buttonHeight,
+        horizontal: MySizes.defaultSpace,
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(MySizes.buttonRadius),
       ),
@@ -27,7 +30,10 @@ class MyOutlineButtonTheme {
         fontSize: MySizes.fontSizeMd,
         fontWeight: FontWeight.w600,
       ),
-      padding: const EdgeInsets.symmetric(vertical: MySizes.buttonHeight),
+      padding: const EdgeInsets.symmetric(
+        vertical: MySizes.buttonHeight,
+        horizontal: MySizes.defaultSpace,
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(MySizes.buttonRadius),
       ),

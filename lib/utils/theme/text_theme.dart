@@ -29,6 +29,11 @@ class MyTextTheme {
         fontSize: 12.0,
         fontWeight: FontWeight.normal,
         color: MyColors.dark.withOpacity(0.5)),
+    labelSmall: const TextStyle().copyWith(
+        fontSize: 10.0,
+        fontStyle: FontStyle.italic,
+        fontWeight: FontWeight.normal,
+        color: MyColors.dark.withOpacity(0.5)),
   );
 
   static TextTheme darkTextTheme = TextTheme(
@@ -58,5 +63,10 @@ class MyTextTheme {
         fontSize: 12.0,
         fontWeight: FontWeight.normal,
         color: MyColors.light.withOpacity(0.5)),
+    labelSmall: const TextStyle().copyWith(
+        fontSize: 10.0,
+        fontStyle: FontStyle.italic,
+        fontWeight: FontWeight.normal,
+        color: MyColors.white.withOpacity(0.8)),
   );
 }
