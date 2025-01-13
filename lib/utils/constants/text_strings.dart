@@ -72,7 +72,9 @@ class MyTexts {
   static const headingActionBtnTxt = "View All";
   static const headingFeatureBrands = "Feature Brands";
   static const headingYouMightLike = "You Might Like";
+  static const headingAccountSettings = "Account Settings";
+  static const headingAppSettings = "App Settings";
 
-  // ---# ---# Brands
+  // ---# Brands
   static const brandNike = "Nike";
 }

@@ -41,4 +41,7 @@ class MyImages {
 
   // ---# brands
   static const brandNike = "assets/icons/brands/nike.png";
+
+  // ---# profile
+  static const profileImg = "assets/images/content/user.png";
 }

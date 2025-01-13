@@ -85,6 +85,7 @@ class DynamicSliverAppBar extends StatefulWidget {
   final CustomClipper<Path>? appBarClipper;
 
   @override
+  // ignore: library_private_types_in_public_api
   _DynamicSliverAppBarState createState() => _DynamicSliverAppBarState();
 }
 
@@ -133,8 +134,8 @@ class _DynamicSliverAppBarState extends State<DynamicSliverAppBar> {
                   vertical: MediaQuery.paddingOf(context).top / 2),
               child: Container(
                   key: _childKey,
-                  child:
-                      widget.flexibleSpace ?? SizedBox(height: kToolbarHeight)),
+                  child: widget.flexibleSpace ??
+                      const SizedBox(height: kToolbarHeight)),
             ),
             Positioned.fill(
               // 10 is the magic number which the app bar is pushed down within the sliver app bar. Couldnt find exactly where this number

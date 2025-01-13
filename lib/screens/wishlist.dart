@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:single_store_ecommerce/components/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
-import 'package:single_store_ecommerce/components/products/product_item.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_vertical.dart';
 import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
@@ -30,6 +28,7 @@ class Wishlist extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            // ---# List of products
             DisplayProductsVertical(
               margin: EdgeInsets.zero,
               DisplayProductsVerticalProps(
