@@ -18,22 +18,22 @@ class MyTextTheme {
     bodyLarge: const TextStyle().copyWith(
         fontSize: 14.0, fontWeight: FontWeight.w500, color: MyColors.dark),
     bodyMedium: const TextStyle().copyWith(
-        fontSize: 14.0, fontWeight: FontWeight.normal, color: MyColors.dark),
+        fontSize: 14.0, fontWeight: FontWeight.w400, color: MyColors.dark),
     bodySmall: const TextStyle().copyWith(
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        color: MyColors.dark.withOpacity(0.5)),
+        fontSize: 14.0, fontWeight: FontWeight.w300, color: MyColors.dark),
     labelLarge: const TextStyle().copyWith(
-        fontSize: 12.0, fontWeight: FontWeight.normal, color: MyColors.dark),
+        fontSize: 12.0,
+        fontWeight: FontWeight.w500,
+        color: MyColors.dark.withOpacity(0.8)),
     labelMedium: const TextStyle().copyWith(
         fontSize: 12.0,
-        fontWeight: FontWeight.normal,
-        color: MyColors.dark.withOpacity(0.5)),
+        fontWeight: FontWeight.w400,
+        color: MyColors.dark.withOpacity(0.8)),
     labelSmall: const TextStyle().copyWith(
-        fontSize: 10.0,
+        fontSize: 12.0,
         fontStyle: FontStyle.italic,
-        fontWeight: FontWeight.normal,
-        color: MyColors.dark.withOpacity(0.5)),
+        fontWeight: FontWeight.w300,
+        color: MyColors.dark.withOpacity(0.8)),
   );
 
   static TextTheme darkTextTheme = TextTheme(
@@ -52,21 +52,21 @@ class MyTextTheme {
     bodyLarge: const TextStyle().copyWith(
         fontSize: 14.0, fontWeight: FontWeight.w500, color: MyColors.light),
     bodyMedium: const TextStyle().copyWith(
-        fontSize: 14.0, fontWeight: FontWeight.normal, color: MyColors.light),
+        fontSize: 14.0, fontWeight: FontWeight.w400, color: MyColors.light),
     bodySmall: const TextStyle().copyWith(
-        fontSize: 14.0,
-        fontWeight: FontWeight.w500,
-        color: MyColors.light.withOpacity(0.5)),
+        fontSize: 14.0, fontWeight: FontWeight.w300, color: MyColors.light),
     labelLarge: const TextStyle().copyWith(
-        fontSize: 12.0, fontWeight: FontWeight.normal, color: MyColors.light),
+        fontSize: 12.0,
+        fontWeight: FontWeight.w500,
+        color: MyColors.light.withOpacity(0.8)),
     labelMedium: const TextStyle().copyWith(
         fontSize: 12.0,
-        fontWeight: FontWeight.normal,
-        color: MyColors.light.withOpacity(0.5)),
+        fontWeight: FontWeight.w400,
+        color: MyColors.light.withOpacity(0.8)),
     labelSmall: const TextStyle().copyWith(
-        fontSize: 10.0,
+        fontSize: 12.0,
         fontStyle: FontStyle.italic,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.w300,
         color: MyColors.white.withOpacity(0.8)),
   );
 }
