@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/fullscreen_container.dart';
+import 'package:single_store_ecommerce/components/containers/fullscreen_container.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';

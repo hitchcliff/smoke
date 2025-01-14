@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/close_app_bar.dart';
-import 'package:single_store_ecommerce/components/fullscreen_container.dart';
-import 'package:single_store_ecommerce/components/register_form.dart';
-import 'package:single_store_ecommerce/components/signin_with.dart';
+import 'package:single_store_ecommerce/components/bars/close_app_bar.dart';
+import 'package:single_store_ecommerce/components/containers/fullscreen_container.dart';
+import 'package:single_store_ecommerce/components/forms/register_form.dart';
+import 'package:single_store_ecommerce/components/forms/signin_with.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';

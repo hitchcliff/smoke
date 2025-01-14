@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/header_wrapper.dart';
-import 'package:single_store_ecommerce/components/my_app_bar.dart';
+import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
+import 'package:single_store_ecommerce/components/bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/settings/account_settings.dart';
 import 'package:single_store_ecommerce/components/settings/app_settings.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';

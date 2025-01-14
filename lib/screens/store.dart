@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/brand/brand.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/components/cart_counter_icon.dart';
-import 'package:single_store_ecommerce/components/dynamic_sliver_appbar.dart';
-import 'package:single_store_ecommerce/components/grid_layout.dart';
-import 'package:single_store_ecommerce/components/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/my_tab_bar.dart';
-import 'package:single_store_ecommerce/components/search_form.dart';
-import 'package:single_store_ecommerce/components/section_heading.dart';
+import 'package:single_store_ecommerce/components/icons/cart_counter_icon.dart';
+import 'package:single_store_ecommerce/components/widgets/dynamic_sliver_appbar.dart';
+import 'package:single_store_ecommerce/components/grid_layouts/grid_layout.dart';
+import 'package:single_store_ecommerce/components/bars/my_app_bar.dart';
+import 'package:single_store_ecommerce/components/bars/my_tab_bar.dart';
+import 'package:single_store_ecommerce/components/forms/search_form.dart';
+import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/components/store/store_tab.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
@@ -78,7 +78,7 @@ class Store extends StatelessWidget {
                                 ),
                               ),
 
-                              // ---# Brands
+                              // ---# Feature Brands
                               const GridLayout(
                                 crossAxisCount: 2,
                                 children: [

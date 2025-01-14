@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/circular_container.dart';
-import 'package:single_store_ecommerce/components/rounded_image.dart';
+import 'package:single_store_ecommerce/components/containers/circular_container.dart';
+import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
 import 'package:single_store_ecommerce/controllers/home_slider_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';

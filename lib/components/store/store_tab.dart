@@ -5,7 +5,7 @@ import 'package:single_store_ecommerce/components/category/category_images.dart'
 import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
-import 'package:single_store_ecommerce/components/section_heading.dart';
+import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';

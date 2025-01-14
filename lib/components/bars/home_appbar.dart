@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/cart_counter_icon.dart';
-import 'package:single_store_ecommerce/components/my_app_bar.dart';
+import 'package:single_store_ecommerce/components/icons/cart_counter_icon.dart';
+import 'package:single_store_ecommerce/components/bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
