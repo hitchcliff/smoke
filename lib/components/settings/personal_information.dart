@@ -5,6 +5,7 @@ import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class PersonalInformation extends StatelessWidget {
   const PersonalInformation({
@@ -13,12 +14,14 @@ class PersonalInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyHelpers.isDarkMode(context);
+
     return Column(
       children: [
-        const SectionHeading(
+        SectionHeading(
           SectionHeadingProps(
             title: MyTexts.settingsPersonalInformation,
-            titleColor: MyColors.black,
+            titleColor: isDarkMode ? MyColors.white : MyColors.black,
           ),
         ),
         Column(
