@@ -62,6 +62,7 @@ class MyTexts {
   static const appbarTitle = "Tailmoor Skinder";
   static const appbarShopTitle = "Shop";
   static const appbarWishlistTitle = "Wishlist";
+  static const appbarProfile = "Profile";
 
   // ---# Search bar
   static const searchBarPlaceholder = "Search in Store";
@@ -77,4 +78,16 @@ class MyTexts {
 
   // ---# Brands
   static const brandNike = "Nike";
+
+  // ---# Settings
+  static const settingsChangeProfile = "Change Profile Picture";
+  static const settingsProfileInformation = "Profile Information";
+  static const settingsPersonalInformation = "Personal Information";
+  static const settingsName = "Name";
+  static const settingsUsername = "Username";
+  static const settingsUserId = "User ID";
+  static const settingsEmail = "E-mail";
+  static const settingsPhoneNumber = "Phone Number";
+  static const settingsGender = "Gender";
+  static const settingsDateOfBirth = "Date of Birth";
 }

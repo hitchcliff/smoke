@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/header_wrapper.dart';
 import 'package:single_store_ecommerce/components/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/settings/account_settings.dart';
 import 'package:single_store_ecommerce/components/settings/app_settings.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/screens/user_info.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -60,7 +62,9 @@ class Profile extends StatelessWidget {
                           FontAwesomeIcons.penToSquare,
                           color: MyColors.white,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => const UserInfo());
+                        },
                       ),
                     ),
                     const SizedBox(

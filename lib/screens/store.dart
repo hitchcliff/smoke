@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/brand/brand.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
 import 'package:single_store_ecommerce/components/cart_counter_icon.dart';
+import 'package:single_store_ecommerce/components/dynamic_sliver_appbar.dart';
 import 'package:single_store_ecommerce/components/grid_layout.dart';
 import 'package:single_store_ecommerce/components/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/my_tab_bar.dart';
@@ -41,13 +42,12 @@ class Store extends StatelessWidget {
           child: NestedScrollView(
               headerSliverBuilder: (_, innerBoxIsScrolled) {
                 return [
-                  SliverAppBar(
+                  DynamicSliverAppBar(
                     automaticallyImplyLeading: false,
                     pinned: true,
                     floating: true,
                     backgroundColor:
                         isDarkMode ? MyColors.black : MyColors.white,
-                    expandedHeight: 440,
 
                     // ---# Header
                     flexibleSpace: Padding(
@@ -125,7 +125,11 @@ class Store extends StatelessWidget {
                                 ],
                               ),
                             ].gap(height: MySizes.spaceBtwItems),
-                          )
+                          ),
+
+                          const SizedBox(
+                            height: MySizes.spaceBtwItems,
+                          ),
                         ].gap(height: MySizes.spaceBtwSections),
                       ),
                     ),
