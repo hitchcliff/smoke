@@ -37,7 +37,7 @@ class DisplayProductsVertical extends StatelessWidget {
 
     return Container(
       margin: margin,
-      color: isDarkMode ? MyColors.darkerGrey : MyColors.lightGrey,
+      color: isDarkMode ? MyColors.dark : MyColors.lightGrey,
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
       child: Column(
         children: [

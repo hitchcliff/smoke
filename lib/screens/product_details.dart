@@ -68,6 +68,9 @@ class ProductDetails extends StatelessWidget {
                               left: MySizes.spaceBtwItems,
                             ),
                             child: RoundedImage(
+                              color: isDarkMode
+                                  ? MyColors.darkGrey
+                                  : MyColors.white,
                               onTap: () {},
                               imgUrl: MyImages.productImg2,
                             ),

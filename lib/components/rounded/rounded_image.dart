@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class RoundedImage extends StatelessWidget {
   const RoundedImage({
@@ -22,6 +23,8 @@ class RoundedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MyHelpers.isDarkMode(context);
+
     return GestureDetector(
       onTap: onTap,
       child: ClipRRect(
