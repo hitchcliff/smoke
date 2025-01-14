@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/widgets/app_scroll_behavior.dart';
@@ -16,7 +18,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: MyTexts.appName,
-      themeMode: ThemeMode.light, // ThemeMode.system
+      themeMode: ThemeMode.dark, // ThemeMode.system
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,

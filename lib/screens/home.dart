@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
 import 'package:single_store_ecommerce/components/bars/home_appbar.dart';
 import 'package:single_store_ecommerce/components/products/product_categories.dart';
@@ -10,6 +11,7 @@ import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
 import 'package:single_store_ecommerce/components/forms/search_form.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/screens/product_details.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -80,7 +82,7 @@ class Home extends StatelessWidget {
                         saleTxt: "25%",
                         onSale: true,
                         onTapHeart: () {},
-                        onTapImg: () {},
+                        onTapImg: () => Get.to(() => const ProductDetails()),
                       ),
                       details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",
