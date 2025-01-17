@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:single_store_ecommerce/components/brand/brand_icon.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -47,19 +48,9 @@ class ProductVerticalDetails extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           // brand
-          Row(
-            children: [
-              Text(
-                prop.brand,
-                style: Theme.of(context).textTheme.bodyMedium,
-              ),
-              if (prop.verified)
-                const Icon(
-                  FontAwesomeIcons.solidCircleCheck,
-                  color: MyColors.verified,
-                  size: MySizes.iconSm,
-                )
-            ].gap(width: MySizes.sm),
+          BrandIcon(
+            name: prop.brand,
+            verified: prop.verified,
           ),
           // price
           Row(

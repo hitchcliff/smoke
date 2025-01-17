@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
+import 'package:single_store_ecommerce/components/texts/on_sale.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
@@ -53,19 +54,8 @@ class ProductThumbnail extends StatelessWidget {
           Positioned(
             top: 20,
             left: 5,
-            child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: MySizes.cardSaleHPadding,
-                vertical: MySizes.cardSaleVPadding,
-              ),
-              decoration: BoxDecoration(
-                color: MyColors.secondary,
-                borderRadius: BorderRadius.circular(
-                  MySizes.cardSaleRadius,
-                ),
-              ),
-              child: Text(props.saleTxt,
-                  style: Theme.of(context).textTheme.labelSmall),
+            child: OnSale(
+              saleTxt: props.saleTxt,
             ),
           ),
 
