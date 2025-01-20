@@ -37,10 +37,10 @@ class ProductHero extends StatelessWidget {
             ),
 
             // ---# Product
-            ProductImg(),
+            const ProductImg(),
 
             // ---# Variations
-            ProductVariations(),
+            const ProductVariations(),
           ],
         ),
       ),
