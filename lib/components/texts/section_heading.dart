@@ -6,7 +6,7 @@ class SectionHeadingProps {
   const SectionHeadingProps({
     required this.title,
     this.showActionButton = false,
-    this.actionText = "view all",
+    this.actionText = "View All",
     this.titleColor = MyColors.white,
     this.onPressed,
   });

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:single_store_ecommerce/components/bars/addtocart_app_bar.dart';
+import 'package:single_store_ecommerce/components/products/product_description.dart';
 import 'package:single_store_ecommerce/components/products/product_hero.dart';
 import 'package:single_store_ecommerce/components/products/product_metadata.dart';
+import 'package:single_store_ecommerce/components/products/product_reviews.dart';
 import 'package:single_store_ecommerce/components/products/product_variation.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
@@ -12,6 +15,7 @@ class ProductDetails extends StatelessWidget {
     bool isDarkMode = MyHelpers.isDarkMode(context);
 
     return const Scaffold(
+      bottomNavigationBar: AddToCartAppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -23,7 +27,13 @@ class ProductDetails extends StatelessWidget {
               ProductMetadata(),
 
               // ---# Variations
-              ProductVariation()
+              ProductVariation(),
+
+              // ---# Decription
+              ProductDescription(),
+
+              // ---# Reviews
+              ProductReviews(),
             ],
           ),
         ),

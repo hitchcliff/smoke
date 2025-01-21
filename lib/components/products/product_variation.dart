@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/chips/variation_chip.dart';
-import 'package:single_store_ecommerce/components/containers/circular_container.dart';
 import 'package:single_store_ecommerce/components/products/product_variation_info.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
-import 'package:single_store_ecommerce/components/texts/label_text.dart';
-import 'package:single_store_ecommerce/components/texts/linethrough_text.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
@@ -31,7 +27,7 @@ class ProductVariation extends StatelessWidget {
                   VariationChip(
                     "Green",
                     onSelected: (value) {},
-                    selected: false,
+                    selected: true,
                   ),
                   VariationChip(
                     "Blue",
@@ -58,7 +54,7 @@ class ProductVariation extends StatelessWidget {
                   VariationChip(
                     "35 EU",
                     onSelected: (value) {},
-                    selected: false,
+                    selected: true,
                   ),
                   VariationChip(
                     "36 EU",
@@ -73,6 +69,15 @@ class ProductVariation extends StatelessWidget {
                 ].gap(width: MySizes.spaceBtwItems),
               ),
             ].gap(height: MySizes.spaceBtwItems),
+          ),
+
+          // ---# Checkout
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const BodyText("Checkout"),
+            ),
           ),
         ].gap(height: MySizes.spaceBtwSections),
       ),
