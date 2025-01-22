@@ -5,15 +5,12 @@ import 'package:single_store_ecommerce/components/products/product_hero.dart';
 import 'package:single_store_ecommerce/components/products/product_metadata.dart';
 import 'package:single_store_ecommerce/components/products/product_reviews.dart';
 import 'package:single_store_ecommerce/components/products/product_variation.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
-class ProductDetails extends StatelessWidget {
-  const ProductDetails({super.key});
+class ProductDetailScreen extends StatelessWidget {
+  const ProductDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = MyHelpers.isDarkMode(context);
-
     return const Scaffold(
       bottomNavigationBar: AddToCartAppBar(),
       body: SafeArea(

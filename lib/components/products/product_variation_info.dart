@@ -7,6 +7,7 @@ import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductVariationInfo extends StatelessWidget {
   const ProductVariationInfo({
@@ -15,18 +16,22 @@ class ProductVariationInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = MyHelpers.isDarkMode(context);
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(MySizes.cardRadius),
-        color: MyColors.darkerGrey,
+        color: isDark ? MyColors.darkerGrey : MyColors.grey,
       ),
       padding: const EdgeInsets.all(MySizes.md),
       child: Column(
         children: [
           Row(
             children: [
-              const SectionHeading(
-                SectionHeadingProps(title: "Variation"),
+              SectionHeading(
+                SectionHeadingProps(
+                    titleColor: MyHelpers.textColor(context: context),
+                    title: "Variation"),
               ),
               Column(
                 children: [

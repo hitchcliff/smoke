@@ -6,6 +6,7 @@ import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductVariation extends StatelessWidget {
   const ProductVariation({super.key});
@@ -19,10 +20,15 @@ class ProductVariation extends StatelessWidget {
           const ProductVariationInfo(),
           // ---# Color
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SectionHeading(SectionHeadingProps(title: "Colors")),
+              SectionHeading(SectionHeadingProps(
+                title: "Colors",
+                titleColor: MyHelpers.textColor(context: context),
+              )),
               Wrap(
-                alignment: WrapAlignment.center,
+                alignment: WrapAlignment.start,
+                runSpacing: MySizes.spaceBtwItems,
                 children: [
                   VariationChip(
                     "Green",
@@ -46,10 +52,15 @@ class ProductVariation extends StatelessWidget {
 
           // ---# Size
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SectionHeading(SectionHeadingProps(title: "Colors")),
+              SectionHeading(SectionHeadingProps(
+                title: "Size",
+                titleColor: MyHelpers.textColor(context: context),
+              )),
               Wrap(
-                alignment: WrapAlignment.center,
+                alignment: WrapAlignment.start,
+                runSpacing: MySizes.spaceBtwItems,
                 children: [
                   VariationChip(
                     "35 EU",
@@ -76,7 +87,7 @@ class ProductVariation extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
-              child: const BodyText("Checkout"),
+              child: const BodyText("Checkout", color: MyColors.white),
             ),
           ),
         ].gap(height: MySizes.spaceBtwSections),

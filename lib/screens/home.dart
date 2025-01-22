@@ -82,7 +82,8 @@ class Home extends StatelessWidget {
                         saleTxt: "25%",
                         onSale: true,
                         onTapHeart: () {},
-                        onTapImg: () => Get.to(() => const ProductDetails()),
+                        onTapImg: () =>
+                            Get.to(() => const ProductDetailScreen()),
                       ),
                       details: ProductVerticalDetailsProps(
                         name: "Green Nike Air Shoes",

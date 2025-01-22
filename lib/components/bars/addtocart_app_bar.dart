@@ -6,14 +6,19 @@ import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class AddToCartAppBar extends StatelessWidget {
   const AddToCartAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = MyHelpers.isDarkMode(context);
+
     return Container(
-      decoration: const BoxDecoration(color: MyColors.dark),
+      decoration: BoxDecoration(
+        color: isDark ? MyColors.darkerGrey : MyColors.grey,
+      ),
       padding: const EdgeInsets.all(MySizes.md),
       child: Row(
         children: [
@@ -40,7 +45,7 @@ class AddToCartAppBar extends StatelessWidget {
                     horizontal: MySizes.md, vertical: MySizes.md),
               ),
             ),
-            child: const BodyText("Add to cart"),
+            child: const BodyText("Add to cart", color: MyColors.white),
           ),
         ],
       ),

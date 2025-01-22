@@ -4,6 +4,7 @@ import 'package:single_store_ecommerce/utils/helpers/getColor.dart';
 import 'package:single_store_ecommerce/utils/helpers/isDark.dart';
 import 'package:single_store_ecommerce/utils/helpers/screenHeight.dart';
 import 'package:single_store_ecommerce/utils/helpers/screenWidth.dart';
+import 'package:single_store_ecommerce/utils/helpers/text_color.dart';
 
 class MyHelpers {
   static double screenWidth() {
@@ -24,5 +25,10 @@ class MyHelpers {
 
   static Color? getColor(String text) {
     return kGetColor(text);
+  }
+
+  static Color textColor(
+      {required BuildContext context, TextColor? textColor}) {
+    return kTextColor(context: context, textColor: textColor);
   }
 }

@@ -26,11 +26,7 @@ class VariationChip extends StatelessWidget {
       selectedColor: MyColors.primary,
       backgroundColor: isColor ? MyHelpers.getColor(text)! : MyColors.primary,
       checkmarkColor: MyColors.white,
-      label: isColor
-          ? const SizedBox()
-          : BodyText(
-              text,
-            ),
+      label: isColor ? const SizedBox() : BodyText(text, color: MyColors.white),
       labelStyle: TextStyle(
         color: selected ? MyColors.white : null,
       ),

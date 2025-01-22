@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
@@ -16,9 +15,10 @@ class ProductReviews extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
       child: Row(
         children: [
-          const Expanded(
+          Expanded(
             child: SectionHeading(
               SectionHeadingProps(
+                titleColor: MyHelpers.textColor(context: context),
                 title: "Reviews(150)",
               ),
             ),
@@ -26,7 +26,7 @@ class ProductReviews extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: const Icon(FontAwesomeIcons.angleRight),
-            color: isDark ? MyColors.white : MyColors.black,
+            color: MyHelpers.textColor(context: context),
           ),
         ],
       ),
