@@ -9,6 +9,6 @@ class LabelText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(s,
-        style: Theme.of(context).textTheme.labelMedium?.apply(color: color));
+        style: Theme.of(context).textTheme.bodyMedium?.apply(color: color));
   }
 }

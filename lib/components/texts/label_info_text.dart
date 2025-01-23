@@ -10,7 +10,7 @@ class LabelInfoText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Theme.of(context).textTheme.bodyMedium?.apply(color: color),
+      style: Theme.of(context).textTheme.labelMedium?.apply(color: color),
     );
   }
 }

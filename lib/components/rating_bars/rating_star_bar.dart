@@ -5,10 +5,12 @@ import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 
 class RatingStarBar extends StatelessWidget {
-  const RatingStarBar(this.text, {super.key, required this.rating});
+  const RatingStarBar(this.text,
+      {super.key, required this.rating, this.direction = Axis.horizontal});
 
   final String text;
   final double rating;
+  final Axis direction;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class RatingStarBar extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         RatingBarIndicator(
-          direction: Axis.horizontal,
+          direction: direction,
           itemSize: 15,
           itemCount: 5,
           rating: rating,
@@ -27,7 +29,7 @@ class RatingStarBar extends StatelessWidget {
             color: MyColors.star,
           ),
         ),
-        LabelInfoText(text),
+        if (text.isNotEmpty) LabelInfoText(text),
       ],
     );
   }

@@ -44,4 +44,8 @@ class MyImages {
 
   // ---# profile
   static const profileImg = "assets/images/content/user.png";
+
+  // ---# Reviewers profile
+  static const reviewersImg1 =
+      "assets/images/reviews/review_profile_image_1.jpg";
 }
