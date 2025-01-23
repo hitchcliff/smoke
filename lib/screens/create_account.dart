@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/bars/close_app_bar.dart';
+import 'package:single_store_ecommerce/components/app_bars/close_app_bar.dart';
 import 'package:single_store_ecommerce/components/containers/fullscreen_container.dart';
 import 'package:single_store_ecommerce/components/forms/register_form.dart';
 import 'package:single_store_ecommerce/components/forms/signin_with.dart';

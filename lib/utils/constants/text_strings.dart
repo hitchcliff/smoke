@@ -90,4 +90,8 @@ class MyTexts {
   static const settingsPhoneNumber = "Phone Number";
   static const settingsGender = "Gender";
   static const settingsDateOfBirth = "Date of Birth";
+
+  // Reviews & Ratings
+  static const reviewsRatingsDescription =
+      "Ratings and reviews are verified and re from people who use the same type of device that you use.";
 }
