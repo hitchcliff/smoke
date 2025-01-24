@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:readmore/readmore.dart';
 import 'package:single_store_ecommerce/components/texts/collapse_text.dart';
 import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
 import 'package:single_store_ecommerce/components/texts/label_text.dart';
