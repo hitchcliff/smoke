@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/components/tile/menu_tile.dart';
+import 'package:single_store_ecommerce/screens/my_address.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
@@ -28,13 +30,16 @@ class AccountSettings extends StatelessWidget {
               titleColor: isDarkMode ? MyColors.white : MyColors.black,
             ),
           ),
-          const Column(
+          Column(
             children: [
               MenuTile(
                 MenuTileProps(
                   leadingIcon: FontAwesomeIcons.house,
                   title: "My Address",
                   subtitle: "Set shopping delivery address",
+                  onTap: () {
+                    Get.to(() => const MyAddressScreen());
+                  },
                 ),
               ),
               MenuTile(
@@ -42,6 +47,7 @@ class AccountSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.cartShopping,
                   title: "My Cart",
                   subtitle: "Add, remove products and move to checkout",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -49,6 +55,7 @@ class AccountSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.house,
                   title: "My Orders",
                   subtitle: "In-progress and Completed Orders",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -56,6 +63,7 @@ class AccountSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.buildingColumns,
                   title: "Bank Account",
                   subtitle: "Withdraw balance to registered bank account",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -63,6 +71,7 @@ class AccountSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.ticket,
                   title: "My Coupons",
                   subtitle: "List of all the discounted coupons",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -70,6 +79,7 @@ class AccountSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.bell,
                   title: "Notifications",
                   subtitle: "Set any kind of notification message",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -77,6 +87,7 @@ class AccountSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.lock,
                   title: "Account Privacy",
                   subtitle: "Manage data usage and connected accounts",
+                  onTap: () {},
                 ),
               ),
             ],

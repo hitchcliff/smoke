@@ -7,12 +7,14 @@ class MenuTileProps {
     required this.title,
     required this.subtitle,
     this.icon,
+    required this.onTap,
   });
 
   final IconData leadingIcon;
   final String title;
   final String subtitle;
   final IconData? icon;
+  final Function()? onTap;
 }
 
 class MenuTile extends StatelessWidget {
@@ -24,6 +26,7 @@ class MenuTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+        onTap: props.onTap,
         leading: Icon(props.leadingIcon, color: MyColors.primary),
         title: Text(
           props.title,

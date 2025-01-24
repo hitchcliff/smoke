@@ -5,7 +5,7 @@ import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 class MyInputDecorationTheme {
   static InputDecorationTheme light = InputDecorationTheme(
     suffixIconColor: MyColors.grey,
-    prefixIconColor: MyColors.grey,
+    prefixIconColor: MyColors.darkerGrey,
     labelStyle:
         const TextStyle(fontSize: MySizes.fontSizeMd, color: MyColors.black),
     border: const OutlineInputBorder().copyWith(

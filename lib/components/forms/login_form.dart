@@ -15,6 +15,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // email field
           TextFormField(

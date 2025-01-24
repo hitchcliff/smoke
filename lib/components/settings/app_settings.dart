@@ -30,11 +30,12 @@ class AppSettings extends StatelessWidget {
           ),
           Column(
             children: [
-              const MenuTile(
+              MenuTile(
                 MenuTileProps(
                   leadingIcon: FontAwesomeIcons.database,
                   title: "Load Data",
                   subtitle: "upload Data to your Cloud Firebase",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -42,10 +43,11 @@ class AppSettings extends StatelessWidget {
                   value: false,
                   onChanged: (value) {},
                 ),
-                const MenuTileProps(
+                MenuTileProps(
                   leadingIcon: FontAwesomeIcons.mapPin,
                   title: "Geolocation",
                   subtitle: "Set recommendation based on location",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -53,10 +55,11 @@ class AppSettings extends StatelessWidget {
                   value: false,
                   onChanged: (value) {},
                 ),
-                const MenuTileProps(
+                MenuTileProps(
                   leadingIcon: FontAwesomeIcons.triangleExclamation,
                   title: "Safe Mode",
                   subtitle: "Search result is safe for all ages",
+                  onTap: () {},
                 ),
               ),
               MenuTile(
@@ -64,10 +67,11 @@ class AppSettings extends StatelessWidget {
                   value: false,
                   onChanged: (value) {},
                 ),
-                const MenuTileProps(
+                MenuTileProps(
                   leadingIcon: FontAwesomeIcons.image,
                   title: "HD Image Quality",
                   subtitle: "Set image quality to be seen",
+                  onTap: () {},
                 ),
               ),
             ],
