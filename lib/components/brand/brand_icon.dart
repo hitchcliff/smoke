@@ -20,7 +20,8 @@ class BrandIcon extends StatelessWidget {
       children: [
         Text(
           name,
-          style: Theme.of(context).textTheme.bodyMedium,
+          style:
+              Theme.of(context).textTheme.labelLarge?.apply(fontWeightDelta: 4),
         ),
         if (verified)
           const Icon(
