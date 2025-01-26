@@ -4,7 +4,6 @@ import 'package:single_store_ecommerce/features/personalization/profile/personal
 import 'package:single_store_ecommerce/features/personalization/profile/profile_information.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/features/personalization/profile/profile_picture.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 

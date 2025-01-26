@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/brand/brand_icon.dart';
 import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
+import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_item_buttons.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_item_name.dart';
@@ -37,8 +38,16 @@ class CartItem extends StatelessWidget {
               // ---# Variation
               CartItemVariation(),
 
-              // ---# Add or Subtract
-              CartItemButtons()
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // ---# Add or Subtract
+                  CartItemButtons(),
+
+                  // ---# Current Price
+                  BodyText("\$100"),
+                ],
+              ),
             ],
           ),
         )
