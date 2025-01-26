@@ -17,8 +17,10 @@ class CartScreen extends StatelessWidget {
         "\$400",
         onPressed: () {},
       ),
-      body: const SingleChildScrollView(
-        child: CartItems(),
+      body: const SafeArea(
+        child: SingleChildScrollView(
+          child: CartItems(),
+        ),
       ),
     );
   }

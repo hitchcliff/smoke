@@ -14,10 +14,12 @@ class AddAddressScreen extends StatelessWidget {
         title: TitleText("Add address"),
         showBackArrow: true,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(MySizes.defaultSpace),
-          child: const AddAdressForm(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(MySizes.defaultSpace),
+            child: const AddAdressForm(),
+          ),
         ),
       ),
     );
