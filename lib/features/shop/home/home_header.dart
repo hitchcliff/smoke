@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:single_store_ecommerce/components/forms/search_form.dart';
+import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
+import 'package:single_store_ecommerce/components/products/product_categories.dart';
+import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/features/shop/home/home_appbar.dart';
+import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+
+class HomeHeader extends StatelessWidget {
+  const HomeHeader({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return HeaderWrapper(
+      child: Column(
+        children: [
+          // app bar
+          const HomeAppbar(),
+
+          // search bar
+          SearchForm(
+            onSubmitted: (value) {},
+            text: MyTexts.searchBarPlaceholder,
+          ),
+
+          // product categories
+          const ProductCategories(),
+        ].gap(height: MySizes.spaceBtwSections),
+      ),
+    );
+  }
+}

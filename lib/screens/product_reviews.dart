@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/products/product_ratings.dart';
-import 'package:single_store_ecommerce/components/products/product_user_ratings.dart';
+import 'package:single_store_ecommerce/features/shop/reviews/product_ratings.dart';
+import 'package:single_store_ecommerce/features/shop/reviews/product_user_ratings.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
