@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/chips/variation_chip.dart';
-import 'package:single_store_ecommerce/components/products/product_variation_info.dart';
+import 'package:single_store_ecommerce/features/shop/product/product_variation_info.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
