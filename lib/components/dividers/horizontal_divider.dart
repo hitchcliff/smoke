@@ -10,6 +10,7 @@ class HorizontalDivider extends StatelessWidget {
     bool isDark = MyHelpers.isDarkMode(context);
 
     return Expanded(
+      flex: 1,
       child: Container(
         height: 1,
         margin: const EdgeInsets.symmetric(horizontal: 10),

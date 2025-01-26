@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_checkout.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_item.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_items.dart';
+import 'package:single_store_ecommerce/screens/checkout.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class CartScreen extends StatelessWidget {
@@ -15,7 +17,9 @@ class CartScreen extends StatelessWidget {
       appBar: const MyAppBar(showBackArrow: true, title: TitleText("Cart")),
       bottomNavigationBar: CartCheckout(
         "\$400",
-        onPressed: () {},
+        onPressed: () {
+          Get.to(() => const CheckoutScreen());
+        },
       ),
       body: const SafeArea(
         child: SingleChildScrollView(

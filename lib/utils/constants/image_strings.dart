@@ -48,4 +48,7 @@ class MyImages {
   // ---# Reviewers profile
   static const reviewersImg1 =
       "assets/images/reviews/review_profile_image_1.jpg";
+
+  // ---# Payment methods
+  static const paymentMethodPaypal = "assets/icons/payment_methods/paypal.png";
 }
