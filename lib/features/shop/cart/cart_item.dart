@@ -31,13 +31,20 @@ class CartItem extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ---# Name and Icon
+              // ---# Brand
               BrandIcon(name: "Nike", verified: true),
+
+              // ---# Name
               CartItemName(),
 
               // ---# Variation
               CartItemVariation(),
 
+              SizedBox(
+                height: MySizes.sm,
+              ),
+
+              // ---# Buttons and Price
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

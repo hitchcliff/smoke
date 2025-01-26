@@ -3,6 +3,7 @@ import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_checkout.dart';
 import 'package:single_store_ecommerce/features/shop/cart/cart_item.dart';
+import 'package:single_store_ecommerce/features/shop/cart/cart_items.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class CartScreen extends StatelessWidget {
@@ -16,22 +17,8 @@ class CartScreen extends StatelessWidget {
         "\$400",
         onPressed: () {},
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(MySizes.defaultSpace),
-          child: ListView.separated(
-            shrinkWrap: true,
-            itemCount: 4,
-            separatorBuilder: (context, index) => const SizedBox(
-              height: MySizes.spaceBtwItems,
-            ),
-            itemBuilder: (context, index) => const Column(
-              children: [
-                CartItem(),
-              ],
-            ),
-          ),
-        ),
+      body: const SingleChildScrollView(
+        child: CartItems(),
       ),
     );
   }
