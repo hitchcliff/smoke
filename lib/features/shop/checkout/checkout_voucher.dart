@@ -16,14 +16,21 @@ class CheckoutVoucher extends StatelessWidget {
         children: [
           Expanded(
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: InputBorder.none,
                 labelText: "Have a promo code? Enter here",
+                enabled: true,
+                focusedBorder: InputBorder.none,
+                errorBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                disabledBorder: InputBorder.none,
+                focusedErrorBorder: InputBorder.none,
               ),
             ),
           ),
           ElevatedButton(
-              onPressed: () {}, child: BodyText("Apply", color: MyColors.white))
+              onPressed: () {},
+              child: const BodyText("Apply", color: MyColors.white))
         ],
       )),
     );
