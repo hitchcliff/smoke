@@ -52,7 +52,7 @@ class ProductThumbnail extends StatelessWidget {
         // Sale
         if (props.onSale)
           Positioned(
-            top: 20,
+            top: 5,
             left: 5,
             child: OnSale(
               saleTxt: props.saleTxt,
@@ -62,7 +62,7 @@ class ProductThumbnail extends StatelessWidget {
         // Heart
         if (props.isWishlist)
           Positioned(
-            top: 20,
+            top: 5,
             right: 5,
             child: GestureDetector(
               onTap: props.onTapHeart,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/grid_layouts/grid_layout.dart';
 import 'package:single_store_ecommerce/components/products/product_item.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
+import 'package:single_store_ecommerce/components/products/product_card.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -13,7 +13,7 @@ class DisplayProductsVerticalDetailsProp {
       {required this.thumbnail, required this.details});
 
   final ProductThumbnailProps thumbnail;
-  final ProductVerticalDetailsProps details;
+  final ProductCardProps details;
 }
 
 class DisplayProductsVerticalProps {
@@ -72,8 +72,8 @@ class DisplayProductsVertical extends StatelessWidget {
                           isWishlist: info.thumbnail.isWishlist,
                         ),
                       ),
-                      ProductVerticalDetails(
-                        ProductVerticalDetailsProps(
+                      ProductCard(
+                        ProductCardProps(
                           name: info.details.name,
                           price: info.details.price,
                           brand: info.details.brand,

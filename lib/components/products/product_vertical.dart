@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/products/product_item.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
+import 'package:single_store_ecommerce/components/products/product_card.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 
 class ProductVertical extends StatelessWidget {
@@ -22,8 +22,8 @@ class ProductVertical extends StatelessWidget {
           isWishlist: true,
         ),
       ),
-      ProductVerticalDetails(
-        ProductVerticalDetailsProps(
+      ProductCard(
+        ProductCardProps(
           name: "Green Nike Air Shoes",
           price: "35.5",
           brand: "Nike",

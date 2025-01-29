@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
+import 'package:single_store_ecommerce/components/products/product_card.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
@@ -23,7 +23,7 @@ class WishlistProducts extends StatelessWidget {
                 isWishlist: true,
                 onTapHeart: () {},
                 onTapImg: () {}),
-            details: ProductVerticalDetailsProps(
+            details: ProductCardProps(
                 name: 'Green Nike Air Shoes',
                 brand: MyTexts.brandNike,
                 onTap: () {},
@@ -36,7 +36,7 @@ class WishlistProducts extends StatelessWidget {
                 isWishlist: true,
                 onTapHeart: () {},
                 onTapImg: () {}),
-            details: ProductVerticalDetailsProps(
+            details: ProductCardProps(
                 name: 'Green Nike Air Shoes',
                 brand: MyTexts.brandNike,
                 onTap: () {},
@@ -49,7 +49,7 @@ class WishlistProducts extends StatelessWidget {
                 isWishlist: true,
                 onTapHeart: () {},
                 onTapImg: () {}),
-            details: ProductVerticalDetailsProps(
+            details: ProductCardProps(
                 name: 'Green Nike Air Shoes',
                 brand: MyTexts.brandNike,
                 onTap: () {},
@@ -62,7 +62,7 @@ class WishlistProducts extends StatelessWidget {
                 isWishlist: true,
                 onTapHeart: () {},
                 onTapImg: () {}),
-            details: ProductVerticalDetailsProps(
+            details: ProductCardProps(
                 name: 'Green Nike Air Shoes',
                 brand: MyTexts.brandNike,
                 onTap: () {},

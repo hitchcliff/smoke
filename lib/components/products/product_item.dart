@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/products/product_vertical_details.dart';
+import 'package:single_store_ecommerce/components/products/product_card.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -12,7 +12,7 @@ class ProductVerticalItem extends StatelessWidget {
     super.key,
   });
 
-  final ProductVerticalDetails details;
+  final ProductCard details;
   final ProductThumbnail thumbnail;
 
   @override
