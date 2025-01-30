@@ -45,13 +45,9 @@ class DisplayProductsVertical extends StatelessWidget {
           if (props.heading != null)
             Padding(
               padding: const EdgeInsets.only(top: MySizes.spaceBtwItems),
-              child: SectionHeading(SectionHeadingProps(
-                titleColor: props.heading!.titleColor,
-                title: props.heading!.title,
-                actionText: props.heading!.actionText,
-                showActionButton: props.heading!.showActionButton,
-              )),
+              child: SectionHeading(props.heading!),
             ),
+
           Padding(
             padding: const EdgeInsets.only(
               bottom: MySizes.defaultSpace,
@@ -62,25 +58,8 @@ class DisplayProductsVertical extends StatelessWidget {
               children: props.products
                   .map(
                     (info) => ProductVerticalItem(
-                      ProductThumbnail(
-                        ProductThumbnailProps(
-                          imgUrl: info.thumbnail.imgUrl,
-                          onTapHeart: info.thumbnail.onTapHeart,
-                          onTapImg: info.thumbnail.onTapImg,
-                          saleTxt: info.thumbnail.saleTxt,
-                          onSale: info.thumbnail.onSale,
-                          isWishlist: info.thumbnail.isWishlist,
-                        ),
-                      ),
-                      ProductCard(
-                        ProductCardProps(
-                          name: info.details.name,
-                          price: info.details.price,
-                          brand: info.details.brand,
-                          verified: info.details.verified,
-                          onTap: info.details.onTap,
-                        ),
-                      ),
+                      ProductThumbnail(info.thumbnail),
+                      ProductCard(info.details),
                     ),
                   )
                   .toList(),

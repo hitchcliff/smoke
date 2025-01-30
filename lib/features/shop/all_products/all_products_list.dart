@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
-import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/products/product_card.dart';
+import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/screens/all_products.dart';
 import 'package:single_store_ecommerce/screens/product_detail.dart';
@@ -11,20 +11,21 @@ import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
-class HomeProducts extends StatelessWidget {
-  const HomeProducts({
+class AllProductsList extends StatelessWidget {
+  const AllProductsList({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = MyHelpers.isDarkMode(context);
+    bool isDark = MyHelpers.isDarkMode(context);
 
     return DisplayProductsVertical(
+      margin: const EdgeInsets.all(0),
       DisplayProductsVerticalProps(
         SectionHeadingProps(
           title: MyTexts.headingPopularProducts,
-          titleColor: isDarkMode ? MyColors.white : MyColors.black,
+          titleColor: isDark ? MyColors.white : MyColors.black,
           showActionButton: true,
           onPressed: () => Get.to(() => const AllProductsScreen()),
         ),

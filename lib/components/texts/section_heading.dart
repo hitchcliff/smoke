@@ -41,7 +41,7 @@ class SectionHeading extends StatelessWidget {
               ),
         ),
         if (props.showActionButton)
-          (TextButton(
+          TextButton(
             onPressed: props.onPressed,
             style: ButtonStyle(
               backgroundColor: WidgetStateProperty.all(
@@ -54,7 +54,7 @@ class SectionHeading extends StatelessWidget {
                 color: isDarkMode ? MyColors.black : MyColors.white,
               ),
             ),
-          ))
+          )
       ],
     );
   }
