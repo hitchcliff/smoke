@@ -41,6 +41,11 @@ class MyImages {
 
   // ---# brands
   static const brandNike = "assets/icons/brands/nike.png";
+  static const brandAdiddas = "assets/icons/brands/adidas-logo.png";
+  static const brandIkea = "assets/icons/brands/ikea_logo.png";
+  static const brandPuma = "assets/icons/brands/puma-logo.png";
+  static const brandZara = "assets/icons/brands/zara-logo.png";
+  static const brandApple = "assets/icons/brands/apple-logo.png";
 
   // ---# profile
   static const profileImg = "assets/images/content/user.png";

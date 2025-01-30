@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/brand/brand.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/components/grid_layouts/grid_layout.dart';
+import 'package:single_store_ecommerce/components/brand/brands.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/screens/all_brands.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -27,56 +29,53 @@ class StoreBrands extends StatelessWidget {
             title: MyTexts.headingFeatureBrands,
             showActionButton: true,
             actionText: MyTexts.headingActionBtnTxt,
-            onPressed: () {},
+            onPressed: () => Get.to(() => const AllBrandsScreen()),
           ),
         ),
 
         // ---# Feature Brands
-        const GridLayout(
-          crossAxisCount: 2,
-          children: [
-            Brand(
-              BrandItemProp(
-                image: AssetImage(
-                  MyImages.brandNike,
-                ),
-                brandName: MyTexts.brandNike,
-                totalProducts: "256",
-                verified: true,
+        const Brands([
+          Brand(
+            BrandItemProp(
+              image: AssetImage(
+                MyImages.brandNike,
               ),
+              brandName: MyTexts.brandNike,
+              totalProducts: "256",
+              verified: true,
             ),
-            Brand(
-              BrandItemProp(
-                image: AssetImage(
-                  MyImages.brandNike,
-                ),
-                brandName: MyTexts.brandNike,
-                totalProducts: "256",
-                verified: true,
+          ),
+          Brand(
+            BrandItemProp(
+              image: AssetImage(
+                MyImages.brandNike,
               ),
+              brandName: MyTexts.brandNike,
+              totalProducts: "256",
+              verified: true,
             ),
-            Brand(
-              BrandItemProp(
-                image: AssetImage(
-                  MyImages.brandNike,
-                ),
-                brandName: MyTexts.brandNike,
-                totalProducts: "256",
-                verified: true,
+          ),
+          Brand(
+            BrandItemProp(
+              image: AssetImage(
+                MyImages.brandNike,
               ),
+              brandName: MyTexts.brandNike,
+              totalProducts: "256",
+              verified: true,
             ),
-            Brand(
-              BrandItemProp(
-                image: AssetImage(
-                  MyImages.brandNike,
-                ),
-                brandName: MyTexts.brandNike,
-                totalProducts: "256",
-                verified: true,
+          ),
+          Brand(
+            BrandItemProp(
+              image: AssetImage(
+                MyImages.brandNike,
               ),
+              brandName: MyTexts.brandNike,
+              totalProducts: "256",
+              verified: true,
             ),
-          ],
-        ),
+          ),
+        ]),
       ].gap(height: MySizes.spaceBtwItems),
     );
   }
