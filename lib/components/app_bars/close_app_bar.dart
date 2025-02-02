@@ -9,7 +9,7 @@ List<Widget>? get closeAppBar => [
         padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
         child: IconButton(
           onPressed: () {
-            Get.offAll(() => const Login());
+            Get.offAll(() => const LoginScreen());
           },
           icon: const Icon(FontAwesomeIcons.xmark),
         ),

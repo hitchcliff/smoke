@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:single_store_ecommerce/screens/login.dart';
 
 class OnBoardingController {
@@ -7,6 +8,8 @@ class OnBoardingController {
 
   static OnBoardingController get instance => Get.find();
   Rx<int> currentPageIdx = 0.obs;
+
+  final GetStorage storage = GetStorage();
 
 // Update page indicator
   updatePageIndicator(idx) {
@@ -16,7 +19,8 @@ class OnBoardingController {
 // Skip page
   skipPage() {
     if (currentPageIdx.value == 2) {
-      Get.offAll(() => const Login());
+      storage.write("isFirstTime", false);
+      Get.offAll(() => const LoginScreen());
     }
 
     currentPageIdx.value = 2;
@@ -26,7 +30,8 @@ class OnBoardingController {
 // Next Page
   nextPage() {
     if (currentPageIdx.value == 2) {
-      Get.offAll(() => const Login());
+      storage.write("isFirstTime", false);
+      Get.offAll(() => const LoginScreen());
       return;
     }
 

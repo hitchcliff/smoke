@@ -43,7 +43,7 @@ class AccountCreated extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(() => const Login());
+                    Get.to(() => const LoginScreen());
                   },
                   child: const Text(MyTexts.verifyContinueBtn),
                 ),

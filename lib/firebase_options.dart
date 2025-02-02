@@ -86,10 +86,12 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions linux = FirebaseOptions(
-      apiKey: "AIzaSyDxg-0DpBPa4SPlx0aIZnjRZH3dwzYJktc",
-      authDomain: "single-store-ecommerce.firebaseapp.com",
-      projectId: "single-store-ecommerce",
-      storageBucket: "single-store-ecommerce.firebasestorage.app",
-      messagingSenderId: "671290491142",
-      appId: "1:671290491142:web:16b923feb92f31454e5e87");
+    apiKey: 'AIzaSyDxg-0DpBPa4SPlx0aIZnjRZH3dwzYJktc',
+    appId: '1:671290491142:web:8986dd6786d59fe74e5e87',
+    messagingSenderId: '671290491142',
+    projectId: 'single-store-ecommerce',
+    authDomain: 'single-store-ecommerce.firebaseapp.com',
+    storageBucket: 'single-store-ecommerce.firebasestorage.app',
+  );
+
 }
