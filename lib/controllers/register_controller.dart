@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:logger/web.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/user/user_model.dart';
 import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
@@ -12,12 +13,12 @@ class RegisterController {
   RegisterController get instance => Get.find();
 
   // ---# Firebase
-  AuthRepository authRepository = AuthRepository();
+  AuthRepository authRepository = AuthRepository.instance;
   UserRepository userRepository = Get.put(UserRepository());
 
   // ---# Variables
   Rx<bool> hidePassword = true.obs;
-  Rx<bool> privacyPolicy = false.obs;
+  Rx<bool> privacyPolicy = true.obs;
   final firstName = TextEditingController();
   final lastName = TextEditingController();
   final username = TextEditingController();
@@ -53,6 +54,8 @@ class RegisterController {
         email.text.trim(),
         password.text.trim(),
       );
+
+      Logger().d(userCredential);
 
       // ---# Create User model
       final userModel = UserModel(

@@ -28,14 +28,10 @@ class Validation {
       return 'Password is required.';
     }
 
-    if (value.length < 3) {
-      return 'Password must be at least 3 characters long.';
-    }
-
     // Check for minimum password length
-    // if (value.length < 6) {
-    //   return 'Password must be at least 6 characters long.';
-    // }
+    if (value.length < 6) {
+      return 'Password must be at least 6 characters long.';
+    }
 
     // Check for uppercase letters
     // if (!value.contains(RegExp(r'[A-Z]'))) {

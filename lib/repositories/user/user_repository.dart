@@ -16,7 +16,7 @@ class UserRepository extends GetxController {
           .doc(user.id)
           .set(user.toJson());
     } catch (e) {
-      throw 'Something went wrong';
+      throw 'Something went wrong ${e.toString()}';
     }
   }
 }

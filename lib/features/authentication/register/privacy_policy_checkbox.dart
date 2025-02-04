@@ -10,7 +10,7 @@ class PrivacyPolicyCheckbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RegisterController controller = RegisterController();
+    RegisterController controller = RegisterController().instance;
     ThemeData theme = Theme.of(context);
 
     return Row(

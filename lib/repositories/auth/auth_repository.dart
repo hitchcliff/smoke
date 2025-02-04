@@ -29,7 +29,7 @@ class AuthRepository extends GetxController {
       return await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
     } catch (e) {
-      throw "Something went wrong";
+      throw "Something went wrong ${e.toString()}";
     }
   }
 }

@@ -1,3 +1,3 @@
 class MyDBCollections {
-  static const users = "Users";
+  static const users = "users";
 }
