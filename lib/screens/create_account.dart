@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/app_bars/close_app_bar.dart';
 import 'package:single_store_ecommerce/components/containers/fullscreen_container.dart';
-import 'package:single_store_ecommerce/components/forms/register_form.dart';
+import 'package:single_store_ecommerce/features/authentication/register/register_form.dart';
 import 'package:single_store_ecommerce/components/forms/signin_with.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';

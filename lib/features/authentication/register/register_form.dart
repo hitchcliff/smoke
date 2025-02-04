@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/controllers/register_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/screens/account_created.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:single_store_ecommerce/features/authentication/register/privacy_policy_checkbox.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:single_store_ecommerce/utils/validators/validation.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+    RegisterController controller = Get.put(RegisterController());
 
     return Form(
+      key: controller.key,
       child: Column(
         children: [
           Row(
@@ -22,6 +24,9 @@ class RegisterForm extends StatelessWidget {
               // first name
               Expanded(
                 child: TextFormField(
+                  controller: controller.firstName,
+                  validator: (value) =>
+                      Validation.validateEmptyText("First Name", value),
                   decoration: const InputDecoration(
                     prefixIcon: Icon(FontAwesomeIcons.user),
                     labelText: MyTexts.registerFirstName,
@@ -30,6 +35,9 @@ class RegisterForm extends StatelessWidget {
               ),
               Expanded(
                 child: TextFormField(
+                  controller: controller.lastName,
+                  validator: (value) =>
+                      Validation.validateEmptyText("Last Name", value),
                   decoration: const InputDecoration(
                       prefixIcon: Icon(FontAwesomeIcons.user),
                       labelText: MyTexts.registerLastName),
@@ -38,68 +46,57 @@ class RegisterForm extends StatelessWidget {
             ].gap(width: MySizes.spaceBtwItems),
           ),
           TextFormField(
+            controller: controller.username,
+            validator: (value) =>
+                Validation.validateEmptyText("Username", value),
             decoration: const InputDecoration(
               prefixIcon: Icon(FontAwesomeIcons.userCheck),
               labelText: MyTexts.registerUsername,
             ),
           ),
           TextFormField(
+            controller: controller.email,
+            validator: (value) => Validation.validateEmail(value),
             decoration: const InputDecoration(
               prefixIcon: Icon(FontAwesomeIcons.envelope),
               labelText: MyTexts.registerEmail,
             ),
           ),
           TextFormField(
+            controller: controller.phoneNumber,
+            validator: (value) => Validation.validatePhoneNumber(value),
             decoration: const InputDecoration(
               prefixIcon: Icon(FontAwesomeIcons.phone),
               labelText: MyTexts.registerPhoneNumber,
             ),
           ),
-          TextFormField(
-            decoration: const InputDecoration(
-              prefixIcon: Icon(FontAwesomeIcons.lock),
-              labelText: MyTexts.registerPassword,
-            ),
-          ),
-          Row(
-            children: [
-              SizedBox(
-                  width: 24,
-                  height: 24,
-                  child: Checkbox(value: true, onChanged: (value) {})),
-              Text.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                        text: "I agree to ", style: theme.textTheme.bodySmall),
-                    TextSpan(
-                      text: "Privacy Policy ",
-                      style: theme.textTheme.bodyMedium!.apply(
-                        decoration: TextDecoration.underline,
-                        color: MyColors.primary,
-                        decorationColor: MyColors.primary,
-                      ),
-                    ),
-                    TextSpan(text: "and ", style: theme.textTheme.bodySmall),
-                    TextSpan(
-                      text: "Terms of use",
-                      style: theme.textTheme.bodyMedium!.apply(
-                        decoration: TextDecoration.underline,
-                        color: MyColors.primary,
-                        decorationColor: MyColors.primary,
-                      ),
-                    ),
-                  ],
+          Obx(
+            () => TextFormField(
+              controller: controller.password,
+              validator: (value) => Validation.validatePassword(value),
+              obscureText: controller.hidePassword.value,
+              decoration: InputDecoration(
+                prefixIcon: Icon(FontAwesomeIcons.lock),
+                labelText: MyTexts.registerPassword,
+                suffixIcon: IconButton(
+                  icon: Icon(
+                    controller.hidePassword.value
+                        ? FontAwesomeIcons.eye
+                        : FontAwesomeIcons.eyeSlash,
+                  ),
+                  onPressed: () {
+                    controller.hidePassword.value =
+                        !controller.hidePassword.value;
+                  },
                 ),
               ),
-            ],
+            ),
           ),
+          PrivacyPolicyCheckbox(),
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {
-                Get.to(() => const AccountCreated());
-              },
+              onPressed: () => controller.register(),
               child: const Text(MyTexts.registerCreateAccount),
             ),
           ),

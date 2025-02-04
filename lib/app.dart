@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/bindings/dep_bindings.dart';
 import 'package:single_store_ecommerce/components/widgets/app_scroll_behavior.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
@@ -17,6 +18,7 @@ class App extends StatelessWidget {
       darkTheme: MyAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       scrollBehavior: AppScrollBehavior(),
+      initialBinding: DepBindings(),
       home: const Scaffold(
         backgroundColor: MyColors.primary,
         body: Center(child: CircularProgressIndicator(color: MyColors.white)),
