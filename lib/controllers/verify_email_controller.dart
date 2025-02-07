@@ -4,7 +4,7 @@ import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
 class VerifyEmailController extends GetxController {
   VerifyEmailController get instance => Get.find();
 
-  AuthRepository _authRepository = AuthRepository.instance;
+  final AuthRepository _authRepository = AuthRepository.instance;
 
   /// Send email and initiate the automatic redirection
   @override
