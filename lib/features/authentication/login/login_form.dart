@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/controllers/login_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/screens/create_account.dart';
 import 'package:single_store_ecommerce/screens/forgot_password.dart';
-import 'package:single_store_ecommerce/screens/navigation.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:single_store_ecommerce/utils/validators/validation.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
+    LoginController controller = Get.put(LoginController());
+
     return Form(
+      key: controller.key,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // email field
           TextFormField(
+            controller: controller.email,
+            validator: (value) => Validation.validateEmail(value),
             decoration: const InputDecoration(
               prefixIcon: Icon(FontAwesomeIcons.envelope),
               labelText: MyTexts.loginPlaceholderEmail,
@@ -26,12 +32,22 @@ class LoginForm extends StatelessWidget {
           ),
 
           // password field
-          TextFormField(
-            obscureText: true,
-            decoration: const InputDecoration(
-              prefixIcon: Icon(FontAwesomeIcons.key),
-              labelText: MyTexts.loginPlaceholderPw,
-              suffixIcon: Icon(FontAwesomeIcons.eyeSlash),
+          Obx(
+            () => TextFormField(
+              obscureText: controller.showPassword.value,
+              decoration: InputDecoration(
+                prefixIcon: Icon(FontAwesomeIcons.key),
+                labelText: MyTexts.loginPlaceholderPw,
+                suffixIcon: IconButton(
+                  icon: Icon(controller.showPassword.value
+                      ? FontAwesomeIcons.eyeSlash
+                      : FontAwesomeIcons.eye),
+                  onPressed: () {
+                    controller.showPassword.value =
+                        !controller.showPassword.value;
+                  },
+                ),
+              ),
             ),
           ),
 
@@ -41,10 +57,19 @@ class LoginForm extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Checkbox(value: true, onChanged: (value) {}),
+                  Obx(
+                    () => Checkbox(
+                      value: controller.rememberMe.value,
+                      onChanged: (value) {
+                        controller.rememberMe.value = value!;
+                      },
+                    ),
+                  ),
                   const Text(MyTexts.loginRememberMe),
                 ],
               ),
+
+              /// Go to forgot password screen
               TextButton(
                 onPressed: () {
                   Get.to(() => const ForgotPassword());
@@ -58,9 +83,7 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {
-                Get.to(() => const Navigation());
-              },
+              onPressed: controller.login,
               child: const Text(MyTexts.loginSignIn),
             ),
           ),

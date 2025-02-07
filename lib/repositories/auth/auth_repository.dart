@@ -5,8 +5,11 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/screens/login.dart';
+import 'package:single_store_ecommerce/screens/navigation.dart';
 import 'package:single_store_ecommerce/screens/on_boarding.dart';
 import 'package:single_store_ecommerce/screens/success.dart';
+import 'package:single_store_ecommerce/screens/verify_email.dart';
+import 'package:single_store_ecommerce/utils/constants/local_storage.dart';
 
 class AuthRepository extends GetxController {
   static AuthRepository get instance => Get.find();
@@ -22,10 +25,32 @@ class AuthRepository extends GetxController {
 
   /// Redirect user to either login or onboarding screens
   redirect() {
-    deviceStorage.writeIfNull('isFirstTime', true);
-    deviceStorage.read('isFirstTime') != true
+    final User? user = _auth.currentUser;
+    if (user != null) {
+      if (user.emailVerified) {
+        Get.offAll(() => Navigation());
+      } else {
+        Get.offAll(() => VerifyEmailScreen(user.email!));
+      }
+
+      return;
+    }
+
+    deviceStorage.writeIfNull(MyLocalStorage.isFirstTime, true);
+    deviceStorage.read(MyLocalStorage.isFirstTime) != true
         ? Get.offAll(() => const LoginScreen())
         : Get.offAll(() => const OnBoardingScreen());
+  }
+
+  /// Login with email & password
+  Future<UserCredential> loginWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+    } catch (e) {
+      throw "Something went wrong ${e.toString()}";
+    }
   }
 
   /// Register email with password

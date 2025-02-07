@@ -8,7 +8,7 @@ import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
 import 'package:single_store_ecommerce/screens/verify_email.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 
-class RegisterController {
+class RegisterController extends GetxController {
   RegisterController get instance => Get.find();
 
   // ---# Firebase
@@ -17,7 +17,7 @@ class RegisterController {
 
   // ---# Variables
   Rx<bool> hidePassword = true.obs;
-  Rx<bool> privacyPolicy = true.obs;
+  Rx<bool> privacyPolicy = false.obs;
   final firstName = TextEditingController();
   final lastName = TextEditingController();
   final username = TextEditingController();
