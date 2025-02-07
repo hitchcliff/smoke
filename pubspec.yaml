@@ -44,6 +44,7 @@ dependencies:
   # Utils
   logger: ^2.5.0
   cloud_firestore: ^5.6.2
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:

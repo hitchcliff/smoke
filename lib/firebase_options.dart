@@ -93,5 +93,4 @@ class DefaultFirebaseOptions {
     authDomain: 'single-store-ecommerce.firebaseapp.com',
     storageBucket: 'single-store-ecommerce.firebasestorage.app',
   );
-
 }

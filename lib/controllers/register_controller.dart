@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:logger/web.dart';
+import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/user/user_model.dart';
 import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
 import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
 import 'package:single_store_ecommerce/screens/verify_email.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/loaders/full_screen_loader.dart';
 
 class RegisterController {
   RegisterController get instance => Get.find();
@@ -55,8 +54,6 @@ class RegisterController {
         password.text.trim(),
       );
 
-      Logger().d(userCredential);
-
       // ---# Create User model
       final userModel = UserModel(
         id: userCredential.user!.uid,
@@ -81,14 +78,15 @@ class RegisterController {
       );
 
       // ---# Move to verify email
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email.text.trim()));
     } catch (e) {
-      Snackbars.warning(
+      // ---# Remove loader
+      FullScreenLoader.stopLoading();
+
+      Snackbars.error(
         title: "Something is wrong",
         message: e.toString(),
       );
-    } finally {
-      FullScreenLoader.stopLoading();
     }
   }
 }
