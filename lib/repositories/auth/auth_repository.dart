@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/screens/login.dart';
 import 'package:single_store_ecommerce/screens/navigation.dart';
@@ -48,6 +49,25 @@ class AuthRepository extends GetxController {
     try {
       return await _auth.signInWithEmailAndPassword(
           email: email, password: password);
+    } catch (e) {
+      throw "Something went wrong ${e.toString()}";
+    }
+  }
+
+  /// Signin with [Google Auth]
+  Future<UserCredential> signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+
+      final GoogleSignInAuthentication? googleAuth =
+          await userAccount?.authentication;
+
+      final credentials = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      return await _auth.signInWithCredential(credentials);
     } catch (e) {
       throw "Something went wrong ${e.toString()}";
     }

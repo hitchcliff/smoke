@@ -1,7 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
+import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
+import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/local_storage.dart';
@@ -19,6 +23,9 @@ class LoginController extends GetxController {
 
   /// Repository
   AuthRepository authRepository = AuthRepository.instance;
+
+  /// Controller
+  UserController userController = Get.put(UserController());
 
   @override
   onInit() {
@@ -59,7 +66,31 @@ class LoginController extends GetxController {
       authRepository.redirect();
     } catch (e) {
       FullScreenLoader.stopLoading();
-      throw "Some went wrong ${e.toString()}";
+      Snackbars.error(title: "Error", message: e.toString());
+    }
+  }
+
+  /// Signin with Google using Auth Repo
+  googleSignIn() async {
+    try {
+      /// Loader
+      FullScreenLoader.openLoadingDialog(
+          "Logging in with Google...", MyImages.docerAnimation);
+
+      /// Google auth
+      UserCredential userCredential = await authRepository.signInWithGoogle();
+
+      /// Save user from Google to DB
+      await userController.saveUserFromCredentials(userCredential);
+
+      /// Stop loading
+      FullScreenLoader.stopLoading();
+
+      /// Redirect
+      authRepository.redirect();
+    } catch (e) {
+      FullScreenLoader.stopLoading();
+      Snackbars.error(title: "Error", message: e.toString());
     }
   }
 }

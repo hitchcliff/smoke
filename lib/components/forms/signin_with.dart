@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/dividers/horizontal_divider.dart';
+import 'package:single_store_ecommerce/controllers/login_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -10,6 +12,8 @@ class SigninWith extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    LoginController controller = Get.put(LoginController());
+
     return Column(
       children: [
         const Row(
@@ -26,9 +30,12 @@ class SigninWith extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Image(
-              image: AssetImage(MyImages.googleIconImg),
-              width: 25,
+            GestureDetector(
+              onTap: controller.googleSignIn,
+              child: const Image(
+                image: AssetImage(MyImages.googleIconImg),
+                width: 25,
+              ),
             ),
             const Image(
               image: AssetImage(MyImages.fbIconImg),
