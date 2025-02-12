@@ -21,41 +21,54 @@ class VerifyEmailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
-        child: FullscreenContainer(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Image(
-                image: AssetImage(MyImages.verifyEmailImg),
-                height: 200,
-              ),
-              Text(MyTexts.verifyTitle, style: theme.textTheme.headlineMedium),
-              Text(email, style: theme.textTheme.bodyLarge),
-              Text(
-                MyTexts.verifyDescription,
-                style: theme.textTheme.bodyMedium,
-                textAlign: TextAlign.center,
-              ),
-
-              // ---# Verify code
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: controller.verifyEmail,
-                  child: const Text(MyTexts.verifyContinueBtn),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(MySizes.defaultSpace),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Image(
+                  image: AssetImage(MyImages.verifyEmailImg),
+                  height: 200,
                 ),
-              ),
-
-              // ---# Resend email
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: controller.sendEmailCode,
-                  child: const Text(MyTexts.verifyResendBtn),
+                Text(MyTexts.verifyTitle,
+                    style: theme.textTheme.headlineMedium),
+                Text(email, style: theme.textTheme.bodyLarge),
+                Text(
+                  MyTexts.verifyDescription,
+                  style: theme.textTheme.bodyMedium,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ].gap(height: MySizes.spaceBtwItems),
+
+                // ---# Verify code
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: controller.verifyEmail,
+                    child: const Text(MyTexts.verifyContinueBtn),
+                  ),
+                ),
+
+                // ---# Resend email
+                SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: controller.sendEmailCode,
+                    child: const Text(MyTexts.verifyResendBtn),
+                  ),
+                ),
+
+                // ---# Logout
+                SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: controller.logout,
+                    child: const Text("Logout"),
+                  ),
+                ),
+              ].gap(height: MySizes.spaceBtwItems),
+            ),
           ),
         ),
       ),

@@ -11,6 +11,7 @@ class FullScreenLoader {
   /// Parameters:
   ///   - text: the text to be displayed in the loading dialog
   ///   - animation: the lottie animation to be shown
+
   static void openLoadingDialog(String text, String animation) {
     showDialog(
       context: Get.overlayContext!, // Use Get.overlayContext for overlay delays

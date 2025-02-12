@@ -37,10 +37,10 @@ class SigninWith extends StatelessWidget {
                 width: 25,
               ),
             ),
-            const Image(
-              image: AssetImage(MyImages.fbIconImg),
-              width: 25,
-            ),
+            // const Image(
+            //   image: AssetImage(MyImages.fbIconImg),
+            //   width: 25,
+            // ),
           ].gap(width: MySizes.spaceBtwItems),
         ),
       ].gap(height: MySizes.spaceBtwItems),

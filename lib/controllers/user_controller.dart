@@ -6,7 +6,7 @@ import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
 class UserController extends GetxController {
   UserController get instance => Get.find();
 
-  final UserRepository _userRepository = UserRepository.instance;
+  final UserRepository _userRepository = Get.put(UserRepository());
 
   /// Save the user from Google to DB
   saveUserFromCredentials(UserCredential? userCredential) async {

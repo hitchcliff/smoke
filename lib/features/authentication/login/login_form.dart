@@ -17,7 +17,7 @@ class LoginForm extends StatelessWidget {
     LoginController controller = Get.put(LoginController());
 
     return Form(
-      key: controller.key,
+      key: controller.loginFormKey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -34,6 +34,9 @@ class LoginForm extends StatelessWidget {
           // password field
           Obx(
             () => TextFormField(
+              controller: controller.password,
+              validator: (value) =>
+                  Validation.validateEmptyText("Password", value),
               obscureText: controller.showPassword.value,
               decoration: InputDecoration(
                 prefixIcon: Icon(FontAwesomeIcons.key),

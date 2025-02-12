@@ -24,7 +24,7 @@ class RegisterController extends GetxController {
   final email = TextEditingController();
   final phoneNumber = TextEditingController();
   final password = TextEditingController();
-  GlobalKey<FormState> key = GlobalKey<FormState>();
+  GlobalKey<FormState> registerFormKey = GlobalKey<FormState>();
 
   // ---# Signup
   register() async {
@@ -36,10 +36,14 @@ class RegisterController extends GetxController {
       );
 
       // ---# Form validation
-      if (!key.currentState!.validate()) return;
+      if (!registerFormKey.currentState!.validate()) {
+        FullScreenLoader.stopLoading();
+        return;
+      }
 
       // ---# Privacy policy check
       if (!privacyPolicy.value) {
+        FullScreenLoader.stopLoading();
         Snackbars.warning(
           title: "Accept Privacy Policy",
           message: "You need to agree to our terms and policy.",

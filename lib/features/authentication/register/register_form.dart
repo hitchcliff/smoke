@@ -16,7 +16,7 @@ class RegisterForm extends StatelessWidget {
     RegisterController controller = Get.put(RegisterController());
 
     return Form(
-      key: controller.key,
+      key: controller.registerFormKey,
       child: Column(
         children: [
           Row(

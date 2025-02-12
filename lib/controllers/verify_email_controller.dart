@@ -24,6 +24,11 @@ class VerifyEmailController extends GetxController {
     _authRepository.autoRedirect();
   }
 
+  /// Logout
+  logout() async {
+    await _authRepository.logout();
+  }
+
   /// Manual email verification
   verifyEmail() {
     _authRepository.verifyEmail();

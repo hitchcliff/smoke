@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/controllers/user_controller.dart';
@@ -14,12 +14,12 @@ class LoginController extends GetxController {
   LoginController get instance => Get.find();
 
 // Variables
-  Rx<bool> rememberMe = false.obs;
+  Rx<bool> rememberMe = true.obs;
   Rx<bool> showPassword = false.obs;
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   GetStorage localStorage = GetStorage();
-  GlobalKey<FormState> key = GlobalKey<FormState>();
+  GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
   /// Repository
   AuthRepository authRepository = AuthRepository.instance;
@@ -29,8 +29,10 @@ class LoginController extends GetxController {
 
   @override
   onInit() {
-    email.value = localStorage.read(MyLocalStorage.email);
-    password.value = localStorage.read(MyLocalStorage.password);
+    email =
+        TextEditingController(text: localStorage.read(MyLocalStorage.email));
+    password =
+        TextEditingController(text: localStorage.read(MyLocalStorage.password));
 
     super.onInit();
   }
@@ -45,7 +47,10 @@ class LoginController extends GetxController {
       );
 
       /// Validate
-      if (!key.currentState!.validate()) return;
+      if (!loginFormKey.currentState!.validate()) {
+        FullScreenLoader.stopLoading();
+        return;
+      }
 
       /// Save data if `rememberMe` is `true`
       if (rememberMe.value) {
@@ -67,6 +72,7 @@ class LoginController extends GetxController {
     } catch (e) {
       FullScreenLoader.stopLoading();
       Snackbars.error(title: "Error", message: e.toString());
+      Logger().e(e.toString());
     }
   }
 

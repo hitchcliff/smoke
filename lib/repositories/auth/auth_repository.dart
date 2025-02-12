@@ -84,11 +84,22 @@ class AuthRepository extends GetxController {
     }
   }
 
+  /// Forgot password
+  sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } catch (e) {
+      throw "Something went wrong ${e.toString}";
+    }
+  }
+
   /// Send email verification
   sendVerificationCode() async {
     try {
       await _auth.currentUser?.sendEmailVerification();
-      Snackbars.success(title: "Sent email verification code");
+      Snackbars.success(
+          title: "Sent email verification code",
+          message: "Please check your email to verify your accout.");
     } catch (e) {
       throw "Something went wrong ${e.toString()}";
     }
