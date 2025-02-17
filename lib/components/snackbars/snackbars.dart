@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/components/texts/body_text.dart';
+import 'package:single_store_ecommerce/controllers/delete_user_controller.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class Snackbars {
@@ -76,6 +79,37 @@ class Snackbars {
       margin: const EdgeInsets.all(20),
       icon: const Icon(FontAwesomeIcons.triangleExclamation,
           color: MyColors.white),
+    );
+  }
+
+  static deleteAccountWarnning() {
+    DeleteUserController deleteUserController = Get.put(DeleteUserController());
+
+    Get.defaultDialog(
+      middleTextStyle: TextStyle(color: MyColors.black),
+      contentPadding: const EdgeInsets.all(MySizes.defaultSpace),
+      title: "Delete Account",
+      middleText:
+          "Are you sure you want to delete your account? This action is irreversible, all your data will be removed permanently.",
+      cancel: TextButton(
+        onPressed: () {
+          Navigator.of(Get.overlayContext!).pop();
+        },
+        child: BodyText(
+          "Cancel",
+          color: MyColors.black,
+        ),
+      ),
+      confirm: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: MyColors.heart,
+            side: BorderSide(color: MyColors.heart)),
+        onPressed: () {
+          Navigator.of(Get.overlayContext!).pop();
+          deleteUserController.deleteUserAccount();
+        },
+        child: Text("Delete"),
+      ),
     );
   }
 }

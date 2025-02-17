@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/controllers/navigation_controller.dart';
+import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
 
 class Navigation extends StatelessWidget {
   const Navigation({super.key});
@@ -9,6 +10,8 @@ class Navigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
+    AuthRepository authRepository = AuthRepository.instance;
+    authRepository.authUser!.reload();
 
     return Scaffold(
       bottomNavigationBar: Obx(

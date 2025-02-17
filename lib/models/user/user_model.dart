@@ -1,3 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get/get.dart';
+import 'package:logger/logger.dart';
+
 /// Model class representing user data.
 class UserModel {
   UserModel({
@@ -19,7 +23,7 @@ class UserModel {
   String profilePicture;
 
   /// Helper function to get the full name.
-  String get fullName => '$firstName $lastName';
+  String get fullName => '${firstName.capitalize} ${lastName.capitalize}';
 
   /// Helper function to format phone number.
   // String get formattedPhoneNo => TFormatter.formatPhoneNumber(phoneNumber);
@@ -39,6 +43,17 @@ class UserModel {
     return usernameWithPrefix;
   }
 
+  /// Simple returns empty [UserModel]
+  static UserModel empty() => UserModel(
+        id: "",
+        firstName: "",
+        lastName: "",
+        username: "",
+        email: "",
+        phoneNumber: "",
+        profilePicture: "",
+      );
+
   /// Convert model to JSON structure for storing data in Firebase.
   Map<String, dynamic> toJson() {
     return {
@@ -49,5 +64,27 @@ class UserModel {
       'PhoneNumber': phoneNumber,
       'ProfilePicture': profilePicture,
     };
+  }
+
+  /// Factory method to create a UserModel from a Firebase document snapshot.
+  factory UserModel.fromSnapshot(
+      DocumentSnapshot<Map<String, dynamic>> document) {
+    if (document.data() != null) {
+      final data = document.data()!;
+
+      Logger().d(data);
+
+      return UserModel(
+        id: document.id,
+        firstName: data['FirstName'],
+        lastName: data['LastName'],
+        username: data['Username'],
+        email: data['Email'],
+        phoneNumber: data['PhoneNumber'],
+        profilePicture: data['ProfilePicture'],
+      );
+    } else {
+      return UserModel.empty();
+    }
   }
 }

@@ -11,6 +11,6 @@ class NavigationController {
     const Home(),
     const Store(),
     const Wishlist(),
-    const Profile(),
+    const ProfileScreen(),
   ];
 }

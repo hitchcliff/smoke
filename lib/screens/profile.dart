@@ -6,8 +6,8 @@ import 'package:single_store_ecommerce/features/personalization/profile/profile_
 import 'package:single_store_ecommerce/features/personalization/profile/profile_logout_btn.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

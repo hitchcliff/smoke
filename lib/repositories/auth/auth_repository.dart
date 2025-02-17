@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
+import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
 import 'package:single_store_ecommerce/screens/login.dart';
 import 'package:single_store_ecommerce/screens/navigation.dart';
 import 'package:single_store_ecommerce/screens/on_boarding.dart';
@@ -17,6 +18,9 @@ class AuthRepository extends GetxController {
 
   GetStorage deviceStorage = GetStorage();
   final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  /// Current authenticated user
+  User? get authUser => _auth.currentUser;
 
   @override
   void onReady() {
@@ -113,8 +117,9 @@ class AuthRepository extends GetxController {
 
       if (_auth.currentUser!.emailVerified) {
         timer.cancel();
-        Get.off(() => SuccessScreen());
-        Snackbars.success(title: "Verified Successfully!");
+        Get.offAll(() => SuccessScreen());
+        Snackbars.success(
+            title: "Congratulations!!!", message: "Verified succesfully");
       }
     });
   }
@@ -123,7 +128,8 @@ class AuthRepository extends GetxController {
   verifyEmail() {
     if (_auth.currentUser != null && _auth.currentUser!.emailVerified) {
       Get.off(() => const SuccessScreen());
-      Snackbars.success(title: "Verified Successfully!");
+      Snackbars.success(
+          title: "Congratulations!!!", message: "Verified succesfully");
     }
   }
 
@@ -134,6 +140,29 @@ class AuthRepository extends GetxController {
       Get.offAll(() => const LoginScreen());
     } catch (e) {
       throw "Something went wrong ${e.toString()}";
+    }
+  }
+
+  /// Re-authenticate user with email & password
+  reAuthenticateUserWithEmailAndPassword(String email, String password) async {
+    try {
+      /// Create a credential
+      AuthCredential credential =
+          EmailAuthProvider.credential(email: email, password: password);
+
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } catch (e) {
+      throw e.toString();
+    }
+  }
+
+  /// Delete the account from DB
+  deleteAccount() async {
+    try {
+      await UserRepository.instance.delete();
+      await _auth.currentUser?.delete();
+    } catch (e) {
+      throw e.toString();
     }
   }
 }

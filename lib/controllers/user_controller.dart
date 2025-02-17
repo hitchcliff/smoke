@@ -1,17 +1,51 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
+import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
+import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/user/user_model.dart';
 import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
+import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 
 class UserController extends GetxController {
-  UserController get instance => Get.find();
+  static UserController get instance => Get.find();
 
+  // Variables
+  Rx<UserModel> user = UserModel.empty().obs;
+
+  // Repository
   final UserRepository _userRepository = Get.put(UserRepository());
+
+  @override
+  void onInit() {
+    getUser();
+    super.onInit();
+  }
+
+  /// Get current user
+  getUser() async {
+    try {
+      final fetchUser = await _userRepository.getUser();
+
+      Logger().d(fetchUser.fullName);
+      // Set the user
+      user(fetchUser);
+    } catch (e) {
+      FullScreenLoader.stopLoading();
+      Snackbars.error(title: "Error fetching user", message: e.toString());
+    }
+  }
 
   /// Save the user from Google to DB
   saveUserFromCredentials(UserCredential? userCredential) async {
     try {
-      if (userCredential == null) return;
+      FullScreenLoader.openLoadingDialog(
+          "Saving user...", MyImages.docerAnimation);
+
+      if (userCredential == null) {
+        FullScreenLoader.stopLoading();
+        return;
+      }
 
       final nameParts =
           UserModel.nameParts(userCredential.user!.displayName ?? "");
@@ -29,8 +63,11 @@ class UserController extends GetxController {
       );
 
       await _userRepository.save(user);
+
+      FullScreenLoader.stopLoading();
     } catch (e) {
-      throw "Something went wrong ${e.toString()}";
+      Snackbars.error(title: "Error saving user", message: e.toString());
+      FullScreenLoader.stopLoading();
     }
   }
 }

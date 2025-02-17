@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
+import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/screens/user_info.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
@@ -15,6 +16,8 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final UserController controller = UserController.instance;
+
     return HeaderWrapper(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -40,12 +43,14 @@ class ProfileHeader extends StatelessWidget {
                 image: AssetImage(MyImages.profileImg),
               ),
             ),
-            title: Text("Kevin Nacario",
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineSmall
-                    ?.apply(color: MyColors.white)),
-            subtitle: Text("kevin@email.com",
+            title: Obx(
+              () => Text(controller.user.value.fullName,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall
+                      ?.apply(color: MyColors.white)),
+            ),
+            subtitle: Text(controller.user.value.email,
                 style: Theme.of(context)
                     .textTheme
                     .labelMedium
@@ -56,10 +61,11 @@ class ProfileHeader extends StatelessWidget {
                 color: MyColors.white,
               ),
               onPressed: () {
-                Get.to(() => const UserInfo());
+                Get.to(() => const UserInfoScreen());
               },
             ),
           ),
+
           const SizedBox(
             height: MySizes.defaultSpace,
           ),
