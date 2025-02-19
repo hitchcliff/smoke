@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:single_store_ecommerce/models/user/user_model.dart';
 import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
 import 'package:single_store_ecommerce/utils/constants/db_collections.dart';
@@ -9,6 +13,7 @@ class UserRepository extends GetxController {
 
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final AuthRepository _authRepository = AuthRepository.instance;
+  final FirebaseStorage _storage = FirebaseStorage.instance;
 
   /// Create user
   save(UserModel user) async {
@@ -60,6 +65,18 @@ class UserRepository extends GetxController {
           .collection(MyDBCollections.users)
           .doc(_authRepository.authUser!.uid)
           .delete();
+    } catch (e) {
+      throw e.toString();
+    }
+  }
+
+  /// Upload any image
+  Future<String> uploadImage(String path, XFile image) async {
+    try {
+      final ref = _storage.ref(path).child(image.name);
+      await ref.putFile(File(image.path));
+      final url = await ref.getDownloadURL();
+      return url;
     } catch (e) {
       throw e.toString();
     }

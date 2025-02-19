@@ -18,7 +18,7 @@ class UserInfoScreen extends StatelessWidget {
     return Scaffold(
       appBar: const MyAppBar(
         showBackArrow: true,
-        title: Text(MyTexts.appbarProfile),
+        title: Text("User Information"),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
