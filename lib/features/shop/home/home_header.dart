@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/forms/search_form.dart';
 import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
-import 'package:single_store_ecommerce/components/products/product_categories.dart';
+import 'package:single_store_ecommerce/components/products/featured_categories.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/features/shop/home/home_appbar.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -27,7 +27,7 @@ class HomeHeader extends StatelessWidget {
           ),
 
           // product categories
-          const ProductCategories(),
+          const FeaturedCategories(),
         ].gap(height: MySizes.spaceBtwSections),
       ),
     );

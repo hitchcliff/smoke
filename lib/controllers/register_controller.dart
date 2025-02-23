@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/models/user/user_model.dart';
+import 'package:single_store_ecommerce/models/user_model.dart';
 import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
 import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
 import 'package:single_store_ecommerce/screens/verify_email.dart';

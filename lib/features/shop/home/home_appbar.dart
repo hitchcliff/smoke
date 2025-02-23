@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/icons/cart_counter_icon.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
+import 'package:single_store_ecommerce/components/shimmer/shimmer_effect.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/screens/cart.dart';
@@ -28,10 +29,15 @@ class HomeAppbar extends StatelessWidget {
                 .labelMedium!
                 .apply(color: MyColors.grey),
           ),
-          Obx(() => TitleText(
-                controller.user.value.fullName,
-                color: MyColors.white,
-              )),
+          Obx(() => controller.loading.value
+              ? ShimmerEffect(
+                  height: 50,
+                  width: 80,
+                )
+              : TitleText(
+                  controller.user.value.fullName,
+                  color: MyColors.white,
+                )),
         ],
       ),
       actions: [
