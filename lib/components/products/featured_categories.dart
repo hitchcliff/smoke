@@ -32,32 +32,33 @@ class FeaturedCategories extends StatelessWidget {
           ),
         ),
         Obx(
-          () => SizedBox(
-            height: 120,
-            child: ListView.builder(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemCount: categoryController.featuredCategories.length,
-              physics: const ScrollPhysics(),
-              itemBuilder: (_, index) {
-                final category = categoryController.featuredCategories[index];
+          () => categoryController.loading.value
+              ? CategoryShimmer(
+                  itemCount: categoryController.featuredCategories.length,
+                )
+              : SizedBox(
+                  height: 120,
+                  child: Obx(
+                    () => ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: categoryController.featuredCategories.length,
+                      physics: const ScrollPhysics(),
+                      itemBuilder: (_, index) {
+                        final category =
+                            categoryController.featuredCategories[index];
 
-                if (categoryController.loading.value) {
-                  return CategoryShimmer(
-                    itemCount: categoryController.featuredCategories.length,
-                  );
-                } else {
-                  return CircularIconText(
-                      icon: IconDataSolid(category.codePoint),
-                      text: category.name,
-                      onTap: () {
-                        Get.to(() => const CategoryScreen());
-                      });
-                }
-              },
-            ),
-          ),
-        ),
+                        return CircularIconText(
+                            icon: IconDataSolid(category.codePoint),
+                            text: category.name,
+                            onTap: () {
+                              Get.to(() => const CategoryScreen());
+                            });
+                      },
+                    ),
+                  ),
+                ),
+        )
       ].gap(height: MySizes.spaceBtwItems),
     );
   }
