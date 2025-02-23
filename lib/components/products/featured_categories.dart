@@ -20,6 +20,7 @@ class FeaturedCategories extends StatelessWidget {
     CategoryController categoryController = Get.put(CategoryController());
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
           padding: EdgeInsets.symmetric(

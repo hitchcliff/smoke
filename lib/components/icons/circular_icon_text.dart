@@ -33,13 +33,11 @@ class CircularIconText extends StatelessWidget {
                     : MyColors.white,
                 borderRadius: BorderRadius.circular(100),
               ),
-              child: Center(
-                child: Icon(
-                  icon,
-                  color: MyHelpers.isDarkMode(context)
-                      ? MyColors.white
-                      : MyColors.black,
-                ),
+              child: Icon(
+                icon,
+                color: MyHelpers.isDarkMode(context)
+                    ? MyColors.white
+                    : MyColors.black,
               ),
             ),
             SizedBox(
