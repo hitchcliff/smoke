@@ -3,4 +3,5 @@ class MyDBCollections {
   static const profile = "users/images/profile/";
   static const categories = "categories";
   static const products = "products";
+  static const brands = "brands";
 }

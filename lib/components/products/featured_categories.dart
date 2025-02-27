@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/icons/circular_icon_text.dart';
 import 'package:single_store_ecommerce/components/shimmer/category_shimmer.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
@@ -18,6 +19,10 @@ class FeaturedCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CategoryController categoryController = Get.put(CategoryController());
+
+    Logger().d("Is category loading: ${categoryController.loading.value}");
+    Logger().d(
+        "Featured category length: ${categoryController.featuredCategories.length}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,24 +44,22 @@ class FeaturedCategories extends StatelessWidget {
                 )
               : SizedBox(
                   height: 120,
-                  child: Obx(
-                    () => ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: categoryController.featuredCategories.length,
-                      physics: const ScrollPhysics(),
-                      itemBuilder: (_, index) {
-                        final category =
-                            categoryController.featuredCategories[index];
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categoryController.featuredCategories.length,
+                    physics: const ScrollPhysics(),
+                    itemBuilder: (_, index) {
+                      final category =
+                          categoryController.featuredCategories[index];
 
-                        return CircularIconText(
-                            icon: IconDataSolid(category.codePoint),
-                            text: category.name,
-                            onTap: () {
-                              Get.to(() => const CategoryScreen());
-                            });
-                      },
-                    ),
+                      return CircularIconText(
+                          icon: IconDataSolid(category.codePoint),
+                          text: category.name,
+                          onTap: () {
+                            Get.to(() => const CategoryScreen());
+                          });
+                    },
                   ),
                 ),
         )

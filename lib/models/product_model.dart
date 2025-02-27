@@ -15,7 +15,7 @@ class ProductModel {
     required this.salePrice,
     required this.isFeatured,
     this.images,
-    this.brand,
+    this.brandId,
     this.productAttributes,
     this.productVariation,
   });
@@ -27,7 +27,7 @@ class ProductModel {
 
   /// Not-required
   final List<String>? images;
-  final BrandModel? brand;
+  final String? brandId;
   final List<ProductAttributeModel>?
       productAttributes; // {name: "Color", values: ["green", "blue", "red"]}
   final List<ProductVariationModel>?
@@ -58,6 +58,7 @@ class ProductModel {
       'price': price,
       'stock': stock,
       'salePrice': 0,
+      'brandId': brandId,
     };
   }
 
@@ -78,7 +79,7 @@ class ProductModel {
         salePrice: data['salePrice'],
         isFeatured: data['isFeatured'],
         images: data['images'] != null ? List<String>.from(data['images']) : [],
-        brand: BrandModel.fromJson(data['brand']),
+        brandId: data['brandId'],
         productAttributes: (data['productAttributes'] as List<dynamic>)
             .map((e) => ProductAttributeModel.fromJson(e))
             .toList(),

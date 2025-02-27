@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/category_model.dart';
@@ -24,7 +22,7 @@ class CategoryController extends GetxController {
   }
 
   /// Read all categories
-  void readAllCategories() async {
+  readAllCategories() async {
     try {
       loading.value = true;
 

@@ -17,9 +17,10 @@ class ProductController extends GetxController {
       FullScreenLoader.openLoadingDialog(
           "Uploading data...", MyImages.docerAnimation);
 
+      /// Upload the products
       await _productRepository.upload(product);
 
-      Snackbars.success(
+      await Snackbars.success(
           title: "Success", message: "Congratulations, products are uploaded");
     } catch (e) {
       Snackbars.error(title: "Error", message: e.toString());

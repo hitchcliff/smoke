@@ -31,7 +31,7 @@ class HomeAppbar extends StatelessWidget {
           ),
           Obx(() => controller.loading.value
               ? ShimmerEffect(
-                  height: 15,
+                  height: 30,
                   width: 100,
                 )
               : TitleText(
