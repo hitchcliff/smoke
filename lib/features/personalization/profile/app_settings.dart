@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/components/tile/menu_tile.dart';
+import 'package:single_store_ecommerce/screens/load_data.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
@@ -35,7 +37,9 @@ class AppSettings extends StatelessWidget {
                   leadingIcon: FontAwesomeIcons.database,
                   title: "Load Data",
                   subtitle: "upload Data to your Cloud Firebase",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => const LoadData());
+                  },
                 ),
               ),
               MenuTile(
