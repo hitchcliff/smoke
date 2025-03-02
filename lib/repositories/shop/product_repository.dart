@@ -16,7 +16,7 @@ class ProductRepository extends GetxController {
   /// Upload data to db
   upload(ProductModel data) async {
     try {
-      Logger().d("Product ID: ${data.id}");
+      Logger().d("Product: ${data.toJson()}");
       await _db
           .collection(MyDBCollections.products)
           .doc(data.id)

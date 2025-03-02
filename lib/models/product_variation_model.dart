@@ -7,7 +7,8 @@ class ProductVariationModel {
       required this.attributeValues});
 
   final String id, image;
-  final int stock, price;
+  final int stock;
+  final double price;
   final Map<String, String> attributeValues;
 
   static ProductVariationModel empty() => ProductVariationModel(
@@ -17,6 +18,9 @@ class ProductVariationModel {
     return {
       "id": id,
       "attributeValues": attributeValues,
+      "image": image,
+      "stock": stock,
+      "price": price,
     };
   }
 

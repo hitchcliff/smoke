@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:single_store_ecommerce/models/brand_model.dart';
 import 'package:single_store_ecommerce/models/product_attribute_model.dart';
 import 'package:single_store_ecommerce/models/product_variation_model.dart';
 
@@ -44,6 +43,9 @@ class ProductModel {
         description: '',
         salePrice: 0,
         isFeatured: false,
+        productAttributes: [],
+        productVariation: [],
+        images: [],
       );
 
   /// To JSON, will be used for uploading data to firebase
@@ -59,6 +61,9 @@ class ProductModel {
       'stock': stock,
       'salePrice': 0,
       'brandId': brandId,
+      "images": images,
+      "productAttributes": productAttributes?.map((e) => e.toJson()).toList(),
+      "productVariation": productVariation?.map((e) => e.toJson()).toList(),
     };
   }
 
