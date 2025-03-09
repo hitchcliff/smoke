@@ -29,15 +29,17 @@ class HomeAppbar extends StatelessWidget {
                 .labelMedium!
                 .apply(color: MyColors.grey),
           ),
-          Obx(() => controller.loading.value
-              ? ShimmerEffect(
-                  height: 30,
-                  width: 100,
-                )
-              : TitleText(
-                  controller.user.value.fullName,
-                  color: MyColors.white,
-                )),
+          Obx(
+            () => controller.loading.value
+                ? ShimmerEffect(
+                    height: 30,
+                    width: 100,
+                  )
+                : TitleText(
+                    controller.user.value.fullName,
+                    color: MyColors.white,
+                  ),
+          ),
         ],
       ),
       actions: [

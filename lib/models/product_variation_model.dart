@@ -4,15 +4,16 @@ class ProductVariationModel {
       required this.image,
       required this.stock,
       required this.price,
+      required this.salePrice,
       required this.attributeValues});
 
   final String id, image;
   final int stock;
-  final double price;
+  final double price, salePrice;
   final Map<String, String> attributeValues;
 
   static ProductVariationModel empty() => ProductVariationModel(
-      id: "", attributeValues: {}, image: '', stock: 0, price: 0);
+      id: "", attributeValues: {}, image: '', stock: 0, price: 0, salePrice: 0);
 
   Map<String, dynamic> toJson() {
     return {
@@ -36,6 +37,7 @@ class ProductVariationModel {
       attributeValues: Map<String, String>.from(
         data['attributeValues'],
       ),
+      salePrice: data['salePrice'],
     );
   }
 }

@@ -40,7 +40,7 @@ class FeaturedCategories extends StatelessWidget {
         Obx(
           () => categoryController.loading.value
               ? CategoryShimmer(
-                  itemCount: categoryController.featuredCategories.length,
+                  itemCount: 6,
                 )
               : SizedBox(
                   height: 120,
