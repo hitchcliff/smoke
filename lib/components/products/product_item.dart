@@ -22,9 +22,10 @@ class ProductVerticalItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(MySizes.cardPadding),
       decoration: BoxDecoration(
-        color: isDarkMode ? MyColors.black : MyColors.white,
+        color: isDarkMode ? MyColors.dark : MyColors.light,
         borderRadius: BorderRadius.circular(MySizes.cardRadius),
-        border: Border.all(width: 1, color: MyColors.white),
+        border: Border.all(
+            width: 1, color: isDarkMode ? MyColors.light : MyColors.dark),
       ),
       child: Column(
         children: [thumbnail, details],

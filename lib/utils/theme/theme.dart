@@ -11,7 +11,7 @@ import 'package:single_store_ecommerce/utils/theme/text_theme.dart';
 class MyAppTheme {
   static ThemeData lightTheme = ThemeData(
     fontFamily: "Poppins",
-    scaffoldBackgroundColor: MyColors.white,
+    scaffoldBackgroundColor: MyColors.light,
     primaryColor: MyColors.primary,
     textTheme: MyTextTheme.lightTextTheme,
     elevatedButtonTheme: MyElevatedButtonTheme.lightElevatedButton,
@@ -24,7 +24,7 @@ class MyAppTheme {
 
   static ThemeData darkTheme = ThemeData(
     fontFamily: "Poppins",
-    scaffoldBackgroundColor: MyColors.black,
+    scaffoldBackgroundColor: MyColors.dark,
     primaryColor: MyColors.primary,
     textTheme: MyTextTheme.darkTextTheme,
     elevatedButtonTheme: MyElevatedButtonTheme.darkElevatedButton,

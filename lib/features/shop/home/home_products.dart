@@ -27,7 +27,7 @@ class HomeProducts extends StatelessWidget {
 
     return Obx(
       () => controller.loading.value
-          ? Padding(
+          ? Container(
               padding: EdgeInsets.all(MySizes.defaultSpace),
               child: Column(
                 children: [

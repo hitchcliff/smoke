@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/banner_model.dart';
 import 'package:single_store_ecommerce/repositories/shop/banner_repository.dart';
 
@@ -27,7 +28,7 @@ class BannerController extends GetxController {
       /// Assign to state
       banners.assignAll(data);
     } catch (e) {
-      throw e.toString();
+      Snackbars.error(title: "Read all banners", message: e.toString());
     } finally {
       loading.value = false;
     }

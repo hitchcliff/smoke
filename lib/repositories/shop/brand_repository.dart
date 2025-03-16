@@ -29,4 +29,19 @@ class BrandRepository extends GetxController {
       throw e.toString();
     }
   }
+
+  /// Get all banners
+  Future<List<BrandModel>> readAll() async {
+    try {
+      QuerySnapshot snapshot =
+          await _db.collection(MyDBCollections.brands).get();
+
+      return snapshot.docs
+          .map((doc) => BrandModel.fromSnapshot(
+              doc as DocumentSnapshot<Map<String, dynamic>>))
+          .toList();
+    } catch (e) {
+      throw e.toString();
+    }
+  }
 }

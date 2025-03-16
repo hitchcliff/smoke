@@ -16,7 +16,7 @@ class HomeSlider extends StatelessWidget {
     BannerController bannerController = Get.put(BannerController());
 
     return Obx(
-      () => Container(
+      () => Padding(
         padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
         child: PromoSlider(
           banners: bannerController.banners

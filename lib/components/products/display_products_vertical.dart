@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/grid_layouts/grid_layout.dart';
 import 'package:single_store_ecommerce/components/products/product_item.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
@@ -37,9 +38,11 @@ class DisplayProductsVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
 
+    Logger().d("Is dark: $isDarkMode");
+
     return Container(
       margin: margin,
-      color: isDarkMode ? MyColors.dark : MyColors.lightGrey,
+      color: isDarkMode ? MyColors.dark : MyColors.light,
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
       child: Column(
         children: [

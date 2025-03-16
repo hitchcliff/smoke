@@ -4,10 +4,10 @@ class MyColors {
   static const Color primary = Color(0xFF89AC46);
   static const Color secondary = Color(0xFFD3E671);
   static const Color accent = Color(0xFFb0c7ff);
-  static const Color dark = Color(0xFF272727);
-  static const Color light = Color(0xFFF6F6F6);
+  static const Color dark = Color(0xFF303F16);
+  static const Color light = Color(0xFFD3E671);
   static const Color verified = Color(0xFF0866FF);
-  static const Color heart = Color(0xFFFB2937);
+  static const Color heart = Color(0xFFFF8989);
   static const Color star = Color(0xFFFFD500);
 
   // Neutral Shades
