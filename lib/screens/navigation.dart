@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/controllers/navigation_controller.dart';
+import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class Navigation extends StatelessWidget {
   const Navigation({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = MyHelpers.isDarkMode(context);
     final controller = Get.put(NavigationController());
 
     return Scaffold(
@@ -16,6 +19,7 @@ class Navigation extends StatelessWidget {
           height: 80,
           selectedIndex: controller.currentPageIdx.value,
           elevation: 0,
+          backgroundColor: isDarkMode ? MyColors.primary : MyColors.secondary,
           onDestinationSelected: (value) =>
               controller.currentPageIdx.value = value,
           destinations: const [
