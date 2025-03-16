@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/models/product_attribute_model.dart';
 import 'package:single_store_ecommerce/models/product_variation_model.dart';
 
@@ -21,7 +22,7 @@ class ProductModel {
 
   // Required Variables
   final String id, title, thumbnail, description, productType;
-  final double stock, price, salePrice;
+  final num price, salePrice, stock;
   final bool isFeatured;
 
   /// Not-required
@@ -39,9 +40,9 @@ class ProductModel {
         thumbnail: '',
         productType: "",
         stock: 0,
-        price: 0,
+        price: 0.0,
         description: '',
-        salePrice: 0,
+        salePrice: 0.0,
         isFeatured: false,
         productAttributes: [],
         productVariation: [],
@@ -59,7 +60,7 @@ class ProductModel {
       'productType': productType,
       'price': price,
       'stock': stock,
-      'salePrice': 0,
+      'salePrice': salePrice,
       'brandId': brandId,
       "images": images,
       "productAttributes": productAttributes?.map((e) => e.toJson()).toList(),
@@ -73,6 +74,8 @@ class ProductModel {
     if (document.data() != null) {
       final data = document.data()!;
 
+      Logger().d("Price: ${data['salePrice']}");
+
       return ProductModel(
         id: document.id,
         title: data['title'],
@@ -85,12 +88,12 @@ class ProductModel {
         isFeatured: data['isFeatured'],
         images: data['images'] != null ? List<String>.from(data['images']) : [],
         brandId: data['brandId'],
-        productAttributes: (data['productAttributes'] as List<dynamic>)
-            .map((e) => ProductAttributeModel.fromJson(e))
-            .toList(),
-        productVariation: (data['productVariation'] as List<dynamic>)
-            .map((e) => ProductVariationModel.fromJson(e))
-            .toList(),
+        // productAttributes: (data['productAttributes'] as List<dynamic>)
+        //     .map((e) => ProductAttributeModel.fromJson(e))
+        //     .toList(),
+        // productVariation: (data['productVariation'] as List<dynamic>)
+        //     .map((e) => ProductVariationModel.fromJson(e))
+        //     .toList(),
       );
     } else {
       return ProductModel.empty();

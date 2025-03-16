@@ -20,9 +20,9 @@ class FeaturedCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     CategoryController categoryController = Get.put(CategoryController());
 
-    Logger().d("Is category loading: ${categoryController.loading.value}");
-    Logger().d(
-        "Featured category length: ${categoryController.featuredCategories.length}");
+    // Logger().d("Is category loading: ${categoryController.loading.value}");
+    // Logger().d(
+    //     "Featured category length: ${categoryController.featuredCategories.length}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

@@ -24,9 +24,11 @@ class DisplayProductsVerticalProps {
 }
 
 class DisplayProductsVertical extends StatelessWidget {
-  const DisplayProductsVertical(this.props,
-      {super.key,
-      this.margin = const EdgeInsets.only(top: MySizes.spaceBtwSections)});
+  const DisplayProductsVertical(
+    this.props, {
+    super.key,
+    this.margin = const EdgeInsets.only(top: MySizes.spaceBtwSections),
+  });
 
   final DisplayProductsVerticalProps props;
   final EdgeInsetsGeometry margin;
@@ -48,23 +50,25 @@ class DisplayProductsVertical extends StatelessWidget {
               child: SectionHeading(props.heading!),
             ),
 
-          Padding(
-            padding: const EdgeInsets.only(
-              bottom: MySizes.defaultSpace,
-              top: MySizes.spaceBtwItems,
-            ),
-            child: GridLayout(
-              crossAxisCount: 2,
-              children: props.products
-                  .map(
-                    (info) => ProductVerticalItem(
-                      ProductThumbnail(info.thumbnail),
-                      ProductCard(info.details),
-                    ),
-                  )
-                  .toList(),
-            ),
-          ),
+          props.products.isEmpty
+              ? SizedBox()
+              : Padding(
+                  padding: const EdgeInsets.only(
+                    bottom: MySizes.defaultSpace,
+                    top: MySizes.spaceBtwItems,
+                  ),
+                  child: GridLayout(
+                    crossAxisCount: 2,
+                    children: props.products
+                        .map(
+                          (info) => ProductVerticalItem(
+                            ProductThumbnail(info.thumbnail),
+                            ProductCard(info.details),
+                          ),
+                        )
+                        .toList(),
+                  ),
+                ),
         ],
       ),
     );

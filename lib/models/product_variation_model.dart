@@ -8,6 +8,7 @@ class ProductVariationModel {
       required this.attributeValues});
 
   final String id, image;
+
   final int stock;
   final double price, salePrice;
   final Map<String, String> attributeValues;

@@ -29,7 +29,7 @@ class UserController extends GetxController {
       loading.value = true;
       final fetchUser = await _userRepository.getUser();
 
-      Logger().d(fetchUser.fullName);
+      // Logger().d(fetchUser.fullName);
       // Set the user
       user(fetchUser);
     } catch (e) {

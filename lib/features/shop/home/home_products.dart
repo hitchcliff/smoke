@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/products/product_card.dart';
+import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
+import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/screens/all_products.dart';
 import 'package:single_store_ecommerce/screens/product_detail.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
@@ -19,111 +23,54 @@ class HomeProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
+    ProductController controller = Get.put(ProductController());
 
-    return DisplayProductsVertical(
-      DisplayProductsVerticalProps(
-        SectionHeadingProps(
-          title: MyTexts.headingPopularProducts,
-          titleColor: isDarkMode ? MyColors.white : MyColors.black,
-          showActionButton: true,
-          onPressed: () => Get.to(() => const AllProductsScreen()),
-        ),
-        [
-          DisplayProductsVerticalDetailsProp(
-            thumbnail: ProductThumbnailProps(
-              imgUrl: MyImages.productImg1,
-              isWishlist: true,
-              saleTxt: "25%",
-              onSale: true,
-              onTapHeart: () {},
-              onTapImg: () => Get.to(() => const ProductDetailScreen()),
+    return Obx(
+      () => controller.loading.value
+          ? Padding(
+              padding: EdgeInsets.all(MySizes.defaultSpace),
+              child: Column(
+                children: [
+                  CircularProgressIndicator(),
+                  BodyText("Fetching products..."),
+                ],
+              ))
+          : DisplayProductsVertical(
+              DisplayProductsVerticalProps(
+                SectionHeadingProps(
+                  title: MyTexts.headingPopularProducts,
+                  titleColor: isDarkMode ? MyColors.white : MyColors.black,
+                  showActionButton: true,
+                  onPressed: () => Get.to(() => const AllProductsScreen()),
+                ),
+                controller.products
+                    .map((product) => (DisplayProductsVerticalDetailsProp(
+                          thumbnail: ProductThumbnailProps(
+                            isNetworkImg: true,
+                            imgUrl: product.thumbnail,
+                            isWishlist: false,
+                            saleTxt: product.salePrice > 0
+                                ? MyHelpers.getPercentSale(
+                                    product.price,
+                                    product.salePrice,
+                                  )
+                                : "",
+                            onSale: product.salePrice > 0,
+                            onTapHeart: () {},
+                            onTapImg: () =>
+                                Get.to(() => const ProductDetailScreen()),
+                          ),
+                          details: ProductCardProps(
+                            name: product.title,
+                            price: product.price.toString(),
+                            brand: MyTexts.brandNike,
+                            onTap: () {},
+                            verified: true,
+                          ),
+                        )))
+                    .toList(),
+              ),
             ),
-            details: ProductCardProps(
-              name: "Green Nike Air Shoes",
-              price: "35.5",
-              brand: MyTexts.brandNike,
-              onTap: () {},
-              verified: true,
-            ),
-          ),
-          DisplayProductsVerticalDetailsProp(
-            thumbnail: ProductThumbnailProps(
-              imgUrl: MyImages.productImg2,
-              onTapHeart: () {},
-              onTapImg: () {},
-            ),
-            details: ProductCardProps(
-              name: "Green Nike Air Shoes",
-              price: "55.5",
-              brand: MyTexts.brandNike,
-              onTap: () {},
-              verified: true,
-            ),
-          ),
-          DisplayProductsVerticalDetailsProp(
-            thumbnail: ProductThumbnailProps(
-              imgUrl: MyImages.productImg1,
-              isWishlist: true,
-              saleTxt: "25%",
-              onSale: true,
-              onTapHeart: () {},
-              onTapImg: () {},
-            ),
-            details: ProductCardProps(
-              name: "Green Nike Air Shoes",
-              price: "35.5",
-              brand: MyTexts.brandNike,
-              onTap: () {},
-              verified: true,
-            ),
-          ),
-          DisplayProductsVerticalDetailsProp(
-            thumbnail: ProductThumbnailProps(
-              imgUrl: MyImages.productImg2,
-              onTapHeart: () {},
-              onTapImg: () {},
-            ),
-            details: ProductCardProps(
-              name: "Green Nike Air Shoes",
-              price: "55.5",
-              brand: MyTexts.brandNike,
-              onTap: () {},
-              verified: true,
-            ),
-          ),
-          DisplayProductsVerticalDetailsProp(
-            thumbnail: ProductThumbnailProps(
-              imgUrl: MyImages.productImg1,
-              isWishlist: true,
-              saleTxt: "25%",
-              onSale: true,
-              onTapHeart: () {},
-              onTapImg: () {},
-            ),
-            details: ProductCardProps(
-              name: "Green Nike Air Shoes",
-              price: "35.5",
-              brand: MyTexts.brandNike,
-              onTap: () {},
-              verified: true,
-            ),
-          ),
-          DisplayProductsVerticalDetailsProp(
-            thumbnail: ProductThumbnailProps(
-              imgUrl: MyImages.productImg2,
-              onTapHeart: () {},
-              onTapImg: () {},
-            ),
-            details: ProductCardProps(
-              name: "Green Nike Air Shoes",
-              price: "55.5",
-              brand: MyTexts.brandNike,
-              onTap: () {},
-              verified: true,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

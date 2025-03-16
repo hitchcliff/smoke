@@ -26,4 +26,19 @@ class ProductRepository extends GetxController {
       throw e.toString();
     }
   }
+
+  /// Get all products
+  Future<List<ProductModel>> getProducts() async {
+    try {
+      final QuerySnapshot snapshot =
+          await _db.collection(MyDBCollections.products).get();
+
+      return snapshot.docs
+          .map((document) => ProductModel.fromSnapshot(
+              document as DocumentSnapshot<Map<String, dynamic>>))
+          .toList();
+    } catch (e) {
+      throw e.toString();
+    }
+  }
 }

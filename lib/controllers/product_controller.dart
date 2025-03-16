@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/product_model.dart';
@@ -8,8 +9,18 @@ import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 class ProductController extends GetxController {
   static ProductController get instance => Get.find();
 
+  Rx<bool> loading = false.obs;
+  RxList<ProductModel> products = <ProductModel>[].obs;
+
   /// Repository
   final ProductRepository _productRepository = Get.put(ProductRepository());
+
+  @override
+  void onInit() {
+    read();
+
+    super.onInit();
+  }
 
   /// Create product
   create(ProductModel product) async {
@@ -26,6 +37,23 @@ class ProductController extends GetxController {
       Snackbars.error(title: "Error", message: e.toString());
     } finally {
       FullScreenLoader.stopLoading();
+    }
+  }
+
+  /// Read products
+  read() async {
+    try {
+      loading.value = true;
+
+      /// Fetch all products
+      final data = await _productRepository.getProducts();
+
+      /// Assign the products to state
+      products.assignAll(data);
+    } catch (e) {
+      Snackbars.error(title: "Read products", message: e.toString());
+    } finally {
+      loading.value = true;
     }
   }
 }

@@ -72,7 +72,7 @@ class UserModel {
     if (document.data() != null) {
       final data = document.data()!;
 
-      Logger().d(data);
+      // Logger().d(data);
 
       return UserModel(
         id: document.id,

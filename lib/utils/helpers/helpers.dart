@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/utils/helpers/convertHexToRGB.dart';
 import 'package:single_store_ecommerce/utils/helpers/getColor.dart';
+import 'package:single_store_ecommerce/utils/helpers/getPercentSale.dart';
 import 'package:single_store_ecommerce/utils/helpers/isDark.dart';
 import 'package:single_store_ecommerce/utils/helpers/screenHeight.dart';
 import 'package:single_store_ecommerce/utils/helpers/screenWidth.dart';
@@ -30,5 +31,9 @@ class MyHelpers {
   static Color textColor(
       {required BuildContext context, TextColor? textColor}) {
     return kTextColor(context: context, textColor: textColor);
+  }
+
+  static String getPercentSale(num price, num salePrice) {
+    return kGetPercentSale(price: price, salePrice: salePrice);
   }
 }
