@@ -4,13 +4,12 @@ class CategoryModel {
   CategoryModel({
     required this.name,
     required this.parentId,
-    required this.codePoint,
+    required this.image,
     required this.isFeatured,
     required String id,
   });
 
-  final String name, parentId;
-  final int codePoint;
+  final String name, parentId, image;
   final bool isFeatured;
 
   /// Empty function
@@ -18,14 +17,14 @@ class CategoryModel {
         id: '',
         name: "",
         parentId: "",
-        codePoint: 62795,
+        image: "",
         isFeatured: false,
       );
 
   /// Model to Json
   Map<String, dynamic> toJson() => {
         "name": name,
-        "codePoint": codePoint,
+        "image": image,
         "parentId": parentId,
         "isFeatured": isFeatured,
       };
@@ -41,7 +40,7 @@ class CategoryModel {
         id: document.id,
         name: data['name'],
         parentId: data['parentId'],
-        codePoint: data['codePoint'],
+        image: data['image'],
         isFeatured: data['isFeatured'],
       );
     } else {
