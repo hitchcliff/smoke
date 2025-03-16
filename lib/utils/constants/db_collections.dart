@@ -4,4 +4,5 @@ class MyDBCollections {
   static const categories = "categories";
   static const products = "products";
   static const brands = "brands";
+  static const banners = "banners";
 }

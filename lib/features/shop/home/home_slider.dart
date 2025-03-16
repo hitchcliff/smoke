@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
+import 'package:single_store_ecommerce/components/shimmer/shimmer_effect.dart';
 import 'package:single_store_ecommerce/components/sliders/promo_slider.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:single_store_ecommerce/controllers/banner_controller.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class HomeSlider extends StatelessWidget {
@@ -11,14 +13,21 @@ class HomeSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
-      child: PromoSlider(
-        banners: [
-          RoundedImage(onTap: () {}, imgUrl: MyImages.promoBannerImg1),
-          RoundedImage(onTap: () {}, imgUrl: MyImages.promoBannerImg2),
-          RoundedImage(onTap: () {}, imgUrl: MyImages.promoBannerImg3),
-        ],
+    BannerController bannerController = Get.put(BannerController());
+
+    return Obx(
+      () => Container(
+        padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
+        child: PromoSlider(
+          banners: bannerController.banners
+              .map((banner) => (RoundedImage(
+                    onTap: () {},
+                    imgUrl: banner.image,
+                    isNetworkImage: true,
+                    fit: BoxFit.cover,
+                  )))
+              .toList(),
+        ),
       ),
     );
   }
