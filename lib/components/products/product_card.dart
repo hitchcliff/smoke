@@ -36,7 +36,7 @@ class ProductCard extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Padding(
           padding: const EdgeInsets.only(top: MySizes.sm),
@@ -47,6 +47,7 @@ class ProductCard extends StatelessWidget {
               Text(
                 prop.name,
                 style: Theme.of(context).textTheme.bodyLarge,
+                overflow: TextOverflow.ellipsis,
               ),
               // brand
               BrandIcon(

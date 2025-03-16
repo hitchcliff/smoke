@@ -43,7 +43,7 @@ class HomeProducts extends StatelessWidget {
                   showActionButton: true,
                   onPressed: () => Get.to(() => const AllProductsScreen()),
                 ),
-                controller.products
+                controller.featuredProducts
                     .map((product) => (DisplayProductsVerticalDetailsProp(
                           thumbnail: ProductThumbnailProps(
                             isNetworkImg: true,
