@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:logger/logger.dart';
 
 /// Model class representing user data.
 class UserModel {

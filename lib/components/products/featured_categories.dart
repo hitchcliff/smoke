@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/circle/circle_image.dart';
-import 'package:single_store_ecommerce/components/containers/circular_container.dart';
-import 'package:single_store_ecommerce/components/icons/circular_icon_text.dart';
 import 'package:single_store_ecommerce/components/shimmer/category_shimmer.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';

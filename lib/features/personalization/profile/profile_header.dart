@@ -7,7 +7,6 @@ import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
 import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/screens/user_info.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class ProfileHeader extends StatelessWidget {

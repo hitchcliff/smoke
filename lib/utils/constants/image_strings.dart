@@ -1,11 +1,11 @@
 class MyImages {
   // ---# on boarding page
   static const String onboardingImage1 =
-      "assets/images/on_boarding_images/sammy-line-searching.gif";
+      "assets/images/on_boarding_images/1.jpg";
   static const String onboardingImage2 =
-      "assets/images/on_boarding_images/sammy-line-shopping.gif";
+      "assets/images/on_boarding_images/2.jpg";
   static const String onboardingImage3 =
-      "assets/images/on_boarding_images/sammy-line-delivery.gif";
+      "assets/images/on_boarding_images/3.jpg";
 
   // ---# login screen
   static const String logoBlackImage =

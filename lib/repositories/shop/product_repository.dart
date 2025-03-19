@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/models/product_model.dart';
 import 'package:single_store_ecommerce/repositories/shop/brand_repository.dart';
 import 'package:single_store_ecommerce/utils/constants/db_collections.dart';
@@ -16,7 +15,7 @@ class ProductRepository extends GetxController {
   /// Upload data to db
   upload(ProductModel data) async {
     try {
-      Logger().d("Product: ${data.toJson()}");
+      // Logger().d("Product: ${data.toJson()}");
       await _db
           .collection(MyDBCollections.products)
           .doc(data.id)

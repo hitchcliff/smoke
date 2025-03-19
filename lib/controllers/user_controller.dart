@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/user_model.dart';
