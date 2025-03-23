@@ -52,7 +52,8 @@ class ProductController extends GetxController {
       products.assignAll(data);
 
       /// Assign featured products
-      featuredProducts.assignAll(data.where((d) => d.isFeatured).toList());
+      featuredProducts
+          .assignAll(data.where((d) => d.isFeatured).take(10).toList());
     } catch (e) {
       Snackbars.error(title: "Read products", message: e.toString());
     } finally {

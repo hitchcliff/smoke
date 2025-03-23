@@ -11,6 +11,12 @@ class BrandController extends GetxController {
 
   final BrandRepository _brandRepository = Get.put(BrandRepository());
 
+  @override
+  void onInit() {
+    readAll();
+    super.onInit();
+  }
+
   /// Get all brands
   readAll() async {
     try {
@@ -23,5 +29,10 @@ class BrandController extends GetxController {
     } finally {
       loading.value = false;
     }
+  }
+
+  /// Read current brand through {id}
+  BrandModel read(String id) {
+    return brands.where((brand) => brand.id == id).toList()[0];
   }
 }

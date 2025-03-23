@@ -74,7 +74,7 @@ class ProductModel {
     if (document.data() != null) {
       final data = document.data()!;
 
-      Logger().d("Price: ${data['salePrice']}");
+      // Logger().d("Price: ${data['salePrice']}");
 
       return ProductModel(
         id: document.id,

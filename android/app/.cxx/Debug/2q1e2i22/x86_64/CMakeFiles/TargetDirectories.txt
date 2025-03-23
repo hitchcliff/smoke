@@ -1,0 +1,2 @@
+D:/develop/single_store_ecommerce/android/app/.cxx/Debug/2q1e2i22/x86_64/CMakeFiles/edit_cache.dir
+D:/develop/single_store_ecommerce/android/app/.cxx/Debug/2q1e2i22/x86_64/CMakeFiles/rebuild_cache.dir

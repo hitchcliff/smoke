@@ -7,16 +7,23 @@ class BrandModel {
     required this.totalProducts,
     required this.isFeatured,
     required this.id,
+    required this.verified,
   });
 
   // Variables
   final String id, name, image;
   final int totalProducts;
-  final bool isFeatured;
+  final bool isFeatured, verified;
 
   /// Empty function
   static BrandModel empty() => BrandModel(
-      id: "", name: "", image: '', totalProducts: 0, isFeatured: false);
+        id: "",
+        name: "",
+        image: '',
+        totalProducts: 0,
+        isFeatured: false,
+        verified: false,
+      );
 
   /// ToJson
   Map<String, dynamic> toJson() {
@@ -24,7 +31,8 @@ class BrandModel {
       "name": name,
       "image": image,
       "isFeatured": isFeatured,
-      "totalProducts": totalProducts
+      "totalProducts": totalProducts,
+      "verified": verified,
     };
   }
 
@@ -38,6 +46,7 @@ class BrandModel {
       image: data['image'],
       isFeatured: data['isFeatured'],
       totalProducts: data['totalProducts'],
+      verified: data['verified'],
     );
   }
 
@@ -53,6 +62,7 @@ class BrandModel {
         image: data['image'],
         isFeatured: data['isFeatured'],
         totalProducts: data['totalProducts'],
+        verified: data['verified'],
       );
     } else {
       return BrandModel.empty();
