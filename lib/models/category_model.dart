@@ -6,15 +6,17 @@ class CategoryModel {
     required this.parentId,
     required this.image,
     required this.isFeatured,
-    required String id,
+    required this.id,
+    required this.catId,
   });
 
-  final String name, parentId, image;
+  final String id, catId, name, parentId, image;
   final bool isFeatured;
 
   /// Empty function
   static CategoryModel empty() => CategoryModel(
         id: '',
+        catId: "777", // meaning there is no category id
         name: "",
         parentId: "",
         image: "",
@@ -23,6 +25,7 @@ class CategoryModel {
 
   /// Model to Json
   Map<String, dynamic> toJson() => {
+        'catId': catId,
         "name": name,
         "image": image,
         "parentId": parentId,
@@ -38,6 +41,7 @@ class CategoryModel {
 
       return CategoryModel(
         id: document.id,
+        catId: data['catId'],
         name: data['name'],
         parentId: data['parentId'],
         image: data['image'],

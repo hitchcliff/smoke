@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:logger/web.dart';
 import 'package:single_store_ecommerce/components/circle/circle_image.dart';
 import 'package:single_store_ecommerce/components/shimmer/category_shimmer.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
@@ -18,10 +19,6 @@ class FeaturedCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CategoryController categoryController = Get.put(CategoryController());
-
-    // Logger().d("Is category loading: ${categoryController.loading.value}");
-    // Logger().d(
-    //     "Featured category length: ${categoryController.featuredCategories.length}");
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +55,17 @@ class FeaturedCategories extends StatelessWidget {
                             categoryController.featuredCategories[index];
 
                         return GestureDetector(
-                          onTap: () => Get.to(() => CategoryScreen()),
+                          onTap: () {
+                            // Go to category screen
+                            Get.to(
+                              () => CategoryScreen(
+                                category: category,
+                              ),
+                            );
+
+                            // Update products in category controller
+                            categoryController.updateProducts(category.catId);
+                          },
                           child: Column(
                             children: [
                               CircleImage(

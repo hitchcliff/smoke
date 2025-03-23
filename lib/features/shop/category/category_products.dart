@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/products/product_horizontal.dart';
+import 'package:single_store_ecommerce/controllers/category_controller.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class CategoryProducts extends StatelessWidget {
@@ -9,15 +12,19 @@ class CategoryProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CategoryController categoryController = CategoryController.instance;
+
     return SizedBox(
       height: 100,
       child: ListView.separated(
-        itemCount: 4,
+        itemCount: categoryController.products.length,
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) => const SizedBox(
           width: MySizes.spaceBtwItems,
         ),
-        itemBuilder: (context, index) => const ProductHorizontal(),
+        itemBuilder: (context, index) => ProductHorizontal(
+          product: categoryController.products[index],
+        ),
       ),
     );
   }

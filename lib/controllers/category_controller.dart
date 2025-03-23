@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
+import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/models/category_model.dart';
+import 'package:single_store_ecommerce/models/product_model.dart';
 import 'package:single_store_ecommerce/repositories/shop/category_repository.dart';
 
 class CategoryController extends GetxController {
@@ -10,9 +13,13 @@ class CategoryController extends GetxController {
   Rx<bool> loading = false.obs;
   final RxList<CategoryModel> allCategories = <CategoryModel>[].obs;
   final RxList<CategoryModel> featuredCategories = <CategoryModel>[].obs;
+  final RxList<ProductModel> products = <ProductModel>[].obs;
 
   // Repositories
   final CategoryRepository _categoryRepository = Get.put(CategoryRepository());
+
+  // Controller
+  final ProductController _productController = Get.put(ProductController());
 
   @override
   void onInit() {
@@ -43,5 +50,13 @@ class CategoryController extends GetxController {
     } finally {
       loading.value = false;
     }
+  }
+
+  /// Read products by {categoryId}
+  updateProducts(String id) {
+    // Push all products
+    products.assignAll(_productController.products
+        .where((product) => product.categoryId == id)
+        .toList());
   }
 }
