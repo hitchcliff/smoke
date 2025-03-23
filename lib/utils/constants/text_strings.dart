@@ -58,7 +58,7 @@ class MyTexts {
   static const String forgotPasswordBtn = "Submit";
 
   // ---# Appbar
-  static const appbarLabel = "Good day for shopping";
+  static const appbarLabel = "Good day for smoking!";
   static const appbarTitle = "Tailmoor Skinder";
   static const appbarShopTitle = "Shop";
   static const appbarWishlistTitle = "Wishlist";

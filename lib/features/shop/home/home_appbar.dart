@@ -22,13 +22,8 @@ class HomeAppbar extends StatelessWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            MyTexts.appbarLabel,
-            style: Theme.of(context)
-                .textTheme
-                .labelMedium!
-                .apply(color: MyColors.grey),
-          ),
+          Text(MyTexts.appbarLabel,
+              style: Theme.of(context).textTheme.labelMedium!),
           Obx(
             () => controller.loading.value
                 ? ShimmerEffect(
@@ -37,7 +32,6 @@ class HomeAppbar extends StatelessWidget {
                   )
                 : TitleText(
                     controller.user.value.fullName,
-                    color: MyColors.white,
                   ),
           ),
         ],

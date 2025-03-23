@@ -14,20 +14,26 @@ class ProductModel {
     required this.description,
     required this.salePrice,
     required this.isFeatured,
+    required this.brandId,
+    required this.categoryId,
     this.images,
-    this.brandId,
     this.productAttributes,
     this.productVariation,
   });
 
   // Required Variables
-  final String id, title, thumbnail, description, productType;
+  final String id,
+      title,
+      thumbnail,
+      description,
+      productType,
+      brandId,
+      categoryId;
   final num price, salePrice, stock;
   final bool isFeatured;
 
   /// Not-required
   final List<String>? images;
-  final String? brandId;
   final List<ProductAttributeModel>?
       productAttributes; // {name: "Color", values: ["green", "blue", "red"]}
   final List<ProductVariationModel>?
@@ -44,6 +50,8 @@ class ProductModel {
         description: '',
         salePrice: 0.0,
         isFeatured: false,
+        brandId: "777", // 777 = no brand
+        categoryId: "777", // 777 = not belong to any category
         productAttributes: [],
         productVariation: [],
         images: [],
@@ -62,6 +70,7 @@ class ProductModel {
       'stock': stock,
       'salePrice': salePrice,
       'brandId': brandId,
+      'categoryId': categoryId,
       "images": images,
       "productAttributes": productAttributes?.map((e) => e.toJson()).toList(),
       "productVariation": productVariation?.map((e) => e.toJson()).toList(),
@@ -88,6 +97,7 @@ class ProductModel {
         isFeatured: data['isFeatured'],
         images: data['images'] != null ? List<String>.from(data['images']) : [],
         brandId: data['brandId'],
+        categoryId: data['categoryId'],
         // productAttributes: (data['productAttributes'] as List<dynamic>)
         //     .map((e) => ProductAttributeModel.fromJson(e))
         //     .toList(),

@@ -3,11 +3,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfileMenuProps {
   const ProfileMenuProps(
-      {required this.value, required this.onPressed, required this.title});
+      {required this.value,
+      required this.onPressed,
+      required this.title,
+      this.editable = false});
 
   final String title;
   final String value;
   final VoidCallback onPressed;
+  final bool? editable;
 }
 
 class ProfileMenu extends StatelessWidget {
@@ -31,9 +35,12 @@ class ProfileMenu extends StatelessWidget {
           flex: 5,
           child: Text(props.value),
         ),
-        IconButton(
-          icon: const Icon(FontAwesomeIcons.angleRight),
-          onPressed: props.onPressed,
+        Opacity(
+          opacity: props.editable != true ? 0 : 1,
+          child: IconButton(
+            icon: const Icon(FontAwesomeIcons.angleRight),
+            onPressed: props.onPressed,
+          ),
         ),
       ],
     );

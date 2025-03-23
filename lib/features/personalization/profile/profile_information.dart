@@ -5,6 +5,7 @@ import 'package:single_store_ecommerce/components/settings/profile_menu.dart';
 import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/features/personalization/profile/screens/update_name.dart';
+import 'package:single_store_ecommerce/features/personalization/profile/screens/update_phone_number.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
@@ -35,6 +36,7 @@ class ProfileInformation extends StatelessWidget {
             Obx(
               () => ProfileMenu(
                 ProfileMenuProps(
+                    editable: true,
                     title: MyTexts.settingsName,
                     value: controller.user.value.fullName,
                     onPressed: () {
@@ -46,8 +48,24 @@ class ProfileInformation extends StatelessWidget {
             ProfileMenu(
               ProfileMenuProps(
                 title: MyTexts.settingsUsername,
-                value: "notkev1n",
+                value: controller.user.value.username,
                 onPressed: () {},
+              ),
+            ),
+            ProfileMenu(
+              ProfileMenuProps(
+                  title: MyTexts.settingsEmail,
+                  value: controller.user.value.email,
+                  onPressed: () {}),
+            ),
+            ProfileMenu(
+              ProfileMenuProps(
+                editable: true,
+                title: MyTexts.settingsPhoneNumber,
+                value: controller.user.value.phoneNumber,
+                onPressed: () {
+                  Get.to(() => const UpdatePhoneNumberScreen());
+                },
               ),
             ),
           ],

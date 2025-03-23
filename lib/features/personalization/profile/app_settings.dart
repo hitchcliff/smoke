@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/components/tile/menu_tile.dart';
+import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/screens/load_data.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -17,6 +18,7 @@ class AppSettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
+    UserController userController = UserController.instance;
 
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -32,16 +34,18 @@ class AppSettings extends StatelessWidget {
           ),
           Column(
             children: [
-              MenuTile(
-                MenuTileProps(
-                  leadingIcon: FontAwesomeIcons.database,
-                  title: "Load Data",
-                  subtitle: "upload Data to your Cloud Firebase",
-                  onTap: () {
-                    Get.to(() => const LoadData());
-                  },
-                ),
-              ),
+              userController.user.value.isAdmin != true
+                  ? SizedBox()
+                  : MenuTile(
+                      MenuTileProps(
+                        leadingIcon: FontAwesomeIcons.database,
+                        title: "Load Data",
+                        subtitle: "upload Data to your Cloud Firebase",
+                        onTap: () {
+                          Get.to(() => const LoadData());
+                        },
+                      ),
+                    ),
               MenuTile(
                 trailing: Switch(
                   value: false,

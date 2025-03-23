@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/personal_information.dart';
 import 'package:single_store_ecommerce/features/personalization/profile/profile_information.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/features/personalization/profile/profile_picture.dart';
@@ -32,7 +31,7 @@ class UserInfoScreen extends StatelessWidget {
                 const ProfileInformation(),
                 const Divider(),
                 // ---# Personal Information
-                const PersonalInformation(),
+                // const PersonalInformation(),
 
                 /// Delete button
                 TextButton(

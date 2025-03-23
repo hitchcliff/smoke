@@ -61,38 +61,38 @@ class AccountSettings extends StatelessWidget {
                   },
                 ),
               ),
-              MenuTile(
-                MenuTileProps(
-                  leadingIcon: FontAwesomeIcons.buildingColumns,
-                  title: "Bank Account",
-                  subtitle: "Withdraw balance to registered bank account",
-                  onTap: () {},
-                ),
-              ),
-              MenuTile(
-                MenuTileProps(
-                  leadingIcon: FontAwesomeIcons.ticket,
-                  title: "My Coupons",
-                  subtitle: "List of all the discounted coupons",
-                  onTap: () {},
-                ),
-              ),
-              MenuTile(
-                MenuTileProps(
-                  leadingIcon: FontAwesomeIcons.bell,
-                  title: "Notifications",
-                  subtitle: "Set any kind of notification message",
-                  onTap: () {},
-                ),
-              ),
-              MenuTile(
-                MenuTileProps(
-                  leadingIcon: FontAwesomeIcons.lock,
-                  title: "Account Privacy",
-                  subtitle: "Manage data usage and connected accounts",
-                  onTap: () {},
-                ),
-              ),
+              // MenuTile(
+              //   MenuTileProps(
+              //     leadingIcon: FontAwesomeIcons.buildingColumns,
+              //     title: "Bank Account",
+              //     subtitle: "Withdraw balance to registered bank account",
+              //     onTap: () {},
+              //   ),
+              // ),
+              // MenuTile(
+              //   MenuTileProps(
+              //     leadingIcon: FontAwesomeIcons.ticket,
+              //     title: "My Coupons",
+              //     subtitle: "List of all the discounted coupons",
+              //     onTap: () {},
+              //   ),
+              // ),
+              // MenuTile(
+              //   MenuTileProps(
+              //     leadingIcon: FontAwesomeIcons.bell,
+              //     title: "Notifications",
+              //     subtitle: "Set any kind of notification message",
+              //     onTap: () {},
+              //   ),
+              // ),
+              // MenuTile(
+              //   MenuTileProps(
+              //     leadingIcon: FontAwesomeIcons.lock,
+              //     title: "Account Privacy",
+              //     subtitle: "Manage data usage and connected accounts",
+              //     onTap: () {},
+              //   ),
+              // ),
             ],
           ),
         ],

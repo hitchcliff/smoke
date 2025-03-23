@@ -11,6 +11,7 @@ class UserModel {
     required this.email,
     required this.phoneNumber,
     required this.profilePicture,
+    this.isAdmin,
   });
 
   final String id;
@@ -20,6 +21,7 @@ class UserModel {
   final String email;
   String phoneNumber;
   String profilePicture;
+  final bool? isAdmin;
 
   /// Helper function to get the full name.
   String get fullName => '${firstName.capitalize} ${lastName.capitalize}';
@@ -62,6 +64,7 @@ class UserModel {
       'Email': email,
       'PhoneNumber': phoneNumber,
       'ProfilePicture': profilePicture,
+      'isAdmin': isAdmin,
     };
   }
 
@@ -74,14 +77,14 @@ class UserModel {
       // Logger().d(data);
 
       return UserModel(
-        id: document.id,
-        firstName: data['FirstName'],
-        lastName: data['LastName'],
-        username: data['Username'],
-        email: data['Email'],
-        phoneNumber: data['PhoneNumber'],
-        profilePicture: data['ProfilePicture'],
-      );
+          id: document.id,
+          firstName: data['FirstName'],
+          lastName: data['LastName'],
+          username: data['Username'],
+          email: data['Email'],
+          phoneNumber: data['PhoneNumber'],
+          profilePicture: data['ProfilePicture'],
+          isAdmin: data['isAdmin']);
     } else {
       return UserModel.empty();
     }

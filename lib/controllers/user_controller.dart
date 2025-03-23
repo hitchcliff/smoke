@@ -26,11 +26,11 @@ class UserController extends GetxController {
   getUser() async {
     try {
       loading.value = true;
-      final fetchUser = await _userRepository.getUser();
+      final data = await _userRepository.getUser();
 
       // Logger().d(fetchUser.fullName);
       // Set the user
-      user(fetchUser);
+      user(data);
     } catch (e) {
       FullScreenLoader.stopLoading();
       Snackbars.error(title: "Error fetching user", message: e.toString());

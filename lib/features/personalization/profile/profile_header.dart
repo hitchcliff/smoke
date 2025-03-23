@@ -8,6 +8,7 @@ import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/screens/user_info.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({
@@ -17,6 +18,7 @@ class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final UserController controller = UserController.instance;
+    bool isDarkMode = MyHelpers.isDarkMode(context);
 
     return HeaderWrapper(
       child: Column(
@@ -26,9 +28,7 @@ class ProfileHeader extends StatelessWidget {
           MyAppBar(
             title: Text(
               "Account",
-              style: Theme.of(context).textTheme.headlineMedium?.apply(
-                    color: MyColors.white,
-                  ),
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ),
 
@@ -45,20 +45,14 @@ class ProfileHeader extends StatelessWidget {
             ),
             title: Obx(
               () => Text(controller.user.value.fullName,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineSmall
-                      ?.apply(color: MyColors.white)),
+                  style: Theme.of(context).textTheme.headlineSmall),
             ),
             subtitle: Text(controller.user.value.email,
-                style: Theme.of(context)
-                    .textTheme
-                    .labelMedium
-                    ?.apply(color: MyColors.white)),
+                style: Theme.of(context).textTheme.labelMedium),
             trailing: IconButton(
-              icon: const Icon(
+              icon: Icon(
+                color: isDarkMode ? MyColors.white : MyColors.black,
                 FontAwesomeIcons.penToSquare,
-                color: MyColors.white,
               ),
               onPressed: () {
                 Get.to(() => const UserInfoScreen());
