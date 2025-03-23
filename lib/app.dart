@@ -13,7 +13,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: MyTexts.appName,
-      themeMode: ThemeMode.dark, // ThemeMode.system
+      themeMode: ThemeMode.light, // ThemeMode.system
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,

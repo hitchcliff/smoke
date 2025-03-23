@@ -37,7 +37,6 @@ class SectionHeading extends StatelessWidget {
           props.title,
           style: Theme.of(context).textTheme.headlineSmall?.apply(
                 overflow: TextOverflow.ellipsis,
-                color: props.titleColor,
               ),
         ),
         if (props.showActionButton)
