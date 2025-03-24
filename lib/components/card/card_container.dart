@@ -14,7 +14,7 @@ Widget CardContainer(
     decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(MySizes.defaultRadius),
-        border: Border.all(color: MyColors.grey)),
+        border: Border.all(color: MyColors.primary)),
     child: child,
   ));
 }

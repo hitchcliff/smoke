@@ -40,7 +40,7 @@ class Store extends StatelessWidget {
                     pinned: true,
                     floating: true,
                     backgroundColor:
-                        isDarkMode ? MyColors.black : MyColors.white,
+                        isDarkMode ? MyColors.dark : MyColors.light,
 
                     // ---# Header
                     flexibleSpace: const StoreHeader(),
@@ -61,6 +61,10 @@ class Store extends StatelessWidget {
               body: const TabBarView(
                 children: [
                   // ---# dynamic later
+                  StoreTab(),
+                  StoreTab(),
+                  StoreTab(),
+                  StoreTab(),
                   StoreTab(),
                 ],
               )),

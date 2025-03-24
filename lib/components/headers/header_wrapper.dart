@@ -16,22 +16,22 @@ class HeaderWrapper extends StatelessWidget {
       child: Container(
         color: MyColors.primary,
         child: Stack(children: [
-          const Positioned(
-            top: -150,
-            right: -250,
-            child: CircularContainer(
-              backgroundColor: MyColors.white,
-              opacity: 0.1,
-            ),
-          ),
-          const Positioned(
-            top: 100,
-            right: -300,
-            child: CircularContainer(
-              backgroundColor: MyColors.white,
-              opacity: 0.1,
-            ),
-          ),
+          // const Positioned(
+          //   top: -150,
+          //   right: -250,
+          //   child: CircularContainer(
+          //     backgroundColor: MyColors.white,
+          //     opacity: 0.1,
+          //   ),
+          // ),
+          // const Positioned(
+          //   top: 100,
+          //   right: -300,
+          //   child: CircularContainer(
+          //     backgroundColor: MyColors.white,
+          //     opacity: 0.1,
+          //   ),
+          // ),
           child,
         ]),
       ),
