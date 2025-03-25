@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/products/similar_products.dart';
-import 'package:single_store_ecommerce/features/shop/store/store_showcase.dart';
+import 'package:single_store_ecommerce/models/category_model.dart';
 
 class StoreTab extends StatelessWidget {
-  const StoreTab({
-    super.key,
-  });
+  const StoreTab({super.key, required this.category});
+
+  final CategoryModel category;
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      children: const [
+      children: [
         Column(
           children: [
             // ---# Showcase brand
-            StoreShowcase(),
+            // StoreShowcase(),
 
             // ---# Similar products
-            SimilarProducts(),
+            SimilarProducts(category: category),
           ],
         ),
       ],

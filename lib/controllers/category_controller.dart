@@ -59,4 +59,17 @@ class CategoryController extends GetxController {
         .where((product) => product.categoryId == id)
         .toList());
   }
+
+  /// Read products by {categoryId}
+  /// Returns the products
+  List<ProductModel> getProductsById(String id) {
+    print('id: $id');
+    print(
+        'controller: ${_productController.products.map((product) => product.categoryId)}');
+
+    // Push all products
+    return _productController.products
+        .where((product) => product.categoryId == id)
+        .toList();
+  }
 }

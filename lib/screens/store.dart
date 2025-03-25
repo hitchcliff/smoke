@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_tab_bar.dart';
 import 'package:single_store_ecommerce/components/icons/cart_counter_icon.dart';
+import 'package:single_store_ecommerce/controllers/category_controller.dart';
 import 'package:single_store_ecommerce/features/shop/store/store_tab.dart';
 import 'package:single_store_ecommerce/components/widgets/dynamic_sliver_appbar.dart';
 import 'package:single_store_ecommerce/features/shop/store/store_header.dart';
@@ -15,9 +16,10 @@ class Store extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
+    CategoryController categoryController = CategoryController.instance;
 
     return DefaultTabController(
-      length: 5,
+      length: categoryController.allCategories.length,
       child: Scaffold(
         appBar: MyAppBar(
           showBackArrow: false,
@@ -46,27 +48,20 @@ class Store extends StatelessWidget {
                     flexibleSpace: const StoreHeader(),
 
                     // ---# Tabs
-                    bottom: const MyTabBar(
-                      tabs: [
-                        Tab(text: "Electronics"),
-                        Tab(text: "Sports"),
-                        Tab(text: "Furniture"),
-                        Tab(text: "Clothes"),
-                        Tab(text: "Store"),
-                      ],
+                    bottom: MyTabBar(
+                      tabs: categoryController.allCategories
+                          .map((cat) => Tab(text: cat.name))
+                          .toList(),
                     ),
                   ),
                 ];
               },
-              body: const TabBarView(
-                children: [
-                  // ---# dynamic later
-                  StoreTab(),
-                  StoreTab(),
-                  StoreTab(),
-                  StoreTab(),
-                  StoreTab(),
-                ],
+              body: TabBarView(
+                children: categoryController.allCategories
+                    .map((cat) => StoreTab(
+                          category: cat,
+                        ))
+                    .toList(),
               )),
         ),
       ),
