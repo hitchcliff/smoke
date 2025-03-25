@@ -22,12 +22,14 @@ class HomeSlider extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
               child: PromoSlider(
                 banners: bannerController.banners
-                    .map((banner) => (RoundedImage(
-                          onTap: () {},
-                          imgUrl: banner.image,
-                          isNetworkImage: true,
-                          fit: BoxFit.cover,
-                        )))
+                    .map(
+                      (banner) => (RoundedImage(
+                        onTap: () {},
+                        imgUrl: banner.image,
+                        isNetworkImage: true,
+                        fit: BoxFit.cover,
+                      )),
+                    )
                     .toList(),
               ),
             ),

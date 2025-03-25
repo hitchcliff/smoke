@@ -4,10 +4,11 @@ import 'package:single_store_ecommerce/models/brand_model.dart';
 import 'package:single_store_ecommerce/repositories/shop/brand_repository.dart';
 
 class BrandController extends GetxController {
-  BrandController get instance => Get.find();
+  static BrandController get instance => Get.find();
 
   Rx<bool> loading = false.obs;
   RxList<BrandModel> brands = <BrandModel>[].obs;
+  RxList<BrandModel> featuredBrands = <BrandModel>[].obs;
 
   final BrandRepository _brandRepository = Get.put(BrandRepository());
 
@@ -21,6 +22,10 @@ class BrandController extends GetxController {
   readAll() async {
     try {
       final data = await _brandRepository.readAll();
+
+      /// Assign all featured brands
+      featuredBrands
+          .assignAll(data.where((brand) => brand.isFeatured).toList());
 
       // Assign all data to state
       brands.assignAll(data);

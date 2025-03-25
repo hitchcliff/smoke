@@ -18,9 +18,8 @@ class StoreShowcase extends StatelessWidget {
       child: ShowcaseBrandCard(
         const BrandItem(
           BrandItemProp(
-            image: AssetImage(
-              MyImages.brandNike,
-            ),
+            isNetworkImage: false,
+            image: MyImages.brandNike,
             brandName: MyTexts.brandNike,
             verified: true,
             totalProducts: "256",

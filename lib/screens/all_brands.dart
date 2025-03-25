@@ -4,6 +4,7 @@ import 'package:single_store_ecommerce/components/brand/brand.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
 import 'package:single_store_ecommerce/components/brand/brands.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
+import 'package:single_store_ecommerce/controllers/brand_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -14,6 +15,8 @@ class AllBrandsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    BrandController brandController = BrandController.instance;
+
     return Scaffold(
       appBar: const MyAppBar(
         title: TitleText("All brands"),
@@ -26,88 +29,17 @@ class AllBrandsScreen extends StatelessWidget {
             child: Column(
               children: [
                 // ---# Brands
-                const Brands([
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandNike,
-                      ),
-                      brandName: MyTexts.brandNike,
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandIkea,
-                      ),
-                      brandName: "Ikea",
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandZara,
-                      ),
-                      brandName: "Zara",
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandAdiddas,
-                      ),
-                      brandName: "Adidas",
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandPuma,
-                      ),
-                      brandName: "Puma",
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandApple,
-                      ),
-                      brandName: "Apple",
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandNike,
-                      ),
-                      brandName: MyTexts.brandNike,
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                  Brand(
-                    BrandItemProp(
-                      image: AssetImage(
-                        MyImages.brandNike,
-                      ),
-                      brandName: MyTexts.brandNike,
-                      totalProducts: "256",
-                      verified: true,
-                    ),
-                  ),
-                ]),
+                Brands(brandController.featuredBrands
+                    .map((brand) => (Brand(
+                          BrandItemProp(
+                            isNetworkImage: true,
+                            image: brand.image,
+                            brandName: brand.name,
+                            totalProducts: brand.totalProducts.toString(),
+                            verified: true,
+                          ),
+                        )))
+                    .toList()),
               ].gap(height: MySizes.spaceBtwSections),
             ),
           ),

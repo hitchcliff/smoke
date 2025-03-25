@@ -4,6 +4,7 @@ import 'package:single_store_ecommerce/components/brand/brand.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
 import 'package:single_store_ecommerce/components/brand/brands.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
+import 'package:single_store_ecommerce/controllers/brand_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/screens/all_brands.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
@@ -20,6 +21,8 @@ class StoreBrands extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
+    BrandController brandController = BrandController.instance;
+
     return Column(
       children: [
         // ---# Heading
@@ -34,48 +37,19 @@ class StoreBrands extends StatelessWidget {
         ),
 
         // ---# Feature Brands
-        const Brands([
-          Brand(
-            BrandItemProp(
-              image: AssetImage(
-                MyImages.brandNike,
-              ),
-              brandName: MyTexts.brandNike,
-              totalProducts: "256",
-              verified: true,
-            ),
-          ),
-          Brand(
-            BrandItemProp(
-              image: AssetImage(
-                MyImages.brandNike,
-              ),
-              brandName: MyTexts.brandNike,
-              totalProducts: "256",
-              verified: true,
-            ),
-          ),
-          Brand(
-            BrandItemProp(
-              image: AssetImage(
-                MyImages.brandNike,
-              ),
-              brandName: MyTexts.brandNike,
-              totalProducts: "256",
-              verified: true,
-            ),
-          ),
-          Brand(
-            BrandItemProp(
-              image: AssetImage(
-                MyImages.brandNike,
-              ),
-              brandName: MyTexts.brandNike,
-              totalProducts: "256",
-              verified: true,
-            ),
-          ),
-        ]),
+        Obx(
+          () => Brands(brandController.featuredBrands
+              .map((brand) => (Brand(
+                    BrandItemProp(
+                      isNetworkImage: true,
+                      image: brand.image,
+                      brandName: brand.name,
+                      totalProducts: brand.totalProducts.toString(),
+                      verified: true,
+                    ),
+                  )))
+              .toList()),
+        ),
       ].gap(height: MySizes.spaceBtwItems),
     );
   }

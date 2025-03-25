@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:single_store_ecommerce/components/brand/brand_item.dart';
 import 'package:single_store_ecommerce/components/card/card_container.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
@@ -26,6 +27,7 @@ class Brand extends StatelessWidget {
       ),
       child: BrandItem(
         BrandItemProp(
+          isNetworkImage: false,
           image: prop.image,
           brandName: prop.brandName,
           verified: prop.verified,
