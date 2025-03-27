@@ -32,12 +32,21 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
-                color: isDarkMode ? MyColors.white : MyColors.black,
+                style: IconButton.styleFrom(
+                  backgroundColor:
+                      isDarkMode ? MyColors.light : MyColors.primary,
+                  foregroundColor: MyColors.black,
+                ),
                 icon: const Icon(FontAwesomeIcons.arrowLeft),
                 onPressed: () => Get.back(),
               )
             : leadingIcon != null
                 ? IconButton(
+                    style: IconButton.styleFrom(
+                      backgroundColor:
+                          isDarkMode ? MyColors.light : MyColors.primary,
+                      foregroundColor: MyColors.black,
+                    ),
                     onPressed: leadingOnPressed,
                     icon: Icon(leadingIcon),
                   )

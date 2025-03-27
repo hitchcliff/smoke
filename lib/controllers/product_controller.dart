@@ -11,6 +11,7 @@ class ProductController extends GetxController {
   Rx<bool> loading = false.obs;
   RxList<ProductModel> products = <ProductModel>[].obs;
   RxList<ProductModel> featuredProducts = <ProductModel>[].obs;
+  Rx<ProductModel> singleProduct = ProductModel.empty().obs;
 
   /// Repository
   final ProductRepository _productRepository = Get.put(ProductRepository());
@@ -56,6 +57,20 @@ class ProductController extends GetxController {
           .assignAll(data.where((d) => d.isFeatured).take(10).toList());
     } catch (e) {
       Snackbars.error(title: "Read products", message: e.toString());
+    } finally {
+      loading.value = false;
+    }
+  }
+
+  /// Updates the single product
+  updateSingleProduct(ProductModel product) {
+    try {
+      loading.value = true;
+
+      // Assign single product
+      singleProduct(product);
+    } catch (e) {
+      Snackbars.error(title: "Read product", message: e.toString());
     } finally {
       loading.value = false;
     }

@@ -47,27 +47,28 @@ class HomeProducts extends StatelessWidget {
                 controller.featuredProducts
                     .map((product) => (DisplayProductsVerticalDetailsProp(
                           thumbnail: ProductThumbnailProps(
-                            isNetworkImg: true,
-                            imgUrl: product.thumbnail,
-                            isWishlist: false,
-                            saleTxt: product.salePrice > 0
-                                ? MyHelpers.getPercentSale(
-                                    product.price,
-                                    product.salePrice,
-                                  )
-                                : "",
-                            onSale: product.salePrice > 0,
-                            onTapHeart: () {},
-                            onTapImg: () =>
-                                Get.to(() => const ProductDetailScreen()),
-                          ),
+                              isNetworkImg: true,
+                              imgUrl: product.thumbnail,
+                              isWishlist: false,
+                              saleTxt: product.salePrice > 0
+                                  ? MyHelpers.getPercentSale(
+                                      product.price,
+                                      product.salePrice,
+                                    )
+                                  : "",
+                              onSale: product.salePrice > 0,
+                              onTapHeart: () {},
+                              onTapImg: () {
+                                controller.singleProduct(product);
+                                Get.to(() => const ProductDetailScreen());
+                              }),
                           details: ProductCardProps(
                             name: product.title,
                             price: product.price.toString(),
-                            brand: brandController.read(product.brandId!).name,
+                            brand: brandController.read(product.brandId).name,
                             onTap: () {},
                             verified:
-                                brandController.read(product.brandId!).verified,
+                                brandController.read(product.brandId).verified,
                           ),
                         )))
                     .toList(),

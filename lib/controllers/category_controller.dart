@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/models/category_model.dart';
