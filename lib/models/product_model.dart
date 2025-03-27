@@ -17,8 +17,8 @@ class ProductModel {
     required this.brandId,
     required this.categoryId,
     this.images,
-    this.productAttributes,
-    this.productVariation,
+    required this.productAttributes,
+    required this.productVariation,
   });
 
   // Required Variables
@@ -34,9 +34,9 @@ class ProductModel {
 
   /// Not-required
   final List<String>? images;
-  final List<ProductAttributeModel>?
+  final List<ProductAttributeModel>
       productAttributes; // {name: "Color", values: ["green", "blue", "red"]}
-  final List<ProductVariationModel>?
+  final List<ProductVariationModel>
       productVariation; // {attributeValues: {color: "green"}, price: 0, stock: 0, image: ""}
 
   /// Empty
@@ -72,8 +72,8 @@ class ProductModel {
       'brandId': brandId,
       'categoryId': categoryId,
       "images": images,
-      "productAttributes": productAttributes?.map((e) => e.toJson()).toList(),
-      "productVariation": productVariation?.map((e) => e.toJson()).toList(),
+      "productAttributes": productAttributes.map((e) => e.toJson()).toList(),
+      "productVariation": productVariation.map((e) => e.toJson()).toList(),
     };
   }
 
@@ -83,7 +83,7 @@ class ProductModel {
     if (document.data() != null) {
       final data = document.data()!;
 
-      // Logger().d("Price: ${data['salePrice']}");
+      Logger().d("Attributes: ${data}");
 
       return ProductModel(
         id: document.id,
@@ -95,15 +95,20 @@ class ProductModel {
         description: data['description'],
         salePrice: data['salePrice'],
         isFeatured: data['isFeatured'],
-        images: data['images'] != null ? List<String>.from(data['images']) : [],
         brandId: data['brandId'],
         categoryId: data['categoryId'],
-        // productAttributes: (data['productAttributes'] as List<dynamic>)
-        //     .map((e) => ProductAttributeModel.fromJson(e))
-        //     .toList(),
-        // productVariation: (data['productVariation'] as List<dynamic>)
-        //     .map((e) => ProductVariationModel.fromJson(e))
-        //     .toList(),
+        images: data['images'] != null ? List<String>.from(data['images']) : [],
+        productAttributes: data['productAttributes'] != null
+            ? (data['productAttributes'] as List<dynamic>)
+                .map((e) => ProductAttributeModel.fromJson(e))
+                .toList()
+            : [],
+        // productVariation: [],
+        productVariation: data['productVariation'] != null
+            ? (data['productVariation'] as List<dynamic>)
+                .map((e) => ProductVariationModel.fromJson(e))
+                .toList()
+            : [],
       );
     } else {
       return ProductModel.empty();

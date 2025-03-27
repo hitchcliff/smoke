@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/product_model.dart';
@@ -58,6 +59,7 @@ class ProductController extends GetxController {
           .assignAll(data.where((d) => d.isFeatured).take(10).toList());
     } catch (e) {
       Snackbars.error(title: "Read products", message: e.toString());
+      Logger().e(e);
     } finally {
       loading.value = false;
     }

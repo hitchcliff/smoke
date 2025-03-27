@@ -1,11 +1,14 @@
+import 'package:logger/logger.dart';
+
 class ProductVariationModel {
-  ProductVariationModel(
-      {required this.id,
-      required this.image,
-      required this.stock,
-      required this.price,
-      required this.salePrice,
-      required this.attributeValues});
+  ProductVariationModel({
+    required this.id,
+    required this.image,
+    required this.stock,
+    required this.price,
+    required this.salePrice,
+    required this.attributeValues,
+  });
 
   final String id, image;
 
@@ -30,15 +33,17 @@ class ProductVariationModel {
   factory ProductVariationModel.fromJson(Map<String, dynamic> data) {
     if (data.isEmpty) return ProductVariationModel.empty();
 
+    Logger().d("variation model: $data['stock']");
+
     return ProductVariationModel(
       id: data['id'],
-      price: data['price'],
+      price: data['price'] ?? 0,
       image: data['image'],
       stock: data['stock'],
       attributeValues: Map<String, String>.from(
         data['attributeValues'],
       ),
-      salePrice: data['salePrice'],
+      salePrice: data['salePrice'] ?? 0,
     );
   }
 }

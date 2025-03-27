@@ -69,6 +69,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H75e4c49c3d1f498893cad36121c950ffB.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/H9e17d2e9e6fb4ee095ebdf06249bc831R.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
       id: "3",
@@ -222,6 +224,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/HTB1H6OTbO6guuRjy0Fmq6y0DXXar.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/HTB1i9tOIY1YBuNjSszhq6AUsFXaC.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "7",
@@ -244,6 +248,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/HTB12qA_ayDxK1RjSsphq6zHrpXaf.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/HTB1IdtcaInrK1RjSspkq6yuvXXaw.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "8",
@@ -266,6 +272,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H54223af44e4a42d583bd3cc020448dacY.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/Haebf4393310a4db4aaf53da2b54d85e9b.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "9",
@@ -288,6 +296,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/He970963c1d584c3db7da870b89fa62997.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/Heb63094704a94ec298cc5f8e035b4aa0e.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "10",
@@ -309,6 +319,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H355e1d51c93a4ef89d7ba151a6b0c738f.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/Hc794bc4af5f5426c952d03559612fa1dx.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
 
   /// zhuoye lighters
@@ -333,6 +345,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H4a52de3f2bd84703bef7e897164242a0a.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/Hd13730b393d740e1b4e2b251e3e6a757w.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "12",
@@ -353,6 +367,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/Hb9aee1eedf594f05ade7a48d10146f84q.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/H173d23114fdb4bbbb018ea6332a94dee8.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
 
   /// boulux
@@ -503,6 +519,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/Hafab68b64e884e0ab699195a4ded6c24O.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/H71c59233375043bc9101f435e026b6c4F.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
 
   /// aciga
@@ -527,6 +545,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H8c1022e0c77c46d980f8fe86b95c8b9dn.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/Hf157c79ed1ef4effb798f511419ba9f2F.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "17",
@@ -547,6 +567,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H0a6c55a7855441baa1544fdbc06faa8bw.png_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/He3bca4dfd0c140c8a43bb2b59878db04H.png_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "18",
@@ -567,6 +589,8 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H1fb6b81e05524abba7e4ad45ace7ecb4N.jpg_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/H5723596a18144c10a066351cf5b45b58h.jpg_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
   ProductModel(
     id: "19",
@@ -587,5 +611,7 @@ final dataOfProducts = [
       "https://s.alicdn.com/@sc04/kf/H6d57c01eb79d4090b328da0a87d7ad124.png_720x720q50.jpg",
       "https://s.alicdn.com/@sc04/kf/H5bd4a92fe60944c0835a96385aa38569F.png_720x720q50.jpg",
     ],
+    productAttributes: [],
+    productVariation: [],
   ),
 ];
