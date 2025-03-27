@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
+import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
@@ -13,6 +14,7 @@ class ProductVariations extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
+    ProductController productController = ProductController.instance;
 
     return Positioned(
       bottom: 50,
@@ -21,17 +23,24 @@ class ProductVariations extends StatelessWidget {
       height: 50,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 7,
+        itemCount: productController.singleProduct.value.images!.length,
         scrollDirection: Axis.horizontal,
         physics: const ScrollPhysics(),
         itemBuilder: (_, index) => Padding(
           padding: const EdgeInsets.only(
             left: MySizes.spaceBtwItems,
           ),
-          child: RoundedImage(
-            color: isDarkMode ? MyColors.darkGrey : MyColors.white,
-            onTap: () {},
-            imgUrl: MyImages.productImg2,
+          child: GestureDetector(
+            onTap: () {
+              productController.updateSingleProductThumbnail(
+                  productController.singleProduct.value.images![index]);
+            },
+            child: Image(
+              width: 80,
+              fit: BoxFit.cover,
+              image: NetworkImage(
+                  productController.singleProduct.value.images![index]),
+            ),
           ),
         ),
       ),

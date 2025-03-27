@@ -12,6 +12,7 @@ class ProductController extends GetxController {
   RxList<ProductModel> products = <ProductModel>[].obs;
   RxList<ProductModel> featuredProducts = <ProductModel>[].obs;
   Rx<ProductModel> singleProduct = ProductModel.empty().obs;
+  Rx<String> singleProductThumbnail = ''.obs;
 
   /// Repository
   final ProductRepository _productRepository = Get.put(ProductRepository());
@@ -69,10 +70,17 @@ class ProductController extends GetxController {
 
       // Assign single product
       singleProduct(product);
+
+      singleProductThumbnail.value = product.thumbnail;
     } catch (e) {
       Snackbars.error(title: "Read product", message: e.toString());
     } finally {
       loading.value = false;
     }
+  }
+
+  /// Updates the thumbnail
+  updateSingleProductThumbnail(String image) {
+    singleProductThumbnail.value = image;
   }
 }

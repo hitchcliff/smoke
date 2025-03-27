@@ -59,7 +59,7 @@ class HomeProducts extends StatelessWidget {
                               onSale: product.salePrice > 0,
                               onTapHeart: () {},
                               onTapImg: () {
-                                controller.singleProduct(product);
+                                controller.updateSingleProduct(product);
                                 Get.to(() => const ProductDetailScreen());
                               }),
                           details: ProductCardProps(
