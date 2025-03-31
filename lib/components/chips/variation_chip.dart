@@ -22,7 +22,7 @@ class VariationChip extends StatelessWidget {
 
     return ChoiceChip(
       selected: selected,
-      onSelected: (value) {},
+      onSelected: onSelected,
       selectedColor: MyColors.primary,
       backgroundColor: isColor ? MyHelpers.getColor(text)! : MyColors.primary,
       checkmarkColor: MyColors.white,

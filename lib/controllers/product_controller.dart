@@ -3,6 +3,7 @@ import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
 import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
 import 'package:single_store_ecommerce/models/product_model.dart';
+import 'package:single_store_ecommerce/models/product_variation_model.dart';
 import 'package:single_store_ecommerce/repositories/shop/product_repository.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 
@@ -14,6 +15,8 @@ class ProductController extends GetxController {
   RxList<ProductModel> featuredProducts = <ProductModel>[].obs;
   Rx<ProductModel> singleProduct = ProductModel.empty().obs;
   Rx<String> singleProductThumbnail = ''.obs;
+  Rx<ProductVariationModel> selectedVariation =
+      ProductVariationModel.empty().obs;
 
   /// Repository
   final ProductRepository _productRepository = Get.put(ProductRepository());
@@ -84,5 +87,10 @@ class ProductController extends GetxController {
   /// Updates the thumbnail
   updateSingleProductThumbnail(String image) {
     singleProductThumbnail.value = image;
+  }
+
+  /// Update product variation
+  updateSelectedVariation(ProductVariationModel variation) {
+    selectedVariation.value = variation;
   }
 }

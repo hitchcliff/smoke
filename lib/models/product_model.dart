@@ -83,7 +83,7 @@ class ProductModel {
     if (document.data() != null) {
       final data = document.data()!;
 
-      Logger().d("Attributes: ${data}");
+      // Logger().d("Attributes: ${data}");
 
       return ProductModel(
         id: document.id,

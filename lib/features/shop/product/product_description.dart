@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/collapse_text.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
+import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
@@ -10,6 +13,8 @@ class ProductDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProductController productController = ProductController.instance;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
       child: Column(
@@ -18,8 +23,18 @@ class ProductDescription extends StatelessWidget {
             title: "Description",
             titleColor: MyHelpers.textColor(context: context),
           )),
-          const CollapseText(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet velit purus, non mattis tellus volutpat at. Donec cursus laoreet neque ac ultricies. Suspendisse porttitor quam bibendum hendrerit hendrerit. Etiam bibendum urna et nunc volutpat vulputate. Donec ac erat sapien. Suspendisse suscipit, metus in sagittis gravida, erat enim posuere leo, nec ornare libero libero ac libero. Maecenas bibendum nulla condimentum orci tempor sodales a id risus."),
+          CollapseText(
+            productController.singleProduct.value.description,
+          ),
+
+          // ---# Checkout
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const BodyText("Checkout", color: MyColors.white),
+            ),
+          ),
           const Divider()
         ].gap(height: MySizes.spaceBtwItems),
       ),

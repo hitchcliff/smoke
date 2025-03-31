@@ -1,12 +1,14 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
+import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/chips/variation_chip.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/features/shop/product/product_variation_info.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
+import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:single_store_ecommerce/features/shop/product/product_variation_info.dart';
+import 'package:single_store_ecommerce/models/product_variation_model.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
@@ -17,67 +19,89 @@ class ProductVariation extends StatelessWidget {
   Widget build(BuildContext context) {
     ProductController productController = ProductController.instance;
 
-    if (productController.singleProduct.value.productAttributes == null) {
-      return SizedBox();
-    } else {
-      return Padding(
-        padding: const EdgeInsets.all(MySizes.defaultSpace),
-        child: Column(
-          children: [
-            const ProductVariationInfo(),
-
-            /// Mapping the variation
-            variation(context, productController.singleProduct.value),
-
-            // ---# Checkout
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const BodyText("Checkout", color: MyColors.white),
-              ),
+    return productController.singleProduct.value.productAttributes.isEmpty
+        ? SizedBox()
+        : Padding(
+            padding: const EdgeInsets.only(
+              bottom: MySizes.defaultSpace,
+              left: MySizes.defaultSpace,
+              right: MySizes.defaultSpace,
             ),
-          ].gap(height: MySizes.spaceBtwItems),
-        ),
-      );
-    }
-  }
-}
-
-Widget variation(BuildContext context, ProductModel product) {
-  return Column(
-      children: product.productAttributes!
-          .map(
-            (attr) => Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: Column(
               children: [
-                SectionHeading(SectionHeadingProps(
-                  title: "Colors",
-                  titleColor: MyHelpers.textColor(context: context),
-                )),
-                Wrap(
-                  alignment: WrapAlignment.start,
-                  runSpacing: MySizes.spaceBtwItems,
-                  children: [
-                    VariationChip(
-                      "Green",
-                      onSelected: (value) {},
-                      selected: true,
-                    ),
-                    VariationChip(
-                      "Blue",
-                      onSelected: (value) {},
-                      selected: false,
-                    ),
-                    VariationChip(
-                      "Red",
-                      onSelected: (value) {},
-                      selected: false,
-                    ),
-                  ].gap(width: MySizes.spaceBtwItems),
-                ),
+                const ProductVariationInfo(),
+
+                // Product Variation Chips
+                Column(
+                    children: productController
+                        .singleProduct.value.productAttributes
+                        .map(
+                          (attr) => Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SectionHeading(SectionHeadingProps(
+                                title: attr.name!,
+                                titleColor:
+                                    MyHelpers.textColor(context: context),
+                              )),
+                              Obx(
+                                () => Wrap(
+                                  alignment: WrapAlignment.start,
+                                  runSpacing: MySizes.spaceBtwItems,
+                                  children: attr.values!
+                                      .map(
+                                        (val) => (VariationChip(
+                                          val,
+                                          selected: val ==
+                                              productController
+                                                  .selectedVariation
+                                                  .value
+                                                  .attributeValues[attr.name],
+                                          onSelected: (value) {
+                                            final ProductVariationModel
+                                                selected = productController
+                                                    .singleProduct
+                                                    .value
+                                                    .productVariation
+                                                    .where((variation) =>
+                                                        variation
+                                                                .attributeValues[
+                                                            attr.name] ==
+                                                        val)
+                                                    .first;
+
+                                            // Update the selectedVariation
+                                            productController
+                                                .updateSelectedVariation(
+                                              selected,
+                                            );
+
+                                            // Logger().d(productController
+                                            //     .products[0]
+                                            //     .productVariation[0]
+                                            //     .salePrice);
+
+                                            // Update the thumbnail
+                                            productController
+                                                .updateSingleProductThumbnail(
+                                              productController
+                                                  .selectedVariation
+                                                  .value
+                                                  .image,
+                                            );
+                                          },
+                                        )),
+                                      )
+                                      .toList()
+                                      .gap(width: MySizes.spaceBtwItems),
+                                ),
+                              ),
+                            ].gap(height: MySizes.spaceBtwItems),
+                          ),
+                        )
+                        .toList())
               ].gap(height: MySizes.spaceBtwItems),
             ),
-          )
-          .toList());
+          );
+  }
 }
