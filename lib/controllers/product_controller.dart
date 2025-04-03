@@ -17,6 +17,7 @@ class ProductController extends GetxController {
   Rx<String> singleProductThumbnail = ''.obs;
   Rx<ProductVariationModel> selectedVariation =
       ProductVariationModel.empty().obs;
+  RxList<ProductModel> searchedProducts = <ProductModel>[].obs;
 
   /// Repository
   final ProductRepository _productRepository = Get.put(ProductRepository());
@@ -92,5 +93,11 @@ class ProductController extends GetxController {
   /// Update product variation
   updateSelectedVariation(ProductVariationModel variation) {
     selectedVariation.value = variation;
+  }
+
+  // Search products
+  searchProducts(String str) {
+    searchedProducts.assignAll(products
+        .where((val) => val.title.toLowerCase().contains(str.toLowerCase())));
   }
 }
