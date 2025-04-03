@@ -18,6 +18,7 @@ class ProductDescription extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionHeading(SectionHeadingProps(
             title: "Description",

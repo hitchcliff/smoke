@@ -29,7 +29,7 @@ class ProductVariation extends StatelessWidget {
             ),
             child: Column(
               children: [
-                const ProductVariationInfo(),
+                // const ProductVariationInfo(),
 
                 // Product Variation Chips
                 Column(

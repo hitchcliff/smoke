@@ -34,8 +34,6 @@ class ProductVariationModel {
   factory ProductVariationModel.fromJson(Map<String, dynamic> data) {
     if (data.isEmpty) return ProductVariationModel.empty();
 
-    // Logger().d("variation model: $data['salePrice']");
-
     return ProductVariationModel(
       id: data['id'],
       price: data['price'] ?? 0,
