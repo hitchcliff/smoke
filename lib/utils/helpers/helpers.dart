@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/features/shop/product/product_variation.dart';
-import 'package:single_store_ecommerce/models/product_attribute_model.dart';
-import 'package:single_store_ecommerce/models/product_variation_model.dart';
 import 'package:single_store_ecommerce/utils/helpers/convertHexToRGB.dart';
 import 'package:single_store_ecommerce/utils/helpers/getColor.dart';
 import 'package:single_store_ecommerce/utils/helpers/getPercentSale.dart';

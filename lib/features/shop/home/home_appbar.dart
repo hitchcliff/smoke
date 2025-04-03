@@ -6,7 +6,6 @@ import 'package:single_store_ecommerce/components/shimmer/shimmer_effect.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/controllers/user_controller.dart';
 import 'package:single_store_ecommerce/screens/cart.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
 class HomeAppbar extends StatelessWidget {

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
 import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 

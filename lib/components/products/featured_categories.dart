@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:logger/web.dart';
 import 'package:single_store_ecommerce/components/circle/circle_image.dart';
 import 'package:single_store_ecommerce/components/shimmer/category_shimmer.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';

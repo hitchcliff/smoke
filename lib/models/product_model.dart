@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/models/product_attribute_model.dart';
 import 'package:single_store_ecommerce/models/product_variation_model.dart';
 

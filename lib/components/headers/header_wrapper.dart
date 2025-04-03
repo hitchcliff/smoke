@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/containers/circular_container.dart';
 import 'package:single_store_ecommerce/components/paths/curve_edges.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 

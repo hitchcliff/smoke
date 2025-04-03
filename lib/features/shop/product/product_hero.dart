@@ -6,7 +6,6 @@ import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/features/shop/product/product_img.dart';
 import 'package:single_store_ecommerce/features/shop/product/product_variations.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductHero extends StatelessWidget {

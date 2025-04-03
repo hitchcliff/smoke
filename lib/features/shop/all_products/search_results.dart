@@ -5,7 +5,6 @@ import 'package:single_store_ecommerce/components/products/product_card.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
 import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/screens/all_products.dart';
 import 'package:single_store_ecommerce/screens/product_detail.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';

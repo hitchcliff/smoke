@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:logger/logger.dart';
 import 'package:single_store_ecommerce/components/products/product_horizontal.dart';
 import 'package:single_store_ecommerce/controllers/category_controller.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';

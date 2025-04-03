@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:logger/web.dart';
 import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/products/product_card.dart';

@@ -20,7 +20,7 @@ class ProductRepository extends GetxController {
           .collection(MyDBCollections.products)
           .doc(data.id)
           .set(data.toJson());
-      await _brandRepository.updateBrand(data.brandId!);
+      await _brandRepository.updateBrand(data.brandId);
     } catch (e) {
       throw e.toString();
     }

@@ -52,9 +52,9 @@ class ProductHorizontal extends StatelessWidget {
               ProductCardProps(
                 name: product.title,
                 price: product.price.toString(),
-                brand: brandController.read(product.brandId!).name,
+                brand: brandController.read(product.brandId).name,
                 onTap: () {},
-                verified: brandController.read(product.brandId!).verified,
+                verified: brandController.read(product.brandId).verified,
               ),
             ),
           ),
