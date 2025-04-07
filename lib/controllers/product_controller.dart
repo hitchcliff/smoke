@@ -100,4 +100,17 @@ class ProductController extends GetxController {
     searchedProducts.assignAll(products
         .where((val) => val.title.toLowerCase().contains(str.toLowerCase())));
   }
+
+  resortProducts(String str) {
+    if (str == "Name") {
+      products.sort((a, b) => a.title.compareTo(b.title));
+      Logger().d(products);
+    } else if (str == "Price") {
+      products.sort((a, b) => a.price.compareTo(b.price));
+    } else {
+      Logger().d("Ratings");
+    }
+    // if()
+    // final newProducts = products.sort()
+  }
 }

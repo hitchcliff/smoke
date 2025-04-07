@@ -17,7 +17,7 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ProductController productController = ProductController.instance;
+    ProductController productController = Get.put(ProductController());
 
     return HeaderWrapper(
       child: Column(

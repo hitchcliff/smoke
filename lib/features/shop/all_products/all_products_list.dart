@@ -21,40 +21,42 @@ class AllProductsList extends StatelessWidget {
     bool isDark = MyHelpers.isDarkMode(context);
     ProductController controller = ProductController.instance;
 
-    return DisplayProductsVertical(
-      margin: const EdgeInsets.all(0),
-      DisplayProductsVerticalProps(
-        SectionHeadingProps(
-          title: MyTexts.headingPopularProducts,
-          titleColor: isDark ? MyColors.white : MyColors.black,
-          showActionButton: true,
-          onPressed: () => Get.to(() => const AllProductsScreen()),
+    return Obx(
+      () => DisplayProductsVertical(
+        margin: const EdgeInsets.all(0),
+        DisplayProductsVerticalProps(
+          SectionHeadingProps(
+            title: MyTexts.headingPopularProducts,
+            titleColor: isDark ? MyColors.white : MyColors.black,
+            showActionButton: true,
+            onPressed: () => Get.to(() => const AllProductsScreen()),
+          ),
+          controller.products
+              .map((product) => (DisplayProductsVerticalDetailsProp(
+                    thumbnail: ProductThumbnailProps(
+                      isNetworkImg: true,
+                      imgUrl: product.thumbnail,
+                      isWishlist: false,
+                      saleTxt: product.salePrice > 0
+                          ? MyHelpers.getPercentSale(
+                              product.price,
+                              product.salePrice,
+                            )
+                          : "",
+                      onSale: product.salePrice > 0,
+                      onTapHeart: () {},
+                      onTapImg: () => Get.to(() => const ProductDetailScreen()),
+                    ),
+                    details: ProductCardProps(
+                      name: product.title,
+                      price: product.price.toString(),
+                      brand: MyTexts.brandNike,
+                      onTap: () {},
+                      verified: true,
+                    ),
+                  )))
+              .toList(),
         ),
-        controller.products
-            .map((product) => (DisplayProductsVerticalDetailsProp(
-                  thumbnail: ProductThumbnailProps(
-                    isNetworkImg: true,
-                    imgUrl: product.thumbnail,
-                    isWishlist: false,
-                    saleTxt: product.salePrice > 0
-                        ? MyHelpers.getPercentSale(
-                            product.price,
-                            product.salePrice,
-                          )
-                        : "",
-                    onSale: product.salePrice > 0,
-                    onTapHeart: () {},
-                    onTapImg: () => Get.to(() => const ProductDetailScreen()),
-                  ),
-                  details: ProductCardProps(
-                    name: product.title,
-                    price: product.price.toString(),
-                    brand: MyTexts.brandNike,
-                    onTap: () {},
-                    verified: true,
-                  ),
-                )))
-            .toList(),
       ),
     );
   }
