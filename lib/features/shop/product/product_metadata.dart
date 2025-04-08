@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:single_store_ecommerce/components/brand/brand_icon.dart';
 import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
 import 'package:single_store_ecommerce/components/texts/label_text.dart';
@@ -10,9 +12,11 @@ import 'package:single_store_ecommerce/controllers/brand_controller.dart';
 import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/models/product_model.dart';
+import 'package:single_store_ecommerce/screens/create_review.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:single_store_ecommerce/utils/helpers/isDark.dart';
 
 class ProductMetadata extends StatelessWidget {
   const ProductMetadata({
@@ -21,7 +25,7 @@ class ProductMetadata extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // bool isDarkMode = MyHelpers.isDarkMode(context);
+    bool isDarkMode = MyHelpers.isDarkMode(context);
     ProductModel product = ProductController.instance.singleProduct.value;
     BrandController brandController = BrandController.instance;
 
@@ -44,6 +48,13 @@ class ProductMetadata extends StatelessWidget {
               //   icon: Icon(FontAwesomeIcons.share,
               //       color: isDarkMode ? MyColors.white : MyColors.black),
               // ),
+              IconButton(
+                icon: Icon(FontAwesomeIcons.comment),
+                color: isDarkMode ? MyColors.white : MyColors.black,
+                onPressed: () {
+                  Get.to(() => const CreateReviewScreen());
+                },
+              ),
             ].gap(width: MySizes.spaceBtwItems),
           ),
           Row(

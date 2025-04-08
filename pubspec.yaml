@@ -26,6 +26,7 @@ dependencies:
 
   # Star rating
   flutter_rating_bar: ^4.0.1
+  flutter_rating_stars: ^1.1.0
 
   # Storage
   get_storage: ^2.1.1
