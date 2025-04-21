@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
+import 'package:single_store_ecommerce/controllers/review_controller.dart';
 import 'package:single_store_ecommerce/features/shop/reviews/product_ratings.dart';
 import 'package:single_store_ecommerce/features/shop/reviews/product_user_ratings.dart';
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/title_text.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/models/review_model.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
@@ -13,6 +15,10 @@ class ProductReviewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ReviewController reviewController = ReviewController.instance;
+    List<ReviewModel> reviews = reviewController.singleReviews;
+    List<double> scores = reviews.map((r) => r.rating).toList();
+
     return Scaffold(
       appBar: const MyAppBar(
         showBackArrow: true,
@@ -33,9 +39,18 @@ class ProductReviewsScreen extends StatelessWidget {
                 const ProductRatings(),
 
                 // ---# User ratings
-                const ProductUserRatings(),
-                const ProductUserRatings(),
-                const ProductUserRatings(),
+                scores.isEmpty
+                    ? SizedBox()
+                    : Column(
+                        children: reviews
+                            .map(
+                              (review) => ProductUserRatings(
+                                props: review,
+                              ),
+                            )
+                            .toList()
+                            .gap(height: MySizes.spaceBtwItems),
+                      ),
               ].gap(height: MySizes.spaceBtwItems),
             ),
           ),

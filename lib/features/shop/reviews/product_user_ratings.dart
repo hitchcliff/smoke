@@ -5,11 +5,14 @@ import 'package:single_store_ecommerce/components/rating_bars/rating_star_bar.da
 import 'package:single_store_ecommerce/components/texts/body_text.dart';
 import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/models/review_model.dart';
 import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 
 class ProductUserRatings extends StatelessWidget {
-  const ProductUserRatings({super.key});
+  const ProductUserRatings({super.key, required this.props});
+
+  final ReviewModel props;
 
   @override
   Widget build(BuildContext context) {
@@ -18,41 +21,36 @@ class ProductUserRatings extends StatelessWidget {
         // ---# User with action btn
         Row(
           children: [
-            const CircleAvatar(
-              backgroundImage: AssetImage(MyImages.reviewersImg1),
+            CircleAvatar(
+              backgroundImage: NetworkImage(props.userImg),
             ),
-            const Expanded(
+            Expanded(
               child: BodyText(
-                "John Doe",
+                props.userFullName,
                 fontWeight: "bold",
               ),
             ),
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.ellipsisVertical))
-          ].gap(width: MySizes.sm),
-        ),
 
-        // ---# Star ratings
-        Row(
-          children: [
-            const RatingStarBar("", rating: 4),
-            const LabelInfoText("Jan 23, 2025"),
+            // Star ratings
+            RatingStarBar("", rating: props.rating),
           ].gap(width: MySizes.sm),
         ),
 
         // ---# Comments
-        const BodyText(
-          "Mauris volutpat nulla auctor justo ultricies sollicitudin. Morbi et auctor urna. Vivamus rhoncus hendrerit nunc, sed vestibulum nisi venenatis non. Proin quis vulputate sapien, sit amet placerat justo.",
+        Align(
+          alignment: Alignment.topLeft,
+          child: BodyText(
+            props.message,
+          ),
         ),
 
         // ---# Seller reply
-        const ReplyCard(
-          name: "Kevin Store",
-          date: "Jan 24, 2025",
-          message:
-              "Mauris volutpat nulla auctor justo ultricies sollicitudin. Morbi et auctor urna. Vivamus rhoncus hendrerit nunc, sed vestibulum nisi venenatis non. Proin quis vulputate sapien, sit amet placerat justo. Morbi eget lobortis urna. Morbi molestie bibendum dictum. Quisque eleifend neque nec turpis sagittis cursus. Pellentesque condimentum condimentum venenatis. Donec pulvinar tincidunt.",
-        ),
+        // const ReplyCard(
+        //   name: "Kevin Store",
+        //   date: "Jan 24, 2025",
+        //   message:
+        //       "Mauris volutpat nulla auctor justo ultricies sollicitudin. Morbi et auctor urna. Vivamus rhoncus hendrerit nunc, sed vestibulum nisi venenatis non. Proin quis vulputate sapien, sit amet placerat justo. Morbi eget lobortis urna. Morbi molestie bibendum dictum. Quisque eleifend neque nec turpis sagittis cursus. Pellentesque condimentum condimentum venenatis. Donec pulvinar tincidunt.",
+        // ),
       ].gap(height: MySizes.spaceBtwItems),
     );
   }

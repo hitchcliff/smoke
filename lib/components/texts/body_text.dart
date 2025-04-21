@@ -13,7 +13,9 @@ class BodyText extends StatelessWidget {
     return Text(
       text,
       style: Theme.of(context).textTheme.bodyMedium?.apply(
-          color: color, fontWeightDelta: fontWeight == "normal" ? 1 : 5),
+            color: color,
+            fontWeightDelta: fontWeight == "normal" ? 1 : 5,
+          ),
     );
   }
 }
