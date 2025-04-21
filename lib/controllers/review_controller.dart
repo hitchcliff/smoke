@@ -23,7 +23,7 @@ class ReviewController extends GetxController {
 
   // Controller
   final ProductController _productController = ProductController.instance;
-  final UserController _userController = UserController.instance;
+  final UserController _userController = Get.put(UserController());
 
   @override
   void onInit() {
@@ -43,6 +43,7 @@ class ReviewController extends GetxController {
       }
 
       final model = ReviewModel(
+        createdAt: DateTime.now().millisecondsSinceEpoch,
         rating: rating.value,
         message: message.value.text.trim(),
         productId: _productController.singleProduct.value.id,
@@ -59,7 +60,10 @@ class ReviewController extends GetxController {
           title: "Success!", message: "Your review has been submitted");
 
       // Redirect user to product detail
-      Get.offAll(() => const ProductDetailScreen());
+      // Get.offAll(() => const ProductDetailScreen());
+      // Get.to(() => const ProductDetailScreen());
+      Get.back();
+      message.clear();
     } catch (e) {
       Snackbars.error(title: "Review", message: e.toString());
       Logger().d("error ${e.toString()}");
@@ -75,6 +79,8 @@ class ReviewController extends GetxController {
 
       // Get the data
       final data = await _reviewRepository.readAll();
+
+      data.sort((a, b) => b.createdAt.compareTo(a.createdAt));
 
       // Save to state
       reviews.assignAll(data);

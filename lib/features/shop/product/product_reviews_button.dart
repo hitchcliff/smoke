@@ -14,8 +14,9 @@ class ProductReviewsButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProductController productController = Get.put(ProductController());
     ReviewController reviewController = Get.put(ReviewController());
-    ProductModel product = ProductController.instance.singleProduct.value;
+    ProductModel product = productController.singleProduct.value;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: MySizes.defaultSpace),

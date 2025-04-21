@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/components/paths/curve_edges.dart';
 import 'package:single_store_ecommerce/controllers/product_controller.dart';
@@ -16,7 +17,6 @@ class ProductHero extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isDarkMode = MyHelpers.isDarkMode(context);
-    ProductController productController = ProductController.instance;
 
     return ClipPath(
       clipper: CurveEdges(),

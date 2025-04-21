@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
 import 'package:single_store_ecommerce/controllers/review_controller.dart';
 import 'package:single_store_ecommerce/features/shop/reviews/product_ratings.dart';
@@ -15,7 +16,7 @@ class ProductReviewsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ReviewController reviewController = ReviewController.instance;
+    ReviewController reviewController = Get.put(ReviewController());
     List<ReviewModel> reviews = reviewController.singleReviews;
     List<double> scores = reviews.map((r) => r.rating).toList();
 

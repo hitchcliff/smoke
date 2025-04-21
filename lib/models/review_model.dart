@@ -9,6 +9,7 @@ class ReviewModel {
     required this.userId,
     required this.userImg,
     required this.userFullName,
+    required this.createdAt,
   });
 
   final String? id;
@@ -18,9 +19,11 @@ class ReviewModel {
   final String userId;
   final String userImg;
   final String userFullName;
+  final num createdAt;
 
   // empty
   static ReviewModel empty() => ReviewModel(
+      createdAt: DateTime.now().millisecondsSinceEpoch,
       message: "",
       rating: 0.0,
       productId: "",
@@ -31,8 +34,9 @@ class ReviewModel {
   // to json
   Map<String, dynamic> toJson() {
     return {
-      "message": message,
+      "createdAt": createdAt,
       "rating": rating,
+      "message": message,
       "productId": productId,
       "userId": userId,
       "userImg": userImg,
@@ -48,6 +52,7 @@ class ReviewModel {
 
       return ReviewModel(
         id: document.id,
+        createdAt: data['createdAt'],
         message: data['message'],
         rating: data['rating'],
         productId: data['productId'],
