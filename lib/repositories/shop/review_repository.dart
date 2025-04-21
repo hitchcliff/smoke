@@ -18,4 +18,19 @@ class ReviewRepository extends GetxController {
       throw e.toString();
     }
   }
+
+  /// read review
+  Future<List<ReviewModel>> readAll() async {
+    try {
+      final QuerySnapshot snapshot =
+          await _db.collection(MyDBCollections.reviews).get();
+
+      return snapshot.docs
+          .map((document) => ReviewModel.fromSnapshot(
+              document as DocumentSnapshot<Map<String, dynamic>>))
+          .toList();
+    } catch (e) {
+      throw e.toString();
+    }
+  }
 }

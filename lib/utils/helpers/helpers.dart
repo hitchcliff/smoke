@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/utils/helpers/convertHexToRGB.dart';
+import 'package:single_store_ecommerce/utils/helpers/getAverage.dart';
 import 'package:single_store_ecommerce/utils/helpers/getColor.dart';
 import 'package:single_store_ecommerce/utils/helpers/getPercentSale.dart';
 import 'package:single_store_ecommerce/utils/helpers/isDark.dart';
@@ -35,5 +36,13 @@ class MyHelpers {
 
   static String getPercentSale(num price, num salePrice) {
     return kGetPercentSale(price: price, salePrice: salePrice);
+  }
+
+  static String getAverage(List<double> scores) {
+    return kGetAverage(scores);
+  }
+
+  static Map<int, double> getRatings(List<double> scores) {
+    return kGetRatings(scores);
   }
 }

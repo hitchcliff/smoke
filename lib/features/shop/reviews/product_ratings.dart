@@ -1,7 +1,12 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:single_store_ecommerce/components/rating_bars/rating_circular_bar.dart';
 import 'package:single_store_ecommerce/components/rating_bars/rating_star_bar.dart';
 import 'package:single_store_ecommerce/components/texts/headline_text.dart';
+import 'package:single_store_ecommerce/controllers/review_controller.dart';
+import 'package:single_store_ecommerce/models/review_model.dart';
+import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
 
 class ProductRatings extends StatelessWidget {
   const ProductRatings({
@@ -10,7 +15,11 @@ class ProductRatings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    ReviewController reviewController = ReviewController.instance;
+    List<ReviewModel> review = reviewController.singleReviews;
+    List<double> scores = review.map((r) => r.rating).toList();
+
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // ---# Total score & Ratings bar
@@ -22,9 +31,10 @@ class ProductRatings extends StatelessWidget {
               child: Column(
                 children: [
                   // ---# Overall ratings
-                  HeadlineText('4.8'),
+                  HeadlineText(MyHelpers.getAverage(scores)),
                   // ---# Star & Total reviews
-                  RatingStarBar("13,000", rating: 4.5)
+                  RatingStarBar("${reviewController.singleReviews.length}",
+                      rating: double.parse(MyHelpers.getAverage(scores)))
                 ],
               ),
             ),
@@ -32,11 +42,16 @@ class ProductRatings extends StatelessWidget {
               flex: 8,
               child: Column(
                 children: [
-                  RatingCircularBar('5', value: 0.8),
-                  RatingCircularBar('4', value: 0.6),
-                  RatingCircularBar('3', value: 0.4),
-                  RatingCircularBar('2', value: 0.3),
-                  RatingCircularBar('1', value: 0.1),
+                  RatingCircularBar('5',
+                      value: MyHelpers.getRatings(scores)[5]!),
+                  RatingCircularBar('4',
+                      value: MyHelpers.getRatings(scores)[4]!),
+                  RatingCircularBar('3',
+                      value: MyHelpers.getRatings(scores)[3]!),
+                  RatingCircularBar('2',
+                      value: MyHelpers.getRatings(scores)[2]!),
+                  RatingCircularBar('1',
+                      value: MyHelpers.getRatings(scores)[1]!),
                 ],
               ),
             )

@@ -4,6 +4,7 @@ import 'package:single_store_ecommerce/components/products/display_products_vert
 import 'package:single_store_ecommerce/components/products/product_card.dart';
 import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
 import 'package:single_store_ecommerce/components/texts/section_heading.dart';
+import 'package:single_store_ecommerce/controllers/brand_controller.dart';
 import 'package:single_store_ecommerce/controllers/product_controller.dart';
 import 'package:single_store_ecommerce/screens/all_products.dart';
 import 'package:single_store_ecommerce/screens/product_detail.dart';
@@ -20,6 +21,7 @@ class AllProductsList extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isDark = MyHelpers.isDarkMode(context);
     ProductController controller = ProductController.instance;
+    BrandController brandController = BrandController.instance;
 
     return Obx(
       () => DisplayProductsVertical(
@@ -50,9 +52,9 @@ class AllProductsList extends StatelessWidget {
                     details: ProductCardProps(
                       name: product.title,
                       price: product.price.toString(),
-                      brand: MyTexts.brandNike,
+                      brand: brandController.read(product.brandId).name,
                       onTap: () {},
-                      verified: true,
+                      verified: brandController.read(product.brandId).verified,
                     ),
                   )))
               .toList(),

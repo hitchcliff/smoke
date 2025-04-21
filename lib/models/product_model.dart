@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:single_store_ecommerce/models/product_attribute_model.dart';
 import 'package:single_store_ecommerce/models/product_variation_model.dart';
+import 'package:single_store_ecommerce/models/review_model.dart';
 
 class ProductModel {
   ProductModel({
@@ -18,6 +19,7 @@ class ProductModel {
     this.images,
     required this.productAttributes,
     required this.productVariation,
+    this.reviews,
   });
 
   // Required Variables
@@ -37,6 +39,7 @@ class ProductModel {
       productAttributes; // {name: "Color", values: ["green", "blue", "red"]}
   final List<ProductVariationModel>
       productVariation; // {attributeValues: {color: "green"}, price: 0, stock: 0, image: ""}
+  final List<ReviewModel>? reviews;
 
   /// Empty
   static ProductModel empty() => ProductModel(
@@ -54,6 +57,7 @@ class ProductModel {
         productAttributes: [],
         productVariation: [],
         images: [],
+        reviews: [],
       );
 
   /// To JSON, will be used for uploading data to firebase
