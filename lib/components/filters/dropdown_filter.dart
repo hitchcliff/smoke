@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:logger/logger.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class DropdownFilter extends StatelessWidget {
   const DropdownFilter({

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/app_bars/close_app_bar.dart';
-import 'package:single_store_ecommerce/components/containers/fullscreen_container.dart';
-import 'package:single_store_ecommerce/features/authentication/register/register_form.dart';
-import 'package:single_store_ecommerce/components/forms/signin_with.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/app_bars/close_app_bar.dart';
+import 'package:smoke/components/containers/fullscreen_container.dart';
+import 'package:smoke/features/authentication/register/register_form.dart';
+import 'package:smoke/components/forms/signin_with.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class CreateAccount extends StatelessWidget {
   const CreateAccount({super.key});

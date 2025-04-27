@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/brand/brand.dart';
-import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/components/brand/brands.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/controllers/brand_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/brand/brand.dart';
+import 'package:smoke/components/brand/brand_item.dart';
+import 'package:smoke/components/brand/brands.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/controllers/brand_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class AllBrandsScreen extends StatelessWidget {
   const AllBrandsScreen({super.key});

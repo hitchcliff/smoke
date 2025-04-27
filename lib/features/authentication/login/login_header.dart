@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({super.key});

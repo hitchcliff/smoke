@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
+import 'package:smoke/components/texts/body_text.dart';
 
 class CheckoutCalculation extends StatelessWidget {
   const CheckoutCalculation({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/products/similar_products.dart';
-import 'package:single_store_ecommerce/models/category_model.dart';
+import 'package:smoke/components/products/similar_products.dart';
+import 'package:smoke/models/category_model.dart';
 
 class StoreTab extends StatelessWidget {
   const StoreTab({super.key, required this.category});

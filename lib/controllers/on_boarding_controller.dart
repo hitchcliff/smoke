@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:single_store_ecommerce/screens/login.dart';
+import 'package:smoke/screens/login.dart';
 
 class OnBoardingController {
   final PageController pageController = PageController();

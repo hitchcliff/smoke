@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/models/brand_model.dart';
-import 'package:single_store_ecommerce/repositories/shop/brand_repository.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/models/brand_model.dart';
+import 'package:smoke/repositories/shop/brand_repository.dart';
 
 class BrandController extends GetxController {
   static BrandController get instance => Get.find();

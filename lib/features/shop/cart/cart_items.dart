@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/features/shop/cart/cart_item.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/features/shop/cart/cart_item.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class CartItems extends StatelessWidget {
   const CartItems({

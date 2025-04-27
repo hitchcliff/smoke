@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/components/tile/menu_tile.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/screens/load_data.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/components/tile/menu_tile.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/screens/load_data.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class AppSettings extends StatelessWidget {
   const AppSettings({

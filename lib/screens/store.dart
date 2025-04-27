@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_tab_bar.dart';
-import 'package:single_store_ecommerce/components/icons/cart_counter_icon.dart';
-import 'package:single_store_ecommerce/controllers/category_controller.dart';
-import 'package:single_store_ecommerce/features/shop/store/store_tab.dart';
-import 'package:single_store_ecommerce/components/widgets/dynamic_sliver_appbar.dart';
-import 'package:single_store_ecommerce/features/shop/store/store_header.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/app_bars/my_tab_bar.dart';
+import 'package:smoke/components/icons/cart_counter_icon.dart';
+import 'package:smoke/controllers/category_controller.dart';
+import 'package:smoke/features/shop/store/store_tab.dart';
+import 'package:smoke/components/widgets/dynamic_sliver_appbar.dart';
+import 'package:smoke/features/shop/store/store_header.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class Store extends StatelessWidget {
   const Store({super.key});

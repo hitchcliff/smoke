@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:smoke/components/texts/label_info_text.dart';
+import 'package:smoke/utils/constants/colors.dart';
 
 class RatingStarBar extends StatelessWidget {
   const RatingStarBar(this.text,

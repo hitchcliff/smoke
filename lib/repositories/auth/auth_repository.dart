@@ -4,14 +4,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
-import 'package:single_store_ecommerce/screens/login.dart';
-import 'package:single_store_ecommerce/screens/navigation.dart';
-import 'package:single_store_ecommerce/screens/on_boarding.dart';
-import 'package:single_store_ecommerce/screens/success.dart';
-import 'package:single_store_ecommerce/screens/verify_email.dart';
-import 'package:single_store_ecommerce/utils/constants/local_storage.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/repositories/user/user_repository.dart';
+import 'package:smoke/screens/login.dart';
+import 'package:smoke/screens/navigation.dart';
+import 'package:smoke/screens/on_boarding.dart';
+import 'package:smoke/screens/success.dart';
+import 'package:smoke/screens/verify_email.dart';
+import 'package:smoke/utils/constants/local_storage.dart';
 
 class AuthRepository extends GetxController {
   static AuthRepository get instance => Get.find();

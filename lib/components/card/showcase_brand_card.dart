@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/components/card/card_container.dart';
-import 'package:single_store_ecommerce/components/category/category_images.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/brand/brand_item.dart';
+import 'package:smoke/components/card/card_container.dart';
+import 'package:smoke/components/category/category_images.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class ShowcaseBrandCard extends StatelessWidget {
   const ShowcaseBrandCard(

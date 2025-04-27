@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/products/product_item.dart';
-import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_card.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:smoke/components/products/product_item.dart';
+import 'package:smoke/components/products/product_thumbnail.dart';
+import 'package:smoke/components/products/product_card.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
 
 class ProductVertical extends StatelessWidget {
   const ProductVertical({

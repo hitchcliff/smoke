@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/forms/search_form.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/shop/store/store_brands.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/forms/search_form.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/shop/store/store_brands.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class StoreHeader extends StatelessWidget {
   const StoreHeader({

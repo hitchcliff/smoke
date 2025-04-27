@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/bindings/dep_bindings.dart';
-import 'package:single_store_ecommerce/components/widgets/app_scroll_behavior.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/theme/theme.dart';
+import 'package:smoke/bindings/dep_bindings.dart';
+import 'package:smoke/components/widgets/app_scroll_behavior.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

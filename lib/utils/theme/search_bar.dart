@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class MySearchBarTheme {
   static SearchBarThemeData light = SearchBarThemeData(

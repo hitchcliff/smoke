@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/models/review_model.dart';
-import 'package:single_store_ecommerce/utils/constants/db_collections.dart';
+import 'package:smoke/models/review_model.dart';
+import 'package:smoke/utils/constants/db_collections.dart';
 
 /// Will talk to the DB
 class ReviewRepository extends GetxController {

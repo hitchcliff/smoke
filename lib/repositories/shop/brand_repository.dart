@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:single_store_ecommerce/models/brand_model.dart';
-import 'package:single_store_ecommerce/utils/constants/db_collections.dart';
+import 'package:smoke/models/brand_model.dart';
+import 'package:smoke/utils/constants/db_collections.dart';
 
 class BrandRepository extends GetxController {
   static BrandRepository get instance => Get.find();

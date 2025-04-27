@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/components/settings/profile_menu.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/screens/update_name.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/screens/update_phone_number.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/components/settings/profile_menu.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/personalization/profile/screens/update_name.dart';
+import 'package:smoke/features/personalization/profile/screens/update_phone_number.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProfileInformation extends StatelessWidget {
   const ProfileInformation({

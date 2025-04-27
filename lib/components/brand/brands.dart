@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/brand/brand.dart';
-import 'package:single_store_ecommerce/components/grid_layouts/grid_layout.dart';
+import 'package:smoke/components/brand/brand.dart';
+import 'package:smoke/components/grid_layouts/grid_layout.dart';
 
 class Brands extends StatelessWidget {
   const Brands(

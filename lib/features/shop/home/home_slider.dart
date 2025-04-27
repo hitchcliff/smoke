@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
-import 'package:single_store_ecommerce/components/sliders/promo_slider.dart';
-import 'package:single_store_ecommerce/controllers/banner_controller.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/rounded/rounded_image.dart';
+import 'package:smoke/components/sliders/promo_slider.dart';
+import 'package:smoke/controllers/banner_controller.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class HomeSlider extends StatelessWidget {
   const HomeSlider({

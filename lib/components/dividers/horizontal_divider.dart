@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class HorizontalDivider extends StatelessWidget {
   const HorizontalDivider({super.key});

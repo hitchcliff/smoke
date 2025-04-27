@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:single_store_ecommerce/models/product_attribute_model.dart';
-import 'package:single_store_ecommerce/models/product_variation_model.dart';
-import 'package:single_store_ecommerce/models/review_model.dart';
+import 'package:smoke/models/product_attribute_model.dart';
+import 'package:smoke/models/product_variation_model.dart';
+import 'package:smoke/models/review_model.dart';
 
 class ProductModel {
   ProductModel({

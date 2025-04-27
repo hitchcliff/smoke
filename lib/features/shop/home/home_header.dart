@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/forms/search_form.dart';
-import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
-import 'package:single_store_ecommerce/components/products/featured_categories.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/shop/home/home_appbar.dart';
-import 'package:single_store_ecommerce/screens/search_products.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/forms/search_form.dart';
+import 'package:smoke/components/headers/header_wrapper.dart';
+import 'package:smoke/components/products/featured_categories.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/shop/home/home_appbar.dart';
+import 'package:smoke/screens/search_products.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({

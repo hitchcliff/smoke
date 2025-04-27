@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/products/product_horizontal.dart';
-import 'package:single_store_ecommerce/controllers/category_controller.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/products/product_horizontal.dart';
+import 'package:smoke/controllers/category_controller.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class CategoryProducts extends StatelessWidget {
   const CategoryProducts({

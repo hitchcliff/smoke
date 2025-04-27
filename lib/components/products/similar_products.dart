@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/products/display_products_vertical.dart';
-import 'package:single_store_ecommerce/components/products/product_card.dart';
-import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/controllers/brand_controller.dart';
-import 'package:single_store_ecommerce/controllers/category_controller.dart';
-import 'package:single_store_ecommerce/models/category_model.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/screens/category.dart';
-import 'package:single_store_ecommerce/screens/product_detail.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/products/display_products_vertical.dart';
+import 'package:smoke/components/products/product_card.dart';
+import 'package:smoke/components/products/product_thumbnail.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/controllers/brand_controller.dart';
+import 'package:smoke/controllers/category_controller.dart';
+import 'package:smoke/models/category_model.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/screens/category.dart';
+import 'package:smoke/screens/product_detail.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class SimilarProducts extends StatelessWidget {
   const SimilarProducts({super.key, required this.category});

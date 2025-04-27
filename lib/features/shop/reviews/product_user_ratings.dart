@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/components/card/reply_card.dart';
-import 'package:single_store_ecommerce/components/rating_bars/rating_star_bar.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/models/review_model.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/card/reply_card.dart';
+import 'package:smoke/components/rating_bars/rating_star_bar.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/components/texts/label_info_text.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/models/review_model.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class ProductUserRatings extends StatelessWidget {
   const ProductUserRatings({super.key, required this.props});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/widgets/animation_loader.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/widgets/animation_loader.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class FullScreenLoader {
   /// Open a full-screen dialog with a given text & animation.

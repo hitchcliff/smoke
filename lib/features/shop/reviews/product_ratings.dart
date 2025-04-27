@@ -1,14 +1,14 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/rating_bars/rating_circular_bar.dart';
-import 'package:single_store_ecommerce/components/rating_bars/rating_star_bar.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/components/texts/headline_text.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/controllers/review_controller.dart';
-import 'package:single_store_ecommerce/models/review_model.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/rating_bars/rating_circular_bar.dart';
+import 'package:smoke/components/rating_bars/rating_star_bar.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/components/texts/headline_text.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/controllers/review_controller.dart';
+import 'package:smoke/models/review_model.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProductRatings extends StatelessWidget {
   const ProductRatings({

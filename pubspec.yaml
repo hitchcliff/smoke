@@ -1,5 +1,5 @@
-name: single_store_ecommerce
-description: "A new Flutter project."
+name: smoke
+description: "Smoke - we sell tobacco accessories"
 publish_to: "none"
 version: 0.1.0
 
@@ -59,16 +59,16 @@ dev_dependencies:
 
 # Splash
 flutter_native_splash:
-  color: "#FFFFFF"
+  color: "#89AC46"
   color_dark: "#272727"
-  image: assets/logos/t-store-splash-logo-black.png
-  image_dark: assets/logos/t-store-splash-logo-white.png
+  image: assets/logos/logo-black.png
+  image_dark: assets/logos/logo-white.png
 
   android_12:
-    color: "#FFFFFF"
+    color: "#89AC46"
     color_dark: "#272727"
-    image: assets/logos/t-store-splash-logo-black.png
-    image_dark: assets/logos/t-store-splash-logo-white.png
+    image: assets/logos/logo-black.png
+    image_dark: assets/logos/logo-white.png
 
 flutter:
   # uses-material-design: true

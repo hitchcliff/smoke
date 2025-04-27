@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/controllers/update_name_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/validators/validation.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/controllers/update_name_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/validators/validation.dart';
 
 class UpdateNameScreen extends StatelessWidget {
   const UpdateNameScreen({

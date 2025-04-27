@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:logger/logger.dart';
-import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/local_storage.dart';
+import 'package:smoke/components/loaders/full_screen_loader.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/repositories/auth/auth_repository.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/local_storage.dart';
 
 class LoginController extends GetxController {
   LoginController get instance => Get.find();

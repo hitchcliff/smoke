@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/features/shop/wishlist/wishlist_products.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/features/shop/wishlist/wishlist_products.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class Wishlist extends StatelessWidget {
   const Wishlist({super.key});

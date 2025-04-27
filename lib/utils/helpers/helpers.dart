@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/utils/helpers/convertHexToRGB.dart';
-import 'package:single_store_ecommerce/utils/helpers/getAverage.dart';
-import 'package:single_store_ecommerce/utils/helpers/getColor.dart';
-import 'package:single_store_ecommerce/utils/helpers/getPercentSale.dart';
-import 'package:single_store_ecommerce/utils/helpers/isDark.dart';
-import 'package:single_store_ecommerce/utils/helpers/screenHeight.dart';
-import 'package:single_store_ecommerce/utils/helpers/screenWidth.dart';
-import 'package:single_store_ecommerce/utils/helpers/text_color.dart';
+import 'package:smoke/utils/helpers/convertHexToRGB.dart';
+import 'package:smoke/utils/helpers/getAverage.dart';
+import 'package:smoke/utils/helpers/getColor.dart';
+import 'package:smoke/utils/helpers/getPercentSale.dart';
+import 'package:smoke/utils/helpers/isDark.dart';
+import 'package:smoke/utils/helpers/screenHeight.dart';
+import 'package:smoke/utils/helpers/screenWidth.dart';
+import 'package:smoke/utils/helpers/text_color.dart';
 
 class MyHelpers {
   static double screenWidth() {

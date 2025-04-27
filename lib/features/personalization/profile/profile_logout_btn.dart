@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/repositories/auth/auth_repository.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class ProfileLogoutBtn extends StatelessWidget {
   const ProfileLogoutBtn({

@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/models/category_model.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/repositories/shop/category_repository.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/models/category_model.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/repositories/shop/category_repository.dart';
 
 class CategoryController extends GetxController {
   static CategoryController get instance => Get.find();

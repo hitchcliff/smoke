@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/widgets/animation_loader.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/screens/navigation.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/widgets/animation_loader.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/screens/navigation.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});

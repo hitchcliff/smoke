@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/account_settings.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/app_settings.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/profile_header.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/profile_logout_btn.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/personalization/profile/account_settings.dart';
+import 'package:smoke/features/personalization/profile/app_settings.dart';
+import 'package:smoke/features/personalization/profile/profile_header.dart';
+import 'package:smoke/features/personalization/profile/profile_logout_btn.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

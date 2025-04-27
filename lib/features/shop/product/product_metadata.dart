@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:single_store_ecommerce/components/brand/brand_icon.dart';
-import 'package:single_store_ecommerce/components/texts/label_info_text.dart';
-import 'package:single_store_ecommerce/components/texts/label_text.dart';
-import 'package:single_store_ecommerce/components/texts/linethrough_text.dart';
-import 'package:single_store_ecommerce/components/texts/on_sale.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/controllers/brand_controller.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/screens/create_review.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
-import 'package:single_store_ecommerce/utils/helpers/isDark.dart';
+import 'package:smoke/components/brand/brand_icon.dart';
+import 'package:smoke/components/texts/label_info_text.dart';
+import 'package:smoke/components/texts/label_text.dart';
+import 'package:smoke/components/texts/linethrough_text.dart';
+import 'package:smoke/components/texts/on_sale.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/controllers/brand_controller.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/screens/create_review.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
+import 'package:smoke/utils/helpers/isDark.dart';
 
 class ProductMetadata extends StatelessWidget {
   const ProductMetadata({

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/controllers/register_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/authentication/register/privacy_policy_checkbox.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/validators/validation.dart';
+import 'package:smoke/controllers/register_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/authentication/register/privacy_policy_checkbox.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/validators/validation.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});

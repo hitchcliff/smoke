@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:smoke/components/loaders/full_screen_loader.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/repositories/auth/auth_repository.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
 
 class ForgetPasswordController extends GetxController {
   ForgetPasswordController get instance => Get.find();

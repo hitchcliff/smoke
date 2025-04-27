@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/controllers/on_boarding_controller.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/controllers/on_boarding_controller.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class OnBoardingSkip extends StatelessWidget {
   const OnBoardingSkip({

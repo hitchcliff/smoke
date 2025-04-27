@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/brand/brand_item.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class Brand extends StatelessWidget {
   const Brand(this.prop, {super.key});

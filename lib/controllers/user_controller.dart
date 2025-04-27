@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/models/user_model.dart';
-import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:smoke/components/loaders/full_screen_loader.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/models/user_model.dart';
+import 'package:smoke/repositories/user/user_repository.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
 
 class UserController extends GetxController {
   static UserController get instance => Get.find();

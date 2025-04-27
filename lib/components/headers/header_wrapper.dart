@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/paths/curve_edges.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:smoke/components/paths/curve_edges.dart';
+import 'package:smoke/utils/constants/colors.dart';
 
 class HeaderWrapper extends StatelessWidget {
   const HeaderWrapper({super.key, required this.child, this.height = 400});

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/shop/category/category_products.dart';
-import 'package:single_store_ecommerce/models/category_model.dart';
-import 'package:single_store_ecommerce/screens/all_products.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/rounded/rounded_image.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/shop/category/category_products.dart';
+import 'package:smoke/models/category_model.dart';
+import 'package:smoke/screens/all_products.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key, required this.category});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/models/user_model.dart';
-import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
-import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
-import 'package:single_store_ecommerce/screens/verify_email.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:smoke/components/loaders/full_screen_loader.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/models/user_model.dart';
+import 'package:smoke/repositories/auth/auth_repository.dart';
+import 'package:smoke/repositories/user/user_repository.dart';
+import 'package:smoke/screens/verify_email.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
 
 class RegisterController extends GetxController {
   RegisterController get instance => Get.find();

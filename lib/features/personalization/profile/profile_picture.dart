@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/circle/circle_image.dart';
-import 'package:single_store_ecommerce/components/shimmer/shimmer_effect.dart';
-import 'package:single_store_ecommerce/controllers/image_upload_controller.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/circle/circle_image.dart';
+import 'package:smoke/components/shimmer/shimmer_effect.dart';
+import 'package:smoke/controllers/image_upload_controller.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class ProfilePicture extends StatelessWidget {
   const ProfilePicture({

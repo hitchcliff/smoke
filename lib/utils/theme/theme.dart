@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/theme/appbar_theme.dart';
-import 'package:single_store_ecommerce/utils/theme/elevated_button_theme.dart';
-import 'package:single_store_ecommerce/utils/theme/icon_button.dart';
-import 'package:single_store_ecommerce/utils/theme/input_decoration.dart';
-import 'package:single_store_ecommerce/utils/theme/outline_button.dart';
-import 'package:single_store_ecommerce/utils/theme/search_bar.dart';
-import 'package:single_store_ecommerce/utils/theme/text_theme.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/theme/appbar_theme.dart';
+import 'package:smoke/utils/theme/elevated_button_theme.dart';
+import 'package:smoke/utils/theme/icon_button.dart';
+import 'package:smoke/utils/theme/input_decoration.dart';
+import 'package:smoke/utils/theme/outline_button.dart';
+import 'package:smoke/utils/theme/search_bar.dart';
+import 'package:smoke/utils/theme/text_theme.dart';
 
 class MyAppTheme {
   static ThemeData lightTheme = ThemeData(

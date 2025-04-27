@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/circle/circle_image.dart';
-import 'package:single_store_ecommerce/components/headers/header_wrapper.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/screens/user_info.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/circle/circle_image.dart';
+import 'package:smoke/components/headers/header_wrapper.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/screens/user_info.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/features/personalization/profile/screens/re_authenticate.dart';
-import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
-import 'package:single_store_ecommerce/screens/login.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:smoke/components/loaders/full_screen_loader.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/features/personalization/profile/screens/re_authenticate.dart';
+import 'package:smoke/repositories/auth/auth_repository.dart';
+import 'package:smoke/screens/login.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
 
 class DeleteUserController extends GetxController {
   static DeleteUserController get instance => Get.find();

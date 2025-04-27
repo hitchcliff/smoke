@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/features/shop/home/home_header.dart';
-import 'package:single_store_ecommerce/features/shop/home/home_products.dart';
-import 'package:single_store_ecommerce/features/shop/home/home_slider.dart';
+import 'package:smoke/features/shop/home/home_header.dart';
+import 'package:smoke/features/shop/home/home_products.dart';
+import 'package:smoke/features/shop/home/home_slider.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

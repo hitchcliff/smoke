@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/repositories/auth/auth_repository.dart';
+import 'package:smoke/repositories/auth/auth_repository.dart';
 
 class VerifyEmailController extends GetxController {
   VerifyEmailController get instance => Get.find();

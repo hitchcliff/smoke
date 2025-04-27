@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/icons/cart_counter_icon.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/shimmer/shimmer_effect.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/screens/cart.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/icons/cart_counter_icon.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/shimmer/shimmer_effect.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/screens/cart.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class HomeAppbar extends StatelessWidget {
   const HomeAppbar({

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/on_boarding/on_boarding_navigation.dart';
-import 'package:single_store_ecommerce/components/on_boarding/on_boarding_page.dart';
-import 'package:single_store_ecommerce/components/on_boarding/on_boarding_skip.dart';
-import 'package:single_store_ecommerce/controllers/on_boarding_controller.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/on_boarding/on_boarding_navigation.dart';
+import 'package:smoke/components/on_boarding/on_boarding_page.dart';
+import 'package:smoke/components/on_boarding/on_boarding_skip.dart';
+import 'package:smoke/controllers/on_boarding_controller.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});

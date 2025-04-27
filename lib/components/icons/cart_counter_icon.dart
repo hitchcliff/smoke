@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/colors.dart';
 
 class CartCounterIcon extends StatelessWidget {
   const CartCounterIcon({

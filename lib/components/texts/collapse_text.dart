@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class CollapseText extends StatelessWidget {
   const CollapseText(

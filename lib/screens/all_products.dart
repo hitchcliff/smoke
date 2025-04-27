@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/filters/dropdown_filter.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/shop/all_products/all_products_list.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/filters/dropdown_filter.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/shop/all_products/all_products_list.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class AllProductsScreen extends StatelessWidget {
   const AllProductsScreen({super.key});

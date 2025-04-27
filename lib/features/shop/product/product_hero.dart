@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/paths/curve_edges.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/features/shop/product/product_img.dart';
-import 'package:single_store_ecommerce/features/shop/product/product_variations.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/paths/curve_edges.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/features/shop/product/product_img.dart';
+import 'package:smoke/features/shop/product/product_variations.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProductHero extends StatelessWidget {
   const ProductHero({

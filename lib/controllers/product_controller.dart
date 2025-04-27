@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:single_store_ecommerce/components/loaders/full_screen_loader.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/models/product_variation_model.dart';
-import 'package:single_store_ecommerce/repositories/shop/product_repository.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
+import 'package:smoke/components/loaders/full_screen_loader.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/models/product_variation_model.dart';
+import 'package:smoke/repositories/shop/product_repository.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
 
 class ProductController extends GetxController {
   static ProductController get instance => Get.find();

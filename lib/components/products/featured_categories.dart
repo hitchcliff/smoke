@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/circle/circle_image.dart';
-import 'package:single_store_ecommerce/components/shimmer/category_shimmer.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/controllers/category_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/screens/category.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/circle/circle_image.dart';
+import 'package:smoke/components/shimmer/category_shimmer.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/controllers/category_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/screens/category.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class FeaturedCategories extends StatelessWidget {
   const FeaturedCategories({

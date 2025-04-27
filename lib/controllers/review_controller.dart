@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/models/review_model.dart';
-import 'package:single_store_ecommerce/repositories/shop/review_repository.dart';
-import 'package:single_store_ecommerce/screens/product_detail.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/models/review_model.dart';
+import 'package:smoke/repositories/shop/review_repository.dart';
+import 'package:smoke/screens/product_detail.dart';
 
 class ReviewController extends GetxController {
   static ReviewController get instance => Get.find();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/features/shop/checkout/checkout_item.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/features/shop/checkout/checkout_item.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class CheckoutItems extends StatelessWidget {
   const CheckoutItems({

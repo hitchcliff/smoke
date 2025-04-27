@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/brand/brand_item.dart';
-import 'package:single_store_ecommerce/components/card/showcase_brand_card.dart';
-import 'package:single_store_ecommerce/components/category/category_images.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
+import 'package:smoke/components/brand/brand_item.dart';
+import 'package:smoke/components/card/showcase_brand_card.dart';
+import 'package:smoke/components/category/category_images.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
 
 class StoreShowcase extends StatelessWidget {
   const StoreShowcase({

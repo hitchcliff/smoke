@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/components/brand/brand_title_with_icon.dart';
-import 'package:single_store_ecommerce/components/shimmer/shimmer_effect.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/brand/brand_title_with_icon.dart';
+import 'package:smoke/components/shimmer/shimmer_effect.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class BrandItemProp {
   const BrandItemProp({

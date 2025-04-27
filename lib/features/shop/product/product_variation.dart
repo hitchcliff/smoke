@@ -1,13 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:single_store_ecommerce/components/chips/variation_chip.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/models/product_variation_model.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/chips/variation_chip.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/models/product_variation_model.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProductVariation extends StatelessWidget {
   const ProductVariation({super.key});

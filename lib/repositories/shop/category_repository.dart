@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/models/category_model.dart';
-import 'package:single_store_ecommerce/utils/constants/db_collections.dart';
+import 'package:smoke/models/category_model.dart';
+import 'package:smoke/utils/constants/db_collections.dart';
 
 class CategoryRepository extends GetxController {
   static CategoryRepository get instance => Get.find();

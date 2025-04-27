@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/app_bars/my_app_bar.dart';
-import 'package:single_store_ecommerce/components/texts/title_text.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/shop/all_products/search_results.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/app_bars/my_app_bar.dart';
+import 'package:smoke/components/texts/title_text.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/shop/all_products/search_results.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class SearchProductsScreen extends StatelessWidget {
   const SearchProductsScreen({super.key});

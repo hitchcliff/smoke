@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/grid_layouts/grid_layout.dart';
-import 'package:single_store_ecommerce/components/products/product_item.dart';
-import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/components/products/product_card.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/grid_layouts/grid_layout.dart';
+import 'package:smoke/components/products/product_item.dart';
+import 'package:smoke/components/products/product_thumbnail.dart';
+import 'package:smoke/components/products/product_card.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class DisplayProductsVerticalDetailsProp {
   const DisplayProductsVerticalDetailsProp(

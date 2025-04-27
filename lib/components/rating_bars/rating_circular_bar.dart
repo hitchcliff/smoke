@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/texts/label_text.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/texts/label_text.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class RatingCircularBar extends StatelessWidget {
   const RatingCircularBar(this.text, {super.key, required this.value});

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/products/product_card.dart';
-import 'package:single_store_ecommerce/components/products/product_thumbnail.dart';
-import 'package:single_store_ecommerce/controllers/brand_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/utils/constants/colors.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/products/product_card.dart';
+import 'package:smoke/components/products/product_thumbnail.dart';
+import 'package:smoke/controllers/brand_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/utils/constants/colors.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProductHorizontal extends StatelessWidget {
   const ProductHorizontal({

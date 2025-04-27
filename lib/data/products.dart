@@ -1,6 +1,6 @@
-import 'package:single_store_ecommerce/models/product_attribute_model.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/models/product_variation_model.dart';
+import 'package:smoke/models/product_attribute_model.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/models/product_variation_model.dart';
 
 /// This data is uploaded in firebase
 final dataOfProducts = [

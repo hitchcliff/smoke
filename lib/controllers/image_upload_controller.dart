@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/controllers/user_controller.dart';
-import 'package:single_store_ecommerce/repositories/user/user_repository.dart';
-import 'package:single_store_ecommerce/utils/constants/db_collections.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/controllers/user_controller.dart';
+import 'package:smoke/repositories/user/user_repository.dart';
+import 'package:smoke/utils/constants/db_collections.dart';
 
 class ImageUploadController extends GetxController {
   static ImageUploadController get instance => Get.find();

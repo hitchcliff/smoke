@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/controllers/login_controller.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/screens/create_account.dart';
-import 'package:single_store_ecommerce/screens/forgot_password.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
-import 'package:single_store_ecommerce/utils/validators/validation.dart';
+import 'package:smoke/controllers/login_controller.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/screens/create_account.dart';
+import 'package:smoke/screens/forgot_password.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/constants/text_strings.dart';
+import 'package:smoke/utils/validators/validation.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});

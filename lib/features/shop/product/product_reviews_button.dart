@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/texts/section_heading.dart';
-import 'package:single_store_ecommerce/controllers/product_controller.dart';
-import 'package:single_store_ecommerce/controllers/review_controller.dart';
-import 'package:single_store_ecommerce/models/product_model.dart';
-import 'package:single_store_ecommerce/screens/product_reviews.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
-import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
+import 'package:smoke/components/texts/section_heading.dart';
+import 'package:smoke/controllers/product_controller.dart';
+import 'package:smoke/controllers/review_controller.dart';
+import 'package:smoke/models/product_model.dart';
+import 'package:smoke/screens/product_reviews.dart';
+import 'package:smoke/utils/constants/sizes.dart';
+import 'package:smoke/utils/helpers/helpers.dart';
 
 class ProductReviewsButton extends StatelessWidget {
   const ProductReviewsButton({super.key});

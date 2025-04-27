@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:single_store_ecommerce/components/snackbars/snackbars.dart';
-import 'package:single_store_ecommerce/models/banner_model.dart';
-import 'package:single_store_ecommerce/repositories/shop/banner_repository.dart';
+import 'package:smoke/components/snackbars/snackbars.dart';
+import 'package:smoke/models/banner_model.dart';
+import 'package:smoke/repositories/shop/banner_repository.dart';
 
 class BannerController extends GetxController {
   BannerController get instance => Get.find();

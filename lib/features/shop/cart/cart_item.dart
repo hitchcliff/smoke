@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/brand/brand_icon.dart';
-import 'package:single_store_ecommerce/components/rounded/rounded_image.dart';
-import 'package:single_store_ecommerce/components/texts/body_text.dart';
-import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/features/shop/cart/cart_item_buttons.dart';
-import 'package:single_store_ecommerce/features/shop/cart/cart_item_name.dart';
-import 'package:single_store_ecommerce/features/shop/cart/cart_item_variation.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
-import 'package:single_store_ecommerce/utils/constants/sizes.dart';
+import 'package:smoke/components/brand/brand_icon.dart';
+import 'package:smoke/components/rounded/rounded_image.dart';
+import 'package:smoke/components/texts/body_text.dart';
+import 'package:smoke/extensions/list_space_between.dart';
+import 'package:smoke/features/shop/cart/cart_item_buttons.dart';
+import 'package:smoke/features/shop/cart/cart_item_name.dart';
+import 'package:smoke/features/shop/cart/cart_item_variation.dart';
+import 'package:smoke/utils/constants/image_strings.dart';
+import 'package:smoke/utils/constants/sizes.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({
