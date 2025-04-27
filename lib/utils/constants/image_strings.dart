@@ -8,10 +8,8 @@ class MyImages {
       "assets/images/on_boarding_images/3.jpg";
 
   // ---# login screen
-  static const String logoBlackImage =
-      "assets/logos/t-store-splash-logo-black.png";
-  static const String logoWhiteImage =
-      "assets/logos/t-store-splash-logo-white.png";
+  static const String logoBlackImage = "assets/logos/logo-black.png";
+  static const String logoWhiteImage = "assets/logos/logo-white.png";
 
   static const String googleIconImg = "assets/logos/google-icon.png";
   static const String fbIconImg = "assets/logos/facebook-icon.png";
